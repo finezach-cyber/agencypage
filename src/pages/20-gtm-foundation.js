@@ -2,6 +2,7 @@ import {
   hero, section, sectionHead, cards, faq, cta,
   callout, checklist, breadcrumbs, relatedLinks, processDiagram,
 } from '../components.js'
+import { opportunitiesSample, impactSample } from '../data/sample-reports.js'
 
 const crumbs = [{ label: 'GTM Foundation', href: '/gtm-foundation/' }]
 
@@ -28,7 +29,7 @@ const faqBlock = faq([
   },
   {
     q: 'Is local search always part of the analysis?',
-    a: `<p>No, and assuming it is would be an error. Some providers sell into a defined geography where local visibility decides everything; others sell a specialised service nationally, where local optimisation is effort spent in the wrong place. Whether local search is relevant to your model is established during intake and stated explicitly in the Opportunities Report.</p>`,
+    a: `<p>No, and assuming it is would be an error. Some firms sell into a defined geography where local visibility decides everything; others — often IT services companies selling a specialised capability — sell nationally, where local optimisation is effort spent in the wrong place. Whether local search is relevant to your model is established during intake and stated explicitly in the Opportunities Report.</p>`,
   },
   {
     q: 'Are we obliged to continue afterwards?',
@@ -42,7 +43,7 @@ ${breadcrumbs(crumbs)}
 ${hero({
   eyebrow: 'Phase 1 · Month 1 · fixed fee',
   title: 'GTM Foundation: two reports and a website, in 30 days',
-  lede: `We identify which of your services carry the most demand against the least competition, build an SEO-optimised website against those opportunities, and project what deploying it is worth in meetings and revenue.`,
+  lede: `For MSPs and IT services companies. We identify which of your services carry the most demand against the least competition, build an SEO-optimised website against those opportunities, and project what deploying it is worth in meetings and revenue.`,
   primary: { href: '/contact/', label: 'Book a strategy call' },
   secondary: { href: '/process/', label: 'See every stage' },
   stats: [
@@ -150,6 +151,26 @@ ${section({
 })}
 
 ${section({
+  tone: 'muted',
+  id: 'samples',
+  inner: `
+  ${sectionHead({
+    eyebrow: 'Samples',
+    title: 'What the reports look like',
+    intro: `Both deliverables below are illustrative samples for a fictional firm. They show the structure, the level of detail and the way conclusions are stated — not results we have produced.`,
+  })}
+  <div class="split">
+    <div>${opportunitiesSample()}</div>
+    <div>${impactSample()}</div>
+  </div>
+  ${callout({
+    title: 'The second deliverable is the one you are reading',
+    body: `<p>The website is harder to show as a sample, because the sample is the medium. This site was built the same way we would build yours: the offers were identified first, the architecture follows the demand, and every page targets one commercial intent with nothing competing against it.</p>
+    <p>Yours would carry your branding and be built against your three opportunities — but the method producing it is the one demonstrated here.</p>`,
+  })}`,
+})}
+
+${section({
   inner: `
   ${sectionHead({
     eyebrow: 'Sequence',
@@ -186,7 +207,7 @@ ${section({
       <h3>Who this is for</h3>
       ${checklist(
         [
-          'MSPs at roughly $2–5M in annual revenue',
+          'MSPs and IT services firms at roughly $2–5M in annual revenue',
           'Growth presently dependent on referral',
           'Technical strengths that have never been marketed',
           'Capacity to service new clients on arrival',
@@ -196,8 +217,8 @@ ${section({
       )}
       ${callout({
         tone: 'warn',
-        title: 'One MSP per metropolitan market',
-        body: `<p>We do not accept two clients competing in the same market. Where yours is already held, we will say so on the first call rather than propose a compromised engagement.</p>`,
+        title: 'What we will tell you on the first call',
+        body: `<p>If the analysis is unlikely to find three opportunities worth building against — because the service list is too narrow, or the demand in your market is too thin — we will say so before you commit, rather than deliver a report that concludes as much.</p>`,
       })}
     </div>
   </div>`,

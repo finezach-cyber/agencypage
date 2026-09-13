@@ -42,7 +42,7 @@ ${breadcrumbs(crumbs)}
 ${hero({
   eyebrow: 'MSP SEO',
   title: 'MSP SEO that targets the terms your buyers actually use',
-  lede: `Search visibility for managed service providers is won locally, on commercial queries, by firms whose pages are not interchangeable with everyone else's. We establish the position first, then build the pages, profile and reputation signals that rank.`,
+  lede: `Search visibility for managed service providers and IT services companies is won on commercial queries, by firms whose pages are not interchangeable with everyone else's. We establish which offers are winnable first, then build the pages and signals that rank.`,
   primary: { href: '/contact/', label: 'Request an SEO assessment' },
   secondary: { href: '/process/#research', label: 'How we map demand' },
   stats: [
@@ -68,7 +68,7 @@ ${section({
   <div class="split">
     <div class="prose">
       <h2>Why SEO for managed service providers is a distinct discipline</h2>
-      <p>Most search guidance is written for ecommerce or software. Neither model reflects how an organisation purchases IT support. An MSP sells a high-consideration, relationship-led service within a defined geography, generally to a buyer who cannot assess the technical substance of what they are acquiring. That changes both what ranks and what converts.</p>
+      <p>Most search guidance is written for ecommerce or software. Neither model reflects how an organisation purchases IT support. An MSP or IT services company sells a high-consideration, relationship-led service, generally to a buyer who cannot assess the technical substance of what they are acquiring. That changes both what ranks and what converts.</p>
 
       <h3>Demand is local rather than national</h3>
       <p>The majority of searches from MSP buyers carry explicit local intent, and Google answers those queries with the map results positioned above the organic listings. Your Google Business Profile, review volume, proximity and citation consistency therefore determine whether you appear at all. For most providers this is the highest-leverage channel available and the one most frequently neglected.</p>

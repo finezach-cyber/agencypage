@@ -316,6 +316,79 @@ export function processDiagram({ compact = false, base = '/process/' } = {}) {
 </div>`
 }
 
+/**
+ * Renders a sample deliverable as a document mock — a styled HTML sheet rather
+ * than a screenshot, so it stays crawlable, responsive and legible at any text
+ * size.
+ *
+ * Every instance is explicitly stamped as a sample. The figures are
+ * illustrative and belong to a fictional firm; nothing here represents a real
+ * client or a real result.
+ */
+export function reportMock({ kicker, company, meta, sections, caption }) {
+  return `<figure class="doc">
+  <div class="doc__sheet">
+    <header class="doc__head">
+      <div>
+        <p class="doc__kicker">${esc(kicker)}</p>
+        <h3 class="doc__title">${esc(company)}</h3>
+        ${meta ? `<p class="doc__meta">${meta}</p>` : ''}
+      </div>
+      <span class="doc__stamp" aria-hidden="true">Sample</span>
+    </header>
+    <div class="doc__body">
+      ${sections
+        .map(
+          (sec) => `<section class="doc__section">
+        <h4 class="doc__h">${esc(sec.title)}</h4>
+        ${sec.body}
+      </section>`,
+        )
+        .join('')}
+    </div>
+  </div>
+  ${caption ? `<figcaption class="doc__cap">${caption}</figcaption>` : ''}
+</figure>`
+}
+
+/** Simple table used inside report mocks. */
+export function docTable({ head, rows, foot }) {
+  return `<div class="table-wrap table-wrap--flush">
+  <table class="data-table data-table--doc">
+    <thead><tr>${head.map((h, i) => `<th scope="col"${i ? ' class="num"' : ''}>${esc(h)}</th>`).join('')}</tr></thead>
+    <tbody>
+      ${rows
+        .map(
+          (r) => `<tr>${r
+            .map((cell, i) =>
+              i === 0
+                ? `<th scope="row">${cell}</th>`
+                : `<td class="num">${cell}</td>`,
+            )
+            .join('')}</tr>`,
+        )
+        .join('')}
+    </tbody>
+    ${foot ? `<tfoot><tr>${foot.map((c, i) => (i === 0 ? `<th scope="row">${c}</th>` : `<td class="num">${c}</td>`)).join('')}</tr></tfoot>` : ''}
+  </table>
+</div>`
+}
+
+/** The conversion chain in the Impact Report, as a readable step list. */
+export function funnelSteps(steps) {
+  return `<ol class="funnel">
+    ${steps
+      .map(
+        (s) => `<li class="funnel__step">
+      <span class="funnel__label">${esc(s.label)}</span>
+      <span class="funnel__value">${esc(s.value)}</span>
+      <span class="funnel__rate">${esc(s.rate)}</span>
+    </li>`,
+      )
+      .join('')}
+  </ol>`
+}
+
 /** Service schema helper for the ranking pages. */
 export function serviceSchema({ name, description, path, serviceType }) {
   return {
@@ -328,7 +401,7 @@ export function serviceSchema({ name, description, path, serviceType }) {
     areaServed: { '@type': 'Country', name: 'United States' },
     audience: {
       '@type': 'BusinessAudience',
-      name: 'Managed service providers doing $2–5M in annual revenue',
+      name: 'Managed service providers and IT services companies doing $2–5M in annual revenue',
     },
   }
 }

@@ -26,7 +26,7 @@ function organizationSchema() {
     },
     image: abs('/assets/og-default.png'),
     description:
-      'Marketing agency for managed service providers. We build the go-to-market foundation — positioning, website, SEO — then run the growth engine that turns it into pipeline.',
+      'Marketing agency for managed service providers and IT services companies. We identify the offers with the most demand and least competition, build an SEO-optimised website against them, and project the revenue impact.',
     email: site.email,
     telephone: site.phone,
     foundingDate: site.founded,
@@ -45,6 +45,8 @@ function organizationSchema() {
       'MSP marketing',
       'MSP lead generation',
       'SEO for managed service providers',
+      'IT services marketing',
+      'IT services lead generation',
       'MSP website design',
       'Managed services go-to-market strategy',
     ],
@@ -205,7 +207,7 @@ function footer() {
           </svg>
           <span class="brand__name">${esc(site.name)}</span>
         </a>
-        <p class="site-footer__pitch">${esc(site.tagline)} Go-to-market strategy, websites, SEO and outbound built for managed service providers doing $2–5M.</p>
+        <p class="site-footer__pitch">${esc(site.tagline)} Opportunity research, websites, SEO and outbound built for MSPs and IT services companies doing $2–5M.</p>
         <p class="site-footer__contact">
           <a href="mailto:${site.email}">${esc(site.email)}</a><br>
           <a href="tel:${site.phone}">${esc(site.phoneDisplay)}</a>

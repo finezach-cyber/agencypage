@@ -22,7 +22,7 @@ const faqBlock = faq([
   },
   {
     q: 'Who performs the work?',
-    a: `<p>We do. There is no subcontracted content operation and no account-management layer forwarding correspondence. It is also why the number of concurrent engagements is capped and why we hold to one client per metropolitan market.</p>`,
+    a: `<p>We do. There is no subcontracted content operation and no account-management layer forwarding correspondence, which is also why the number of concurrent engagements is capped.</p>`,
   },
   {
     q: 'How does the engagement end?',
@@ -36,7 +36,7 @@ ${breadcrumbs([{ label: 'Growth Engine', href: '/growth-engine/' }])}
 ${hero({
   eyebrow: 'Phase 2 · Optional · decided after Month 1',
   title: 'Growth Engine: execution against the plan',
-  lede: `Month 1 identified the opportunities and produced the website. Phase 2 works them — inbound, outbound, reputation, content and the infrastructure that connects all of it to pipeline, run as one system.`,
+  lede: `For MSPs and IT services companies. Month 1 identified the opportunities and produced the website. Phase 2 works them — inbound, outbound, reputation, content and the infrastructure that connects all of it to pipeline, run as one system.`,
   primary: { href: '/contact/', label: 'Book a strategy call' },
   secondary: { href: '/process/', label: 'See the process' },
   stats: [
@@ -62,7 +62,7 @@ ${section({
   <div class="split">
     <div class="prose">
       <h2>Not a content subscription</h2>
-      <p>The standard managed services retainer is a publishing schedule with a reporting deck attached: several articles, some social posts, a newsletter, and a monthly call at which impressions are read aloud. It is straightforward to sell and straightforward to deliver, and it rarely alters the shape of the business.</p>
+      <p>The standard retainer sold to MSPs and IT services firms is a publishing schedule with a reporting deck attached: several articles, some social posts, a newsletter, and a monthly call at which impressions are read aloud. It is straightforward to sell and straightforward to deliver, and it rarely alters the shape of the business.</p>
       <p>This is a different instrument. We work the specific opportunities identified during the <a href="/gtm-foundation/">GTM Foundation</a> across every channel where those buyers can be reached, and hold the whole of it to pipeline rather than activity — measured against the projections set out in the Impact Report.</p>
       <p>It functions as a system because the channels reinforce one another. Reviews improve local ranking, which feeds inbound. Published material gives outbound something credible to reference. Outbound replies indicate which messages land, which improves the pages. The website converts all of it. Operated individually, each produces a channel report; operated together, the trajectory changes.</p>
     </div>

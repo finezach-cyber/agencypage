@@ -38,7 +38,7 @@ ${breadcrumbs(crumbs)}
 ${hero({
   eyebrow: 'MSP marketing strategy',
   title: 'An MSP marketing strategy that begins with what you sell',
-  lede: `Channel selection is the final decision, not the first. We establish which of your services carry genuine demand, which buyers you win disproportionately, and why they should select you — then document the marketing plan that follows.`,
+  lede: `For MSPs and IT services companies. Channel selection is the final decision, not the first. We establish which of your services carry genuine demand, which buyers you win disproportionately, and why they should select you — then document the marketing plan that follows.`,
   primary: { href: '/contact/', label: 'Book a strategy call' },
   secondary: { href: '/process/', label: 'See the process' },
   stats: [
@@ -69,7 +69,7 @@ ${section({
       <p>Strategy is the determination of what will not be pursued. Which buyers are not being addressed, which services are not being led with, which markets are not being served. That is uncomfortable for a firm built on accepting whatever arrived, and it is also the only thing that makes the marketing function — because in a category where every provider lists the same capabilities, the sole available advantage is being demonstrably more suitable for a particular buyer.</p>
 
       <h3>The capability trap</h3>
-      <p>Technically strong providers encounter this almost universally. The firm can deliver managed IT, cybersecurity, cloud migration, compliance, telephony, backup and advisory work, so it presents all of it. The buyer reads a list they are unequipped to evaluate, concludes the firm resembles the previous three they assessed, and asks the only question available to them: the cost per seat.</p>
+      <p>Technically strong MSPs and IT services companies encounter this almost universally. The firm can deliver managed IT, cybersecurity, cloud migration, compliance, telephony, backup and advisory work, so it presents all of it. The buyer reads a list they are unequipped to evaluate, concludes the firm resembles the previous three they assessed, and asks the only question available to them: the cost per seat.</p>
       <p>Presenting everything is how a provider arrives at competing on price. Leading with one thing is how it stops.</p>
 
       <h3>The concentration that already exists</h3>

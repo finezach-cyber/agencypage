@@ -7,7 +7,7 @@
 export const site = {
   name: 'MSP Growth Partners',
   legalName: 'MSP Growth Partners LLC',
-  tagline: 'We help MSPs build the path from $2M to $10M.',
+  tagline: 'We help MSPs and IT services companies build the path from $2M to $10M.',
   domain: 'https://www.mspgrowthpartners.com',
   email: 'hello@mspgrowthpartners.com',
   phone: '+1-555-010-4400',

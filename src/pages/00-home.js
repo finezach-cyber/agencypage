@@ -26,8 +26,8 @@ const faqBlock = faq([
     a: `<p>In this engagement, MSP digital marketing covers the website, organic and local search, review generation and Google Business Profile, email and LinkedIn outbound, content, conversion optimisation and the analytics and CRM configuration that connects all of it to pipeline. It does not include paid advertising as a primary channel, for the reason given above. Every component is documented in the <a href="/msp-marketing-services/">services scope</a>.</p>`,
   },
   {
-    q: 'Which MSPs do you work with?',
-    a: `<p>Managed service providers between roughly $2M and $5M in annual revenue, with the capacity to service new clients when they arrive. We accept one MSP per metropolitan market so that our clients never compete against each other in search results.</p>`,
+    q: 'Do you work with IT services companies as well as MSPs?',
+    a: `<p>Yes. The method applies to any firm selling technical services to businesses — managed service providers, IT services companies, IT support firms, MSSPs and co-managed IT providers. What matters is that you hold a service list wider than your marketing reflects, which is near-universal in this category. We typically work with firms between roughly $2M and $5M in annual revenue that have the capacity to service new clients when they arrive.</p>`,
   },
   {
     q: 'How quickly does this produce pipeline?',
@@ -42,14 +42,14 @@ const faqBlock = faq([
 const body = `
 ${hero({
   eyebrow: 'MSP marketing agency',
-  title: 'The top MSP marketing solution for managed service providers',
-  lede: `We identify which of your services carry the most demand against the least competition, then build an SEO-optimised website against those opportunities. Month 1 delivers two reports and a website ready to deploy. What happens next is your decision.`,
+  title: 'The top MSP marketing solution for MSPs and IT services companies',
+  lede: `For managed service providers and IT services companies. We identify which of your services carry the most demand against the least competition, then build an SEO-optimised website against those opportunities. Month 1 delivers two reports and a website ready to deploy.`,
   primary: { href: '/contact/', label: 'Book a strategy call' },
   secondary: { href: '/process/', label: 'See the process' },
   stats: [
     { label: 'Month 1', value: 'Fixed fee' },
     { label: 'Deliverables', value: '2 reports + site' },
-    { label: 'Coverage', value: 'One MSP per metro' },
+    { label: 'Commitment', value: 'Month 1 only' },
   ],
   aside: `<div class="panel">
     <p class="panel__label">What Month 1 delivers</p>
@@ -68,11 +68,11 @@ ${section({
   ${sectionHead({
     eyebrow: 'The problem',
     title: 'Most MSP marketing fails before the first campaign runs',
-    intro: `Not because the execution is poor. Because the positioning underneath it was never established, and marketing can only amplify the message it is given.`,
+    intro: `Not because the execution is poor. Because the offer underneath it was never established, and marketing can only amplify the message it is given.`,
   })}
   <div class="split">
     <div class="stack">
-      <p>Open five managed service provider websites in any market and you will find the same four services listed in the same order: managed IT, cybersecurity, cloud, IT support. The language is interchangeable. So is the proof. A buyer who cannot evaluate the technical substance of any of it defaults to the two variables they can compare — price and proximity.</p>
+      <p>Open five MSP or IT services websites in any market and you will find the same four services listed in the same order: managed IT, cybersecurity, cloud, IT support. The language is interchangeable. So is the proof. A buyer who cannot evaluate the technical substance of any of it defaults to the two variables they can compare — price and proximity.</p>
       <p>This is a positioning failure, not a copywriting failure. It is what happens when a technically capable firm has never been required to decide which part of the market it is built to serve. Breadth of capability becomes breadth of message, and breadth of message reads as no message at all.</p>
       <p>The consequence is that marketing spend produces activity without producing pipeline. Traffic rises. Enquiries do not. The conclusion drawn is usually that marketing does not work for managed services, when what did not work was promoting an undifferentiated offer to an undefined buyer.</p>
       <p><strong>We do not take generic copy and generic offers to market.</strong> Establishing which offers carry real demand against weak competition is what Month 1 exists to do, and it decides what the website is for.</p>
@@ -138,7 +138,8 @@ ${section({
   )}
   ${callout({
     title: 'Why the projection is stated in revenue',
-    body: `<p>Ranking positions are not a business outcome. The Impact Report carries the projection through to the figure you would use to assess any other investment, using benchmarks that are cited rather than asserted — so you can check them.</p>`,
+    body: `<p>Ranking positions are not a business outcome. The Impact Report carries the projection through to the figure you would use to assess any other investment, using benchmarks that are cited rather than asserted — so you can check them.</p>
+    <p><a href="/gtm-foundation/#samples">See sample versions of both reports &rarr;</a></p>`,
   })}`,
 })}
 
@@ -209,9 +210,9 @@ ${section({
     <div>
       ${sectionHead({
         eyebrow: 'Specialisation',
-        title: 'We work exclusively with managed service providers',
+        title: 'We work exclusively with MSPs and IT services companies',
       })}
-      <p>Working in one category compounds. Each engagement adds to a body of evidence the next one begins with: which services carry genuine demand, which verticals convert, which offers hold up under scrutiny, which site structures produce enquiries, and which outbound messages earn replies.</p>
+      <p>Managed service providers, IT services companies, IT support firms, MSSPs and co-managed IT providers. Working in one category compounds: each engagement adds to a body of evidence the next one begins with — which services carry genuine demand, which verticals convert, which offers hold up under scrutiny, which site structures produce enquiries, and which outbound messages earn replies.</p>
       <p>It also means the work does not require translation. We understand what co-managed IT involves, why a vCISO offer prices differently from break-fix, and why claiming to be proactive rather than reactive has not differentiated a provider for over a decade.</p>
       ${keywordTable({
         rows: coreCluster,
@@ -223,7 +224,7 @@ ${section({
       <h3>This engagement fits</h3>
       ${checklist(
         [
-          'MSPs at roughly $2–5M in annual revenue',
+          'MSPs and IT services firms at roughly $2–5M in annual revenue',
           'Growth currently dependent on referral',
           'Technical strengths that have never been marketed',
           'Capacity to service new clients on arrival',
@@ -254,7 +255,7 @@ export default {
   path: '/',
   title: 'MSP Marketing Agency | The Top MSP Marketing Solution',
   description:
-    'An MSP marketing agency that finds your highest-demand offers first. Month 1 delivers two reports and an SEO-optimised website, ready for you to deploy.',
+    'MSP marketing for MSPs and IT services firms. Month 1 finds your highest-demand offers and delivers two reports plus an SEO-optimised website to deploy.',
   priority: 1.0,
   changefreq: 'weekly',
   schema: [faqBlock.schema],

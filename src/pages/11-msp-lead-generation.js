@@ -50,7 +50,7 @@ ${breadcrumbs(crumbs)}
 ${hero({
   eyebrow: 'MSP lead generation',
   title: 'MSP lead generation built on a defined position',
-  lede: `Inbound and outbound directed at one ideal customer profile, carrying one message. We construct the target list, derive the messaging from your positioning, and run the sequences — measured on booked meetings.`,
+  lede: `For MSPs and IT services companies. Inbound and outbound directed at one ideal customer profile, carrying one message. We construct the target list, derive the messaging from your validated offers, and run the sequences — measured on booked meetings.`,
   primary: { href: '/contact/', label: 'Book a strategy call' },
   secondary: { href: '/process/', label: 'See the process' },
   stats: [

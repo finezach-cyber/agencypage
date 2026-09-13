@@ -35,7 +35,7 @@ ${breadcrumbs(crumbs)}
 ${hero({
   eyebrow: 'Guide',
   title: 'MSP pricing models, and what each one does to your marketing',
-  lede: `Per-user, per-device, tiered, à la carte and value-based. The commercial mechanics of each, which buyers each attracts, and why declining to address price anywhere on your website costs deals you never hear about.`,
+  lede: `For MSPs and IT services companies: per-user, per-device, tiered, à la carte and value-based. The commercial mechanics of each, which buyers each attracts, and why declining to address price anywhere on your website costs deals you never hear about.`,
   primary: { href: '/contact/', label: 'Book a strategy call' },
   secondary: { href: '/msp-marketing-strategy/', label: 'Packaging and positioning' },
 })}
@@ -45,7 +45,7 @@ ${section({
   <div class="split">
     <div class="prose">
       <h2>Pricing is a positioning decision</h2>
-      <p>Providers tend to treat pricing as a finance exercise: establish the cost to serve, apply a margin, check it against the local competition. But the model selected performs more marketing work than most marketing does. It determines which buyers select themselves in, which objections occupy the sales cycle, and whether the offer is directly comparable to the provider three miles away or deliberately not.</p>
+      <p>MSPs and IT services firms tend to treat pricing as a finance exercise: establish the cost to serve, apply a margin, check it against the local competition. But the model selected performs more marketing work than most marketing does. It determines which buyers select themselves in, which objections occupy the sales cycle, and whether the offer is directly comparable to the provider three miles away or deliberately not.</p>
       <p>This is why packaging and pricing are settled during <a href="/process/#positioning">Month 1</a> rather than handled separately. A precise position accompanied by an opaque price structure still loses.</p>
     </div>
     <div>

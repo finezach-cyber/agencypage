@@ -5,7 +5,7 @@ ${breadcrumbs([{ label: 'About', href: '/about/' }])}
 
 ${hero({
   eyebrow: 'About us',
-  title: 'We only work with managed service providers',
+  title: 'We only work with MSPs and IT services companies',
   lede: `Specialisation is not a line borrowed from our own advice. It is the mechanism by which the work compounds: every engagement produces evidence the next one begins with.`,
   primary: { href: '/contact/', label: 'Book a strategy call' },
   secondary: { href: '/process/', label: 'See the process' },
@@ -15,9 +15,9 @@ ${section({
   inner: `
   <div class="split">
     <div class="prose">
-      <h2>Why we narrowed to managed services</h2>
+      <h2>Why we narrowed to this category</h2>
       <p>A generalist agency begins every engagement from zero: a new sector, a new buyer, an unfamiliar vocabulary and a new competitive set, with a learning curve the client funds. We operated that way long enough to observe that the accumulated pattern was worth more than the hours.</p>
-      <p>Managed services proved an unusually suitable category to specialise in, for a reason worth stating plainly: providers in this market are, with few exceptions, technically excellent and commercially generic. They resolve problems their buyers are unequipped to evaluate, and they describe that capability in the same four bullet points as every competitor.</p>
+      <p>Managed services and IT services proved an unusually suitable category to specialise in, for a reason worth stating plainly: firms in this market are, with few exceptions, technically excellent and commercially generic. They resolve problems their buyers are unequipped to evaluate, and they describe that capability in the same four bullet points as every competitor.</p>
       <p>The distance between genuine capability and its expression is the most correctable problem in marketing, and the one where a focused firm holds the greatest advantage over a generalist — because the remedy is never to publish more. It is to determine what the firm is.</p>
 
       <h2>What the specialisation produces</h2>
@@ -26,7 +26,6 @@ ${section({
 
       <h2>How we work</h2>
       <p>Foundation first, without exception. We do not sell an execution retainer to a provider with no established position, because amplifying a generic message is the most dependable way to expend a marketing budget and then conclude that marketing does not work in this category.</p>
-      <p>One client per metropolitan market. Ranking two clients for the same local term means one of them has paid us to lose.</p>
       <p>And we perform the work ourselves. There is no account-management layer between you and the people executing it, which is also why the number of concurrent engagements is capped.</p>
     </div>
     <div>
@@ -39,7 +38,7 @@ ${section({
       ${callout({
         tone: 'success',
         title: 'How we say no',
-        body: `<p>We decline providers whose metropolitan market is already held, who require enquiries before they have capacity to service them, and who intend to remain generalists. It is a brief conversation and a candid one.</p>`,
+        body: `<p>We decline firms that require enquiries before they have the capacity to service them, and firms unwilling to lead with a defined offer. It is a brief conversation and a candid one.</p>`,
       })}
     </div>
   </div>`,
@@ -87,12 +86,11 @@ ${section({
       ${sectionHead({ eyebrow: 'Fit', title: 'Who we work with' })}
       ${checklist(
         [
-          'Managed service providers at roughly $2–5M in annual revenue',
+          'MSPs, IT services companies and IT support firms at roughly $2–5M',
           'Growth presently dependent on referral',
           'Technical strengths that have never been marketed',
           'Capacity to onboard new clients on arrival',
-          'A principal willing to lead with a defined segment',
-          'A metropolitan market we do not already serve',
+          'A principal willing to lead with a defined offer',
         ],
         { columns: 1 },
       )}
@@ -129,7 +127,7 @@ export default {
   path: '/about/',
   title: 'About | A Marketing Firm for MSPs Exclusively',
   description:
-    'A marketing firm working exclusively with managed service providers at $2–5M. How we work, what we decline to do, and the engagements we are a fit for.',
+    'A marketing firm working exclusively with MSPs and IT services companies at $2–5M. How we work, what we decline to do, and who we are a fit for.',
   breadcrumbs: [{ label: 'About', href: '/about/' }],
   priority: 0.6,
   schemaType: 'AboutPage',

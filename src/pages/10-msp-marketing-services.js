@@ -12,7 +12,7 @@ ${breadcrumbs(crumbs)}
 ${hero({
   eyebrow: 'MSP marketing services',
   title: 'MSP marketing services, delivered in a defined sequence',
-  lede: `Everything below is delivered within one of two engagements: Month 1 establishes the position and builds the assets; Phase 2 executes the plan. We do not sell these disciplines in isolation, because in isolation they amplify a message that has not been established.`,
+  lede: `For managed service providers and IT services companies. Everything below is delivered within one of two engagements: Month 1 identifies the opportunities and builds the assets; Phase 2 executes against them. We do not sell these disciplines in isolation, because in isolation they amplify a message that has not been established.`,
   primary: { href: '/contact/', label: 'Book a strategy call' },
   secondary: { href: '/process/', label: 'See the process' },
 })}
@@ -107,7 +107,6 @@ ${section({
           'Month 1 is fixed-fee and quoted before work begins',
           'Phase 2 is a separate decision, made after delivery',
           'You own both reports and the website outright',
-          'One MSP per metropolitan market',
           'No account-management layer between you and the work',
           'Reporting against booked meetings and revenue by source',
         ],
@@ -140,7 +139,7 @@ export default {
   path: '/msp-marketing-services/',
   title: 'MSP Marketing Services for Managed Service Providers',
   description:
-    'MSP marketing services in two engagements: opportunity research and an SEO-optimised website in Month 1, then lead generation, SEO and content execution.',
+    'MSP marketing services for MSPs and IT services companies: opportunity research and an SEO-optimised website in Month 1, then lead generation and SEO.',
   breadcrumbs: crumbs,
   priority: 0.8,
   schema: [

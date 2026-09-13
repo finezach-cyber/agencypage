@@ -7,8 +7,8 @@ const faqBlock = faq([
     a: `<p>Thirty minutes. We ask about your services, your strongest clients, where margin originates, your service area and what has been attempted previously. You receive a candid assessment of where your position most likely lies and whether the engagement is a fit. There is no presentation, and no second call is scheduled before you have asked for one.</p>`,
   },
   {
-    q: 'Are you accepting clients in my area?',
-    a: `<p>We work with one MSP per metropolitan market. Where yours is already held we will say so on the first call rather than propose a compromised engagement.</p>`,
+    q: 'How soon can Month 1 start?',
+    a: `<p>Typically within two weeks of the first call, subject to current capacity. Month 1 runs four weeks from kickoff, so a firm starting at the beginning of a month generally holds both reports and the website before the month closes.</p>`,
   },
   {
     q: 'What if we are not ready to begin?',
@@ -56,7 +56,7 @@ const formHtml = formConfigured
         <div class="field">
           <label for="market">Primary service area</label>
           <input type="text" id="market" name="market" placeholder="e.g. Austin metro">
-          <span class="field__hint">We work with one MSP per metro.</span>
+          <span class="field__hint">Where your clients are, and whether you sell locally or nationally.</span>
         </div>
         <div class="field field--full">
           <label for="message">What are you trying to fix? <span aria-hidden="true">*</span></label>
@@ -104,7 +104,7 @@ ${section({
           <li>Concentrations in your client base you may not have registered</li>
           <li>What buyers in your service area are searching for</li>
           <li>Where competitors currently hold position</li>
-          <li>Whether your metropolitan market is available</li>
+          <li>Whether local search is relevant to how you sell</li>
         </ul>`,
       })}
       <h2>Other ways to reach us</h2>
@@ -116,9 +116,9 @@ ${section({
       <h2>Before you get in touch</h2>
       ${checklist(
         [
-          'We work with MSPs at roughly $2–5M in annual revenue',
-          'We accept one client per metropolitan market',
+          'We work with MSPs and IT services firms at roughly $2–5M in annual revenue',
           'We begin with the foundation, not an execution retainer',
+          'Month 1 is fixed-fee and quoted before any work starts',
           'If the engagement is not a fit we will say so on the first call',
         ],
         { columns: 1 },

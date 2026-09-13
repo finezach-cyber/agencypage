@@ -2,6 +2,7 @@ import {
   hero, section, sectionHead, faq, cta, callout, checklist,
   breadcrumbs, relatedLinks, processDiagram, cards,
 } from '../components.js'
+import { opportunitiesSample, impactSample } from '../data/sample-reports.js'
 
 const crumbs = [{ label: 'Process', href: '/process/' }]
 
@@ -65,7 +66,7 @@ ${breadcrumbs(crumbs)}
 ${hero({
   eyebrow: 'The process',
   title: 'How the engagement works, stage by stage',
-  lede: `Month 1 identifies the offers with the most demand and the least competition, builds an SEO-optimised website against them, and projects what that is worth. You receive two reports and the website. What happens after that is your decision.`,
+  lede: `For MSPs and IT services companies. Month 1 identifies the offers with the most demand and the least competition, builds an SEO-optimised website against them, and projects what that is worth. You receive two reports and the website.`,
   primary: { href: '/contact/', label: 'Book a strategy call' },
   secondary: { href: '/gtm-foundation/', label: 'Phase 1 in detail' },
 })}
@@ -105,7 +106,7 @@ ${section({
       'Surface vertical concentration that accumulated unintentionally',
       'Determine whether local search is relevant to your model, or not',
     ],
-    deliverable: `A defined input set for the analysis: the services worth taking to market, the segments worth defending, and a clear answer on whether local search applies to your firm. Not every MSP is a local-search business, and treating one as though it were wastes the budget.`,
+    deliverable: `A defined input set for the analysis: the services worth taking to market, the segments worth defending, and a clear answer on whether local search applies to your firm. Not every MSP or IT services company is a local-search business, and treating one as though it were wastes the budget.`,
   })}
 
   ${stage({
@@ -127,6 +128,11 @@ ${section({
     ],
     deliverable: `<strong>Deliverable 1 — the Opportunities Report.</strong> Your three strongest offers, each with the size of the opportunity described in plain terms, the keywords that reach it, the competition you would rank against, and a validated price point. Written to be read by your leadership team, not decoded by them.`,
   })}
+
+  <div class="sample-inline">
+    <h4 class="sample-inline__head">A sample Opportunities Report</h4>
+    ${opportunitiesSample()}
+  </div>
 
   ${stage({
     id: 'website',
@@ -166,6 +172,11 @@ ${section({
     ],
     deliverable: `<strong>Deliverable 3 — the GTM Foundations Impact Report.</strong> Current rankings, projected rankings after deployment, and the ceiling available once best practice is applied — each converted through cited industry benchmarks into meetings and revenue, so the investment can be assessed on expected return rather than on traffic.`,
   })}
+
+  <div class="sample-inline">
+    <h4 class="sample-inline__head">A sample GTM Foundations Impact Report</h4>
+    ${impactSample()}
+  </div>
 
   ${callout({
     tone: 'success',
