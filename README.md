@@ -105,34 +105,50 @@ rankings:
 
 ## Keyword strategy
 
-The site targets **2,890 searches/month** — the entire MSP-marketing buying
-market. One page per cluster, no two pages competing for the same query.
+The site targets **2,090 searches/month** — the complete set of terms an MSP
+owner types once they have decided to engage marketing help. One page per
+cluster, no two pages competing for the same query.
 
 | Page | Primary keywords | Vol/mo |
 |---|---|---|
-| `/` | msp marketing (720), msp marketing agency (210), msp marketing company (140), msp marketing services (110), msp digital marketing (90), msp marketing firm (40), msp marketing consultant (30) | **1,340** |
-| `/msp-seo/` | msp seo (140), seo for it companies (140), msp seo agency (110), msp seo services (90), it services seo (90), local seo for msp (20), msp local seo (10) | **600** |
-| `/msp-website-design/` | msp website (320), msp website design (110), it company website design (50), it services website design (10) | **490** |
-| `/msp-lead-generation/` | msp lead generation (170), msp leads (70), msp lead generation services (70), lead generation for msp (70), msp sales leads (40), managed services lead generation (20), it services lead generation (20) | **460** |
+| `/` | msp marketing (720), msp marketing agency (210), msp marketing company (140), msp digital marketing (90) | **1,160** |
+| `/msp-lead-generation/` | msp lead generation (170), msp leads (70), msp lead generation services (70), lead generation for msp (70), it services lead generation (20) | **400** |
 | `/msp-marketing-strategy/` | msp marketing strategy (140), msp marketing plan (110) | **250** |
-| `/resources/msp-pricing-models/` | msp pricing models (30) | **30** |
+| `/msp-seo/` | msp seo (140), plus seo for msp / seo for msps / seo for managed service providers | **140** |
+| `/msp-marketing-services/` | msp marketing services (110) | **110** |
+| `/msp-pricing-models/` | msp pricing models (30) | **30** |
 
-Supporting pages: `/services/` and `/resources/` (hubs), `/gtm-foundation/` and
-`/growth-engine/` (the two offers), `/resources/msp-keyword-research/` (the
-linkable research asset), `/about/`, `/contact/`, `/privacy/`, `404.html`.
+Supporting pages that carry the sale rather than a keyword: `/process/` (the
+full engagement, stage by stage), `/gtm-foundation/` (Phase 1), `/growth-engine/`
+(Phase 2), `/about/`, `/contact/`, `/privacy/`, `404.html`. **13 pages.**
 
-### What the site deliberately does *not* target
+The dataset lives in `src/data/keywords.js`. Before adding a page, check that its
+target term is not already covered above — the whole argument of this site is
+focus, and a second page chasing the same query weakens the first.
 
-There are no pages for `it support near me`, `managed it services provider`,
-`healthcare it services` and the rest of the 40,970/mo buyer-demand list. Those
-are what a business searches when it wants to **hire an MSP** — they would bring
-traffic from people looking for a provider, not for marketing help.
+### What the site deliberately does not target
 
-That data instead lives on `/resources/msp-keyword-research/` as evidence of
-what we build *for* clients. Keeping the two keyword markets separate is the
-core strategic decision in the whole site; see `src/data/keywords.js`.
+`clientDemandExample` in the keyword data holds terms like `it support near me`
+and `managed it services provider`. That is what a business searches when it
+wants to **hire an MSP** — our clients' demand, not ours. It appears once, inside
+`/process/#research`, to illustrate the market-research stage. No page is built
+against it: those searchers want a provider, not a marketing firm.
 
----
+## The process diagram
+
+`processDiagram()` in `src/components.js` renders the engagement flow: five
+Month 1 stages, a decision fork, and the Phase 2 execution band. It appears on
+`/`, `/msp-marketing-services/` and `/gtm-foundation/` in compact form, and in
+full at the top of `/process/`.
+
+Every node is an anchor pointing at a section on `/process/` (`#capabilities`,
+`#research`, `#positioning`, `#website`, `#campaign-plan`, `#decision`,
+`#execution`). It is semantic HTML rather than SVG, so it keeps focus rings, tap
+targets and text scaling, and stacks to a single column on mobile.
+
+**If you add or rename a stage**, update both the node list in `processDiagram()`
+and the matching `stage({ id })` call in `src/pages/15-process.js`. `check.js`
+does not currently validate fragment targets, so a mismatch would be silent.
 
 ## Content integrity
 

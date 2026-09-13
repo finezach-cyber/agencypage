@@ -4,15 +4,15 @@ import { site } from '../site.js'
 const faqBlock = faq([
   {
     q: 'What happens on the first call?',
-    a: `<p>Thirty minutes. We ask about your services, your best clients, where your margin comes from, your service area and what you have tried before. You get an honest read on where your wedge probably is and whether we are a fit. There is no deck and no second call scheduled before you have decided you want one.</p>`,
+    a: `<p>Thirty minutes. We ask about your services, your strongest clients, where margin originates, your service area and what has been attempted previously. You receive a candid assessment of where your position most likely lies and whether the engagement is a fit. There is no presentation, and no second call is scheduled before you have asked for one.</p>`,
   },
   {
-    q: 'Are you taking clients in my area?',
-    a: `<p>We work with one MSP per metro. If yours is taken we will tell you on that first call rather than sell you something compromised.</p>`,
+    q: 'Are you accepting clients in my area?',
+    a: `<p>We work with one MSP per metropolitan market. Where yours is already held we will say so on the first call rather than propose a compromised engagement.</p>`,
   },
   {
-    q: 'What if we are not ready to start?',
-    a: `<p>That is common and fine. Plenty of MSPs talk to us a quarter or two before they do anything. The call is useful on its own — at minimum you leave with a clearer view of the demand in your market.</p>`,
+    q: 'What if we are not ready to begin?',
+    a: `<p>That is common. Providers frequently speak to us a quarter or two before engaging. The call has standalone value: at minimum you leave with a clearer view of the demand in your market.</p>`,
   },
 ])
 
@@ -86,9 +86,9 @@ ${section({
   <div class="split split--sticky">
     <div>
       ${sectionHead({
-        eyebrow: 'Book a GTM call',
-        title: 'Find out what your MSP should actually be selling',
-        intro: `Thirty minutes. We look at your services, your market and your competitors, and tell you where the demand is. No deck, no pitch sequence, no second call unless you want one.`,
+        eyebrow: 'Book a strategy call',
+        title: 'Establish what your MSP should be selling',
+        intro: `Thirty minutes. We review your services, your market and your competitors, and tell you where the demand sits. No presentation, no sequence, and no second call unless you ask for one.`,
         level: 1,
       })}
       ${formHtml}
@@ -100,11 +100,11 @@ ${section({
       ${callout({
         title: 'On that call we will cover',
         body: `<ul class="tick-list">
-          <li>What you are genuinely good at, and where your margin comes from</li>
-          <li>Concentrations in your client base you may not have noticed</li>
+          <li>What your firm is genuinely strong at, and where margin originates</li>
+          <li>Concentrations in your client base you may not have registered</li>
           <li>What buyers in your service area are searching for</li>
-          <li>Where your competitors are already winning</li>
-          <li>Whether your metro is available</li>
+          <li>Where competitors currently hold position</li>
+          <li>Whether your metropolitan market is available</li>
         </ul>`,
       })}
       <h2>Other ways to reach us</h2>
@@ -116,10 +116,10 @@ ${section({
       <h2>Before you get in touch</h2>
       ${checklist(
         [
-          'We work with MSPs doing roughly $2–5M',
-          'We take one client per metro',
-          'We start with the foundation, not a lead-gen retainer',
-          'If it is not a fit we will say so on the first call',
+          'We work with MSPs at roughly $2–5M in annual revenue',
+          'We accept one client per metropolitan market',
+          'We begin with the foundation, not an execution retainer',
+          'If the engagement is not a fit we will say so on the first call',
         ],
         { columns: 1 },
       )}
@@ -132,9 +132,9 @@ ${section({ tone: 'muted', inner: faqBlock.html })}
 
 export default {
   path: '/contact/',
-  title: 'Contact | Book a GTM Call for Your MSP',
+  title: 'Contact | Book a Strategy Call for Your MSP',
   description:
-    'Book a 30-minute GTM call. We look at your services, market and competitors and tell you where the demand is — and whether your metro is available.',
+    'Book a 30-minute strategy call. We review your services, market and competitors, and tell you where the demand sits and whether your market is available.',
   breadcrumbs: [{ label: 'Contact', href: '/contact/' }],
   priority: 0.7,
   schemaType: 'ContactPage',

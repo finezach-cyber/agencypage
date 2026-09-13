@@ -168,7 +168,7 @@ function header(currentPath) {
     </nav>
     <div class="site-header__actions">
       <a class="link-quiet" href="tel:${site.phone}">${esc(site.phoneDisplay)}</a>
-      <a class="btn btn--primary btn--sm" href="${site.bookingUrl}">Book a GTM call</a>
+      <a class="btn btn--primary btn--sm" href="${site.bookingUrl}">Book a strategy call</a>
     </div>
     <button class="hamburger" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu" data-menu-toggle>
       <span></span><span></span><span></span>
@@ -187,7 +187,7 @@ function header(currentPath) {
         .join('')}
       <li><a class="mobile-nav__title-link" href="/contact/">Contact</a></li>
     </ul>
-    <a class="btn btn--primary btn--block" href="${site.bookingUrl}">Book a GTM call</a>
+    <a class="btn btn--primary btn--block" href="${site.bookingUrl}">Book a strategy call</a>
   </div>
 </header>`
 }

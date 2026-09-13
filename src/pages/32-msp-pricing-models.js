@@ -1,33 +1,31 @@
 import {
   hero, section, sectionHead, cards, faq, cta, callout,
-  checklist, breadcrumbs, relatedLinks, keywordTable, quote,
+  checklist, breadcrumbs, relatedLinks, keywordTable,
 } from '../components.js'
+import { pricingCluster } from '../data/keywords.js'
 
-const crumbs = [
-  { label: 'Resources', href: '/resources/' },
-  { label: 'MSP Pricing Models', href: '/resources/msp-pricing-models/' },
-]
+const crumbs = [{ label: 'MSP Pricing Models', href: '/msp-pricing-models/' }]
 
 const faqBlock = faq([
   {
-    q: 'Should we publish our prices on the website?',
-    a: `<p>You do not have to publish a rate card, but you should explain how pricing works. Buyers comparing three providers will choose the one that made the process feel predictable. Silence on price does not create mystique — it creates the suspicion that the answer depends on how much you think they can pay.</p>`,
+    q: 'Should we publish prices on the website?',
+    a: `<p>A rate card is not required, but an explanation of how pricing works is. A buyer comparing three providers will favour the one that made the process feel predictable. Silence on price does not create latitude; it creates the suspicion that the figure depends on what the buyer appears able to pay.</p>`,
   },
   {
     q: 'What is the most common MSP pricing model?',
-    a: `<p>Per-user is the most common for standard managed services, because headcount is easier for a buyer to forecast than device count and it stops penalising the employee with a laptop, a phone and a tablet. Per-device persists in device-heavy environments like manufacturing and clinics, and tiered packaging usually sits on top of whichever unit is chosen.</p>`,
+    a: `<p>Per-user is the most common for standard managed services, because headcount is easier for a buyer to forecast than device count and it does not penalise the employee carrying a laptop, a phone and a tablet. Per-device persists in device-dense environments such as manufacturing and clinical settings, and tiered packaging generally sits above whichever unit is selected.</p>`,
   },
   {
     q: 'How does pricing affect marketing?',
-    a: `<p>More than most MSPs expect. Your pricing model determines which buyers you attract, which deals you lose and on what grounds, and how much of your sales cycle is spent explaining yourself. A confusing model forces a discovery call before anyone can evaluate you — which filters out serious buyers who were simply comparing options on a Tuesday afternoon.</p>`,
+    a: `<p>More than most providers anticipate. The model determines which buyers you attract, on what grounds deals are lost, and how much of the sales cycle is spent explaining the structure. A model requiring a discovery call before it can be understood filters out serious buyers conducting a comparison on a Tuesday afternoon.</p>`,
   },
   {
     q: 'Should we compete on price?',
-    a: `<p>Only if you have a genuine structural cost advantage, which almost no $2–5M MSP does. Otherwise price competition is a race you win by becoming the provider that cannot afford to answer the phone. The alternative is positioning — being obviously more right for a specific buyer, which is what the <a href="/gtm-foundation/">GTM Foundation</a> is for.</p>`,
+    a: `<p>Only with a genuine structural cost advantage, which few providers at this size possess. Absent that, price competition is won by becoming the firm that can no longer afford to answer the phone. The alternative is positioning — being demonstrably more suitable for a defined buyer, which is what <a href="/process/#positioning">stage 03</a> establishes.</p>`,
   },
   {
     q: 'How do we raise prices on existing clients?',
-    a: `<p>Not a marketing question, but the answer is adjacent to one: it is far easier when your positioning has changed and the service has visibly changed with it. An annual adjustment tied to a genuine expansion of scope reads as a new agreement. An adjustment with no story attached reads as an increase, and that is the conversation nobody enjoys.</p>`,
+    a: `<p>Not strictly a marketing question, though the answer is adjacent to one: it is considerably easier when the position has changed and the service has visibly changed with it. An adjustment accompanied by a genuine expansion of scope reads as a new agreement. An adjustment with no accompanying change reads as an increase.</p>`,
   },
 ])
 
@@ -37,8 +35,8 @@ ${breadcrumbs(crumbs)}
 ${hero({
   eyebrow: 'Guide',
   title: 'MSP pricing models, and what each one does to your marketing',
-  lede: `Per-user, per-device, tiered, à la carte, value-based. The commercial mechanics of each — and why refusing to discuss price anywhere on your website quietly costs you deals you never hear about.`,
-  primary: { href: '/contact/', label: 'Book a GTM call' },
+  lede: `Per-user, per-device, tiered, à la carte and value-based. The commercial mechanics of each, which buyers each attracts, and why declining to address price anywhere on your website costs deals you never hear about.`,
+  primary: { href: '/contact/', label: 'Book a strategy call' },
   secondary: { href: '/msp-marketing-strategy/', label: 'Packaging and positioning' },
 })}
 
@@ -47,15 +45,14 @@ ${section({
   <div class="split">
     <div class="prose">
       <h2>Pricing is a positioning decision</h2>
-      <p>MSPs tend to treat pricing as a finance question — cover the cost, add a margin, check what the competition charges. But the model you choose does more marketing work than most of your marketing does. It decides which buyers self-select in, which objections you spend your sales cycle answering, and whether your offer is comparable to the provider down the road or deliberately not.</p>
-      <p>That is why packaging and pricing are part of go-to-market work here rather than something handled separately. A sharp position with a confusing price list still loses.</p>
-      ${quote({ text: `Your pricing model is the first thing a buyer can actually compare. Make sure it compares in your favour.` })}
+      <p>Providers tend to treat pricing as a finance exercise: establish the cost to serve, apply a margin, check it against the local competition. But the model selected performs more marketing work than most marketing does. It determines which buyers select themselves in, which objections occupy the sales cycle, and whether the offer is directly comparable to the provider three miles away or deliberately not.</p>
+      <p>This is why packaging and pricing are settled during <a href="/process/#positioning">Month 1</a> rather than handled separately. A precise position accompanied by an opaque price structure still loses.</p>
     </div>
     <div>
       ${callout({
-        title: 'The 30-searches-a-month page',
-        body: `<p><em>msp pricing models</em> gets about 30 searches a month at a $63.40 cost per click — MSP owners researching how to structure their own offer.</p>
-        <p>Your buyers do not search this. They search "how much does managed IT cost" and variations. Both pages are worth having; they are for completely different people. <a href="/resources/msp-keyword-research/">Why that distinction matters &rarr;</a></p>`,
+        title: 'Two different audiences',
+        body: `<p><em>msp pricing models</em> returns approximately 30 searches a month at $63.40 per click — MSP owners researching how to structure their own offer.</p>
+        <p>Your buyers do not search this term. They search for the cost of managed IT support and its variants. Both pages are worth publishing; they address entirely different readers, and conflating them is a common and costly error.</p>`,
       })}
     </div>
   </div>`,
@@ -64,69 +61,66 @@ ${section({
 ${section({
   tone: 'muted',
   inner: `
-  ${sectionHead({
-    eyebrow: 'The models',
-    title: 'Five ways MSPs price, and how each behaves',
-  })}
+  ${sectionHead({ eyebrow: 'The models', title: 'Five structures, and how each behaves commercially' })}
   ${cards([
     {
       kicker: 'Most common',
       title: 'Per user',
-      body: `A flat monthly rate per employee, covering their devices. Easy for a buyer to forecast against headcount, and it stops punishing the person with a laptop, a phone and a tablet.`,
+      body: `A fixed monthly rate per employee covering their devices. Straightforward for a buyer to forecast against headcount, and it does not penalise multi-device users.`,
       list: [
-        'Strong: predictable, scales with the client, simple to quote',
-        'Weak: unprofitable in device-heavy or shift-work environments',
-        'Attracts: buyers who want a budget line they can defend internally',
+        'Strengths: predictable, scales with the client, simple to quote',
+        'Weaknesses: unprofitable in device-dense or shift-based environments',
+        'Attracts: buyers requiring a budget line they can defend internally',
       ],
     },
     {
       kicker: 'Traditional',
       title: 'Per device',
-      body: `Priced per endpoint, server and network device. Closest to your actual cost to serve, which is why it survives in device-heavy verticals.`,
+      body: `Priced per endpoint, server and network device. The closest approximation to actual cost to serve, which is why it persists in device-dense sectors.`,
       list: [
-        'Strong: tracks cost honestly, fair in mixed environments',
-        'Weak: penalises modern multi-device users, harder to forecast',
-        'Attracts: manufacturing, clinics, anywhere devices outnumber people',
+        'Strengths: tracks cost honestly, equitable in mixed estates',
+        'Weaknesses: penalises modern multi-device users, harder to forecast',
+        'Attracts: manufacturing, clinical settings, device-heavy operations',
       ],
     },
     {
       kicker: 'Packaging',
       title: 'Tiered',
-      body: `Good / better / best on top of a per-user or per-device unit. The packaging layer most MSPs should have and many do not.`,
+      body: `Three levels applied above a per-user or per-device unit. The packaging layer most providers should operate and many do not.`,
       list: [
-        'Strong: creates an upgrade path and anchors the middle tier',
-        'Weak: meaningless if the tiers differ only in response-time promises',
-        'Attracts: buyers who want to feel they chose rather than were quoted',
+        'Strengths: establishes an upgrade path and anchors the middle tier',
+        'Weaknesses: meaningless where tiers differ only in response-time commitments',
+        'Attracts: buyers who prefer to select rather than be quoted',
       ],
     },
     {
       kicker: 'Flexible',
       title: 'À la carte',
-      body: `A base agreement plus separately priced services — backup, security stack, compliance, projects, vCIO.`,
+      body: `A base agreement with separately priced services: backup, security stack, compliance, projects, advisory.`,
       list: [
-        'Strong: lets a price-sensitive buyer start somewhere',
-        'Weak: complicated quotes, scope disputes, uneven margin',
-        'Attracts: buyers optimising line items, which is rarely who you want',
+        'Strengths: allows a price-sensitive buyer to begin somewhere',
+        'Weaknesses: complex quotes, scope disputes, inconsistent margin',
+        'Attracts: buyers optimising line items, rarely the clients you want',
       ],
     },
     {
       kicker: 'Advanced',
       title: 'Value-based',
-      body: `Priced against the outcome — uptime guarantees, compliance posture, risk transfer — rather than against units consumed.`,
+      body: `Priced against outcomes — availability commitments, compliance posture, risk transfer — rather than units consumed.`,
       list: [
-        'Strong: escapes per-seat comparison entirely, best margin available',
-        'Weak: requires genuine specialisation and proof to defend',
-        'Attracts: regulated and risk-aware buyers who are not shopping on price',
+        'Strengths: escapes per-seat comparison, strongest available margin',
+        'Weaknesses: requires genuine specialisation and evidence to defend',
+        'Attracts: regulated and risk-aware buyers not shopping on price',
       ],
     },
     {
-      kicker: 'Everywhere',
+      kicker: 'Alongside',
       title: 'Project and co-managed work',
-      body: `Sits alongside whichever model you choose. Co-managed is increasingly where the growth is for MSPs serving larger clients with an internal IT person.`,
+      body: `Operates above whichever model is selected. Co-managed is increasingly where growth sits for providers serving larger organisations with internal IT staff.`,
       list: [
-        'Strong: opens accounts too big to fully outsource',
-        'Weak: scope boundaries must be explicit or margin disappears',
-        'Attracts: 100+ seat organisations with one overloaded IT manager',
+        'Strengths: opens accounts too large to outsource entirely',
+        'Weaknesses: scope boundaries must be explicit or margin erodes',
+        'Attracts: 100+ seat organisations with one overextended IT manager',
       ],
     },
   ])}`,
@@ -136,20 +130,20 @@ ${section({
   inner: `
   <div class="split">
     <div class="prose">
-      <h2>What to put on the website</h2>
-      <p>The reflex is to say nothing and route everything to a discovery call. It is understandable — pricing depends on environment, and you do not want to be compared on a number out of context.</p>
-      <p>But consider what actually happens. A buyer with a real problem compares four providers on a Tuesday afternoon. Three say "contact us for a quote." One explains how their pricing works, what drives it up or down, and roughly where a company of that size lands. That fourth one gets the call — not because they were cheapest, but because they were the only one who made the buyer feel like the process would be straightforward.</p>
-      <p>You do not need to publish a rate card. You need to remove the fear that asking will start something.</p>
-      <h3>A pricing page that works</h3>
+      <h2>What belongs on the website</h2>
+      <p>The instinct is to publish nothing and route every enquiry to a discovery call. It is understandable: pricing depends on the environment, and no provider wants to be compared on a figure presented without context.</p>
+      <p>Consider what occurs in practice. A buyer with a live problem evaluates four providers on a Tuesday afternoon. Three state that pricing is available on request. The fourth explains the model, the variables that move it, and approximately where an organisation of that size lands. The fourth receives the call — not because it is cheapest, but because it was the only firm that made the process appear straightforward.</p>
+      <p>A rate card is not required. Removing the apprehension that asking initiates something is.</p>
+      <h3>What an effective pricing page contains</h3>
       ${checklist(
         [
-          'Explain the model you use and why you chose it',
-          'Name the variables that move the number — seats, sites, compliance scope, after-hours',
-          'Give a range or a starting point, even a wide one',
-          'Say what is always included, so tiers are not a guessing game',
-          'Explain onboarding: cost, duration, what it involves',
-          'Say what happens when they leave — it defuses the biggest switching fear',
-          'Make the next step small: a question, not a commitment',
+          'The model in use and the reasoning behind it',
+          'The variables that move the figure: seats, sites, compliance scope, after-hours cover',
+          'A range or starting point, however broad',
+          'What is always included, so tiers are not a matter of inference',
+          'Onboarding: cost, duration and what it involves',
+          'What occurs at the end of the agreement, which defuses the principal switching concern',
+          'A small next step: a question, not a commitment',
         ],
         { columns: 1 },
       )}
@@ -157,19 +151,15 @@ ${section({
     <div>
       ${callout({
         tone: 'success',
-        title: 'The competitive reality',
-        body: `<p>In most metros, no local MSP has a useful pricing page. It is one of the few genuinely open positions left — high commercial intent, almost no competition, and it improves close rate on every other channel that feeds it.</p>`,
+        title: 'The competitive position',
+        body: `<p>In most metropolitan markets no local provider maintains a useful pricing page. It is among the few genuinely open positions remaining: high commercial intent, minimal competition, and it improves close rate across every channel that feeds it.</p>`,
       })}
       ${callout({
         tone: 'warn',
-        title: 'What not to do',
-        body: `<p>Do not publish a number you will not honour, and do not build a "pricing" page that only says pricing is customised. A buyer who clicks pricing and learns nothing has been told something — that the answer depends on them.</p>`,
+        title: 'What to avoid',
+        body: `<p>Do not publish a figure you will not honour, and do not build a pricing page whose only content is that pricing is bespoke. A buyer who selects "pricing" and learns nothing has been told something — that the answer depends on them.</p>`,
       })}
-      ${keywordTable({
-        rows: [{ keyword: 'msp pricing models', volume: 30, cpc: 63.4 }],
-        showCpc: true,
-        caption: 'The term this page targets.',
-      })}
+      ${keywordTable({ rows: pricingCluster, caption: 'The term this page targets.' })}
     </div>
   </div>`,
 })}
@@ -177,21 +167,21 @@ ${section({
 ${section({ tone: 'muted', inner: faqBlock.html })}
 
 ${cta({
-  title: 'Packaging is half the positioning',
-  body: 'Deciding what you sell, in what tiers, at what price, is part of the GTM Foundation — because a sharp position with a confusing price list still loses deals.',
-  secondaryLabel: 'See the GTM Foundation',
-  secondaryHref: '/gtm-foundation/',
+  title: 'Packaging is half of the positioning',
+  body: 'Determining what you sell, in what tiers, at what price is settled during Month 1 — because a precise position with an opaque price structure still loses deals.',
+  secondaryLabel: 'See the process',
+  secondaryHref: '/process/',
 })}
 
 ${relatedLinks([
-  { href: '/msp-marketing-strategy/', label: 'MSP marketing strategy', body: 'Where packaging and pricing decisions get made.' },
-  { href: '/resources/msp-keyword-research/', label: 'MSP keyword research', body: 'The demand data behind every page recommendation here.' },
-  { href: '/msp-website-design/', label: 'MSP website design', body: 'Building the pricing page — and the rest of the site around it.' },
+  { href: '/msp-marketing-strategy/', label: 'MSP marketing strategy', body: 'Where packaging and pricing decisions are made.' },
+  { href: '/process/#positioning', label: 'Positioning and offer design', body: 'Stage 03 of the engagement, in detail.' },
+  { href: '/msp-marketing-services/', label: 'MSP marketing services', body: 'The full scope delivered across both phases.' },
 ])}
 `
 
 export default {
-  path: '/resources/msp-pricing-models/',
+  path: '/msp-pricing-models/',
   title: 'MSP Pricing Models Explained | Per-User vs Per-Device',
   description:
     'MSP pricing models compared: per-user, per-device, tiered, à la carte and value-based — how each shapes which buyers you attract and what to publish.',

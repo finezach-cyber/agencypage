@@ -2,37 +2,37 @@ import {
   hero, section, sectionHead, cards, steps, keywordTable, faq, cta,
   callout, checklist, breadcrumbs, relatedLinks, serviceSchema,
 } from '../components.js'
-import { buyerDemand, verticalDemand } from '../data/keywords.js'
+import { seoCluster, clientDemandExample } from '../data/keywords.js'
 
 const crumbs = [
-  { label: 'Services', href: '/services/' },
-  { label: 'SEO for MSPs', href: '/msp-seo/' },
+  { label: 'Services', href: '/msp-marketing-services/' },
+  { label: 'MSP SEO', href: '/msp-seo/' },
 ]
 
 const faqBlock = faq([
   {
-    q: 'How long does MSP SEO take to work?',
-    a: `<p>Google Business Profile and review work can move map pack visibility within weeks. Service and location pages generally take three to six months to reach stable positions, and competitive metros take longer. The honest framing is that SEO is the channel you start now so that month six looks different — which is exactly why we pair it with outbound, so you are not waiting on it alone.</p>`,
+    q: 'How long does MSP SEO take to produce results?',
+    a: `<p>Google Business Profile and review work can improve local visibility within weeks. Service and location pages generally require three to six months to reach stable positions, and competitive metropolitan markets take longer. Search is the channel begun now so that month six differs materially from today, which is why we sequence outbound alongside it rather than asking you to wait.</p>`,
   },
   {
     q: 'Is local SEO or organic SEO more important for an MSP?',
-    a: `<p>Local, by a wide margin. Look at the demand: <em>it support near me</em>, <em>managed it services near me</em>, <em>it services near me</em> and <em>managed service provider near me</em> account for roughly 27,700 of the 40,970 monthly searches in this space. Those queries return the map pack first. If your Google Business Profile is thin and you have twelve reviews, national-level content strategy will not save you.</p>`,
+    a: `<p>Local, substantially. The majority of demand in this category carries explicit local intent — <em>near me</em> and city-qualified variants — and those queries return the map results above the organic listings. Where a Google Business Profile is incomplete and the review count is low, no amount of content strategy will compensate.</p>`,
   },
   {
-    q: 'Do we need location pages for every city we serve?',
-    a: `<p>Only for the ones you genuinely serve and can prove it. A page for every town within 90 minutes, each a find-and-replace of the last, is the fastest way to get the whole set treated as thin content. We build location pages where there is real demand, real proximity and something specific to say — local clients, local partners, response times, the industries concentrated there.</p>`,
+    q: 'Do we need a page for every city we serve?',
+    a: `<p>Only for markets you genuinely serve and can evidence. A page for every town within ninety minutes, each a substitution of the last, is the clearest thin-content signal available and can suppress pages that would otherwise have ranked. We build location pages where there is real demand, real proximity and something specific to state: local clients, response commitments, the industries concentrated there.</p>`,
   },
   {
-    q: 'Should we target industry keywords like healthcare IT services?',
-    a: `<p>Only if you actually serve that vertical and can speak to its compliance requirements. <em>healthcare it services</em> gets 480 searches a month and <em>it support for dental practices</em> carries a $97.83 cost per click, so the demand is worth having. But a HIPAA page written by someone who has never handled a covered entity converts nobody and ranks worse than the specialists. Vertical pages work when the vertical is real.</p>`,
+    q: 'Should we target industry terms such as healthcare IT services?',
+    a: `<p>Only where you serve the vertical and can address its regulatory requirements credibly. The demand is valuable — <em>it support for dental practices</em> carries a $97.83 cost per click — but a compliance page written by a firm that has never handled a covered entity converts poorly and ranks below the specialists. Vertical pages perform when the vertical is real, which is established during <a href="/process/#capabilities">the capability audit</a>.</p>`,
   },
   {
-    q: 'What about blog content — how much do we need?',
-    a: `<p>Less than most agencies sell you. A buyer searching <em>it support company</em> is not looking for a listicle, they are looking for a provider. Money pages — services, locations, verticals, comparisons and pricing — come first because they are what the commercial queries return. Content earns its place once those exist, mostly to answer the questions that come up mid-deal.</p>`,
+    q: 'How much blog content is required?',
+    a: `<p>Less than is commonly sold. A buyer searching <em>it support company</em> is seeking a provider, not an explanatory article. Commercial pages — services, locations, verticals, comparisons and pricing — come first, because those are what commercial queries return. Content earns its place afterwards, principally to answer the questions that arise mid-evaluation.</p>`,
   },
   {
     q: 'Do you build links?',
-    a: `<p>We earn the ones that matter for a local service business: chamber and association listings, vendor and partner directories, local sponsorships, accurate citations, and the occasional genuinely useful resource. We do not buy link packages. For a local MSP, consistent citations and review velocity outperform a pile of purchased guest posts.</p>`,
+    a: `<p>We earn the links that matter for a local service business: chamber and association listings, vendor and partner directories, local sponsorships, accurate citations and genuinely useful resources. We do not purchase link packages. For a local MSP, citation consistency and review velocity outperform acquired guest posts.</p>`,
   },
 ])
 
@@ -40,26 +40,26 @@ const body = `
 ${breadcrumbs(crumbs)}
 
 ${hero({
-  eyebrow: 'SEO for MSPs',
-  title: 'MSP SEO that targets what IT buyers actually type',
-  lede: `There are 40,970 monthly searches from businesses looking to hire a managed service provider, and most of them are local. We build the pages, the profile and the reviews that put you in front of them — then keep earning positions month after month.`,
-  primary: { href: '/contact/', label: 'Get an SEO assessment' },
-  secondary: { href: '/resources/msp-keyword-research/', label: 'See the keyword data' },
+  eyebrow: 'MSP SEO',
+  title: 'MSP SEO that targets the terms your buyers actually use',
+  lede: `Search visibility for managed service providers is won locally, on commercial queries, by firms whose pages are not interchangeable with everyone else's. We establish the position first, then build the pages, profile and reputation signals that rank.`,
+  primary: { href: '/contact/', label: 'Request an SEO assessment' },
+  secondary: { href: '/process/#research', label: 'How we map demand' },
   stats: [
-    { label: 'Buyer searches / mo', value: '40,970' },
+    { label: 'Won through', value: 'Local search' },
     { label: 'Top-term CPC', value: '$98.09' },
-    { label: 'Local intent', value: '~68%' },
+    { label: 'Horizon', value: '3–6 months' },
   ],
   aside: `<div class="panel">
-    <p class="panel__label">Where MSP SEO is won</p>
+    <p class="panel__label">Where MSP SEO is decided</p>
     <ul>
-      <li><span>Google Business Profile &amp; map pack</span> <b>1</b></li>
-      <li><span>Service pages that match commercial intent</span> <b>2</b></li>
-      <li><span>Location pages for real service areas</span> <b>3</b></li>
-      <li><span>Review volume and velocity</span> <b>4</b></li>
-      <li><span>Vertical pages where you have a right to win</span> <b>5</b></li>
+      <li><span>Google Business Profile and local results</span> <b>01</b></li>
+      <li><span>Service pages matching commercial intent</span> <b>02</b></li>
+      <li><span>Location pages for genuine service areas</span> <b>03</b></li>
+      <li><span>Review volume and velocity</span> <b>04</b></li>
+      <li><span>Vertical pages where you have standing</span> <b>05</b></li>
     </ul>
-    <p class="panel__foot">In roughly that order of impact for a $2–5M MSP.</p>
+    <p class="panel__foot">In approximate order of impact for a $2–5M provider.</p>
   </div>`,
 })}
 
@@ -67,27 +67,30 @@ ${section({
   inner: `
   <div class="split">
     <div class="prose">
-      <h2>Why SEO for managed service providers is its own discipline</h2>
-      <p>Most SEO advice is written for ecommerce or SaaS. Neither model matches how a business buys IT support. An MSP sells a high-consideration, relationship-heavy service inside a defined geography, usually to someone who cannot evaluate the technical substance of what they are buying. That changes what actually ranks and what actually converts.</p>
-      <p>Three things follow from that.</p>
-      <h3>1. The demand is local, not national</h3>
-      <p>Of the 40,970 monthly searches from MSP buyers, roughly 27,700 carry explicit local intent — <em>near me</em> and city-modified variants. Google answers those with the map pack above the organic results. Which means your Google Business Profile, your review count, your proximity and your citation consistency are not a side project. They are the channel.</p>
-      <h3>2. The queries are commercial, not informational</h3>
-      <p>Somebody searching <em>outsourced it support</em> is not researching a concept. They have a problem — an outage, a compliance deadline, a bad incumbent, an IT person who just resigned — and they are shopping. That is why clicks cost $28 to $98. It is also why a content calendar full of "What Is Managed IT?" articles produces traffic that never turns into a call.</p>
-      <h3>3. Everyone's pages say the same thing</h3>
-      <p>Google has to choose between a dozen local MSPs whose service pages are functionally identical. When the content is undifferentiated, it falls back harder on the signals it can trust: proximity, reviews, profile completeness, site authority and engagement. Differentiated pages — a real vertical, a real service specialty, real proof — give it a reason to pick you.</p>
-      <p>This is the point where SEO stops being a marketing task and becomes a positioning task. It is also why we do the <a href="/gtm-foundation/">GTM Foundation</a> before the SEO work: you cannot write a page that outranks eleven identical competitors until you have decided how you are different.</p>
+      <h2>Why SEO for managed service providers is a distinct discipline</h2>
+      <p>Most search guidance is written for ecommerce or software. Neither model reflects how an organisation purchases IT support. An MSP sells a high-consideration, relationship-led service within a defined geography, generally to a buyer who cannot assess the technical substance of what they are acquiring. That changes both what ranks and what converts.</p>
+
+      <h3>Demand is local rather than national</h3>
+      <p>The majority of searches from MSP buyers carry explicit local intent, and Google answers those queries with the map results positioned above the organic listings. Your Google Business Profile, review volume, proximity and citation consistency therefore determine whether you appear at all. For most providers this is the highest-leverage channel available and the one most frequently neglected.</p>
+
+      <h3>The queries are commercial, not informational</h3>
+      <p>A buyer searching <em>outsourced it support</em> is not researching a concept. They have an immediate problem — an outage, an insurance requirement, an underperforming incumbent, a departing IT manager — and they are selecting a supplier. That is why clicks in this category cost between $28 and $98, and why a content programme built around explanatory articles produces traffic that does not convert.</p>
+
+      <h3>Undifferentiated pages give the algorithm nothing to choose between</h3>
+      <p>Where a dozen local providers publish functionally identical service pages, ranking falls back on the signals that can be trusted: proximity, reviews, profile completeness, site authority and engagement. Differentiated pages — a genuine vertical, a genuine service depth, specific proof — provide a reason to select you.</p>
+      <p>At that point search ceases to be a marketing exercise and becomes a positioning one. It is why <a href="/process/#positioning">positioning is established in Month 1</a>, before any page is written.</p>
     </div>
     <div>
       ${callout({
-        title: 'The trap most MSPs fall into',
-        body: `<p>Publishing 40 near-identical location pages for every town in the county, each one a find-and-replace of the last.</p>
-        <p>It used to work. Now it is the clearest thin-content signal there is, and it can suppress the pages that would have ranked on their own.</p>`,
+        tone: 'warn',
+        title: 'The most common error',
+        body: `<p>Publishing forty near-identical location pages covering every town in the county, each one a substitution of the last.</p>
+        <p>The tactic previously worked. It is now a reliable thin-content signal and frequently suppresses the pages that would have ranked on their own merits.</p>`,
       })}
       ${callout({
         tone: 'success',
-        title: 'What works instead',
-        body: `<p>Fewer pages, each one genuinely specific: the clients you serve there, the response time you can commit to, the industries concentrated in that market, and a reason you are in that city at all.</p>`,
+        title: 'The alternative',
+        body: `<p>Fewer pages, each genuinely specific: the clients you serve in that market, the response time you can commit to, the industries concentrated there, and a substantive reason for your presence in the city.</p>`,
       })}
     </div>
   </div>`,
@@ -97,24 +100,17 @@ ${section({
   tone: 'muted',
   inner: `
   ${sectionHead({
-    eyebrow: 'The demand map',
+    eyebrow: 'Demand',
     title: 'What your buyers search, and what those clicks cost',
-    intro: `This is the demand we build toward. Every number is US monthly search volume with the average Google Ads cost per click beside it — the price your competitors pay to rent the position you could own.`,
+    intro: `An illustration of the national picture. The version that informs your strategy is built for your service area during <a href="/process/#research">market research</a>.`,
   })}
   ${keywordTable({
-    rows: buyerDemand,
-    totalLabel: 'Total core buyer demand',
-    caption: 'Core MSP buyer demand — what a business types when it wants to hire a provider.',
-  })}
-  <p class="lede" style="margin-top:2.5rem">And when you serve a specific vertical, a second layer opens up:</p>
-  ${keywordTable({
-    rows: verticalDemand,
-    totalLabel: 'Vertical demand',
-    caption: 'Industry-specific demand. Worth targeting only when you genuinely serve the vertical.',
+    rows: clientDemandExample,
+    caption: 'What organisations search when they intend to hire an MSP. US monthly volume and paid cost per click.',
   })}
   ${callout({
-    title: 'Read the CPC column, not just the volume',
-    body: `<p><em>it support for dental practices</em> gets 40 searches a month — and a click costs $97.83. Low volume does not mean low value. It means the few people searching are worth a lot, and a page that ranks for it costs you nothing per click forever.</p>`,
+    title: 'Read the cost column, not only the volume',
+    body: `<p><em>it support for dental practices</em> returns 40 searches a month at $97.83 per click. Low volume does not indicate low value; it indicates that the few organisations searching are worth a great deal. A page holding that position costs nothing per click once earned.</p>`,
   })}`,
 })}
 
@@ -122,42 +118,42 @@ ${section({
   inner: `
   ${sectionHead({
     eyebrow: 'Scope',
-    title: 'What our MSP SEO services cover',
-    intro: `SEO execution is part of the <a href="/growth-engine/">Growth Engine</a>. Here is what that actually means month to month.`,
+    title: 'What MSP SEO covers',
+    intro: `Search execution runs within <a href="/growth-engine/">Phase 2</a>, against the architecture established in Month 1.`,
   })}
   ${cards([
     {
       title: 'Technical foundation',
-      body: `Crawlability, indexation, site speed and Core Web Vitals, internal linking, schema markup for your organization, services and locations, and the structural fixes that stop your own site from competing with itself.`,
+      body: `Crawlability, indexation, load performance and Core Web Vitals, internal linking, structured data for your organisation, services and locations, and the structural corrections that stop a site competing against itself.`,
     },
     {
-      title: 'Local SEO &amp; Google Business Profile',
-      body: `Profile optimisation, categories, services, service areas, photos, posts, Q&amp;A, citation cleanup across the directories that matter, and map pack tracking by grid location rather than a single vanity rank.`,
+      title: 'Local search and Google Business Profile',
+      body: `Profile optimisation, categories, services and service areas, imagery, posts and Q&amp;A, citation correction across the directories that carry weight, and rank tracking by geographic grid rather than a single position.`,
       list: ['NAP consistency audit', 'Category and service configuration', 'Geo-grid rank tracking'],
     },
     {
       title: 'Service pages',
-      body: `One page per service you actually want to sell, written to match commercial intent — managed IT, co-managed IT, cybersecurity, cloud, compliance, vCIO — each with its own proof, pricing framing and conversion path.`,
+      body: `One page for each service you intend to sell — managed IT, co-managed IT, cybersecurity, cloud, compliance, vCIO — written to commercial intent, each with its own proof, pricing context and conversion path.`,
     },
     {
       title: 'Location pages',
-      body: `Built only for markets you genuinely serve, with specifics rather than swapped city names: local clients, response commitments, the industries concentrated there, and directions that make sense.`,
+      body: `Built only for markets you genuinely serve, containing specifics rather than substituted place names: local clients, response commitments and the industries concentrated in that market.`,
     },
     {
       title: 'Vertical pages',
-      body: `Healthcare, dental, legal, accounting, manufacturing — wherever you already have concentration. These convert far better than generic pages because they speak to compliance and workflow the buyer already worries about.`,
+      body: `Healthcare, dental, legal, accounting, manufacturing — wherever concentration already exists. These convert considerably better than general pages because they address regulatory and workflow concerns the buyer already holds.`,
     },
     {
       title: 'Content that supports the sale',
-      body: `The questions that come up mid-deal: what onboarding looks like, how pricing works, what happens when you leave your current provider, what a co-managed arrangement covers. Content that shortens deals, not content that fills a calendar.`,
+      body: `The questions that arise during evaluation: onboarding, pricing structure, transitioning from an incumbent provider, the boundaries of a co-managed arrangement. Material that shortens deals rather than fills a schedule.`,
     },
     {
-      title: 'Reviews and reputation',
-      body: `Review generation is an SEO channel for local businesses, not just a trust signal. We build the request process into your service workflow so review velocity is consistent instead of a once-a-year scramble.`,
+      title: 'Reputation',
+      body: `For a local service business review generation is a ranking input, not solely a trust signal. We build the request into your service workflow so velocity is consistent rather than periodic.`,
     },
     {
       title: 'Measurement',
-      body: `Rankings by location grid, organic sessions to money pages, conversion rate by page, calls and forms attributed to source, and the only number that matters — booked conversations.`,
+      body: `Rankings by geographic grid, organic sessions to commercial pages, conversion rate by page, enquiries attributed to source, and booked meetings.`,
     },
   ])}`,
 })}
@@ -165,87 +161,88 @@ ${section({
 ${section({
   tone: 'muted',
   inner: `
-  ${sectionHead({
-    eyebrow: 'How we run it',
-    title: 'The first 90 days of an MSP SEO engagement',
-  })}
+  ${sectionHead({ eyebrow: 'Sequence', title: 'The first ninety days of search execution' })}
   ${steps([
     {
       title: 'Audit and baseline',
-      body: `Technical crawl, current rankings by geo-grid, profile and citation audit, competitor gap analysis, and a conversion review of the pages that already get traffic. We establish what you rank for today so there is an honest baseline to measure against.`,
+      body: `Technical crawl, current positions by geographic grid, profile and citation audit, competitor gap analysis, and a conversion review of pages already receiving traffic. An honest baseline is established before any work begins.`,
     },
     {
-      title: 'Fix the foundation',
-      body: `Indexation problems, speed, schema, internal linking, cannibalising pages, and Google Business Profile configuration. This is unglamorous and usually produces the first movement, because most MSP sites have something structurally broken.`,
+      title: 'Correct the foundation',
+      body: `Indexation faults, load performance, structured data, internal linking, competing pages and Google Business Profile configuration. Unglamorous, and generally the source of the first measurable movement.`,
     },
     {
-      title: 'Build the money pages',
-      body: `Service pages, priority location pages and any vertical pages your positioning supports — written against the keyword map, not against a word count.`,
+      title: 'Publish the commercial pages',
+      body: `Service pages, priority location pages and any vertical pages the positioning supports — written against the demand map rather than to a word count.`,
       list: [
-        'Mapped one page per commercial intent, no overlap',
+        'One commercial intent per page, with no overlap',
         'Internally linked so authority reaches the pages that convert',
-        'Each with a conversion path, not just a contact link in the footer',
+        'Each with its own conversion path, not a footer contact link',
       ],
     },
     {
-      title: 'Compound it',
-      body: `Review velocity, supporting content, additional locations and verticals as they earn their place, and continuous conversion work on the pages already ranking. Month four onward is where the curve usually turns.`,
+      title: 'Compound',
+      body: `Review velocity, supporting content, additional locations and verticals as they earn inclusion, and continuous conversion work on pages already ranking. Month four onward is typically where the trajectory changes.`,
     },
   ])}`,
 })}
 
 ${section({
+  tone: 'dark',
   inner: `
   <div class="split">
-    <div class="prose">
-      <h2>SEO alone is not a growth plan</h2>
-      <p>We will say this plainly because most agencies selling SEO to MSPs will not: search is a patient channel. If you need conversations this quarter, SEO is the wrong single bet. It is the right bet to start now and the wrong bet to rely on alone.</p>
-      <p>That is why SEO sits inside the <a href="/growth-engine/">Growth Engine</a> rather than being sold on its own. <a href="/msp-lead-generation/">Outbound</a> creates conversations while search compounds. Reviews improve both. The website makes all of it convert. Run one in isolation and you will get a channel report; run them together and you get pipeline.</p>
-    </div>
     <div>
-      <h3>What you can expect to see, and roughly when</h3>
+      ${sectionHead({ eyebrow: 'Expectations', title: 'What to expect, and approximately when' })}
       ${checklist(
         [
-          '<strong>Weeks 1–4:</strong> technical fixes, profile optimisation, baseline established',
-          '<strong>Weeks 4–8:</strong> map pack movement from profile and review work',
-          '<strong>Months 2–3:</strong> new money pages indexed and starting to place',
+          '<strong>Weeks 1–4:</strong> technical correction, profile optimisation, baseline established',
+          '<strong>Weeks 4–8:</strong> local visibility movement from profile and review work',
+          '<strong>Months 2–3:</strong> commercial pages indexed and beginning to place',
           '<strong>Months 3–6:</strong> meaningful positions on service and location terms',
-          '<strong>Months 6+:</strong> compounding — vertical pages, authority, steady organic conversations',
+          '<strong>Months 6+:</strong> compounding through verticals, authority and steady organic enquiries',
         ],
         { columns: 1 },
       )}
+      <p>Search alone is not a growth plan. If conversations are required this quarter, it is the wrong single channel — which is why it runs alongside <a href="/msp-lead-generation/">outbound</a> rather than in isolation.</p>
+    </div>
+    <div>
+      ${keywordTable({
+        rows: seoCluster,
+        caption: 'The term this page targets, and its common variants.',
+      })}
+      <p style="margin-top:1.5rem">A click on <em>msp seo</em> costs $89.43 in paid search. We would rather demonstrate the discipline than purchase the visit — which is also the argument we make for your market.</p>
     </div>
   </div>`,
 })}
 
-${section({ tone: 'muted', inner: faqBlock.html })}
+${section({ inner: faqBlock.html })}
 
 ${cta({
-  title: 'Want to know what you could rank for?',
-  body: 'We will map the search demand in your service area, show you where your competitors are winning, and tell you honestly whether SEO is worth your money right now.',
-  primaryLabel: 'Get an SEO assessment',
-  secondaryLabel: 'See the keyword research',
-  secondaryHref: '/resources/msp-keyword-research/',
+  title: 'Find out what your firm could rank for',
+  body: 'We will map the search demand across your service area, identify where competitors currently hold position, and give you a candid assessment of what is winnable within twelve months.',
+  primaryLabel: 'Request an SEO assessment',
+  secondaryLabel: 'See the process',
+  secondaryHref: '/process/',
 })}
 
 ${relatedLinks([
-  { href: '/msp-website-design/', label: 'MSP website design', body: 'Rankings are worthless if the page does not convert. How we build MSP sites.' },
-  { href: '/msp-lead-generation/', label: 'MSP lead generation', body: 'The outbound side that creates conversations while search compounds.' },
-  { href: '/growth-engine/', label: 'The Growth Engine', body: 'SEO is one channel inside the three-month execution engagement.' },
+  { href: '/msp-lead-generation/', label: 'MSP lead generation', body: 'The outbound channel that produces conversations while search compounds.' },
+  { href: '/msp-marketing-strategy/', label: 'MSP marketing strategy', body: 'The positioning that determines which pages can rank at all.' },
+  { href: '/process/#website', label: 'The website build', body: 'How the site architecture is derived from the demand map.' },
 ])}
 `
 
 export default {
   path: '/msp-seo/',
-  title: 'MSP SEO Services | SEO for Managed Service Providers',
+  title: 'MSP SEO | SEO for Managed Service Providers',
   description:
-    'MSP SEO built around the 40,970 monthly searches from businesses hiring an IT provider. Local SEO, service pages, location pages and reviews that rank.',
+    'MSP SEO built on positioning: local search, Google Business Profile, service and location pages, and the reputation signals that determine local ranking.',
   breadcrumbs: crumbs,
   priority: 0.9,
   schema: [
     faqBlock.schema,
     serviceSchema({
-      name: 'SEO for MSPs',
+      name: 'MSP SEO',
       description:
         'Search engine optimisation for managed service providers: local SEO, Google Business Profile, service pages, location pages, vertical pages and review generation.',
       path: '/msp-seo/',

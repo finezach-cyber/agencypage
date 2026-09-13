@@ -57,30 +57,23 @@ export const site = {
  * indented group in the mobile menu.
  */
 export const nav = [
+  { label: 'Process', href: '/process/' },
   {
     label: 'Services',
-    href: '/services/',
+    href: '/msp-marketing-services/',
     children: [
       { label: 'MSP Lead Generation', href: '/msp-lead-generation/' },
-      { label: 'SEO for MSPs', href: '/msp-seo/' },
-      { label: 'MSP Website Design', href: '/msp-website-design/' },
       { label: 'MSP Marketing Strategy', href: '/msp-marketing-strategy/' },
+      { label: 'MSP SEO', href: '/msp-seo/' },
+      { label: 'All marketing services', href: '/msp-marketing-services/' },
     ],
   },
   {
-    label: 'How It Works',
+    label: 'Engagements',
     href: '/gtm-foundation/',
     children: [
       { label: 'Phase 1 — GTM Foundation', href: '/gtm-foundation/' },
       { label: 'Phase 2 — Growth Engine', href: '/growth-engine/' },
-    ],
-  },
-  {
-    label: 'Resources',
-    href: '/resources/',
-    children: [
-      { label: 'MSP Keyword Research', href: '/resources/msp-keyword-research/' },
-      { label: 'MSP Pricing Models', href: '/resources/msp-pricing-models/' },
     ],
   },
   { label: 'About', href: '/about/' },
@@ -90,28 +83,27 @@ export const footerNav = [
   {
     title: 'Services',
     links: [
-      { label: 'MSP Lead Generation', href: '/msp-lead-generation/' },
-      { label: 'SEO for MSPs', href: '/msp-seo/' },
-      { label: 'MSP Website Design', href: '/msp-website-design/' },
-      { label: 'MSP Marketing Strategy', href: '/msp-marketing-strategy/' },
-      { label: 'All services', href: '/services/' },
+      { label: 'MSP lead generation', href: '/msp-lead-generation/' },
+      { label: 'MSP marketing strategy', href: '/msp-marketing-strategy/' },
+      { label: 'MSP SEO', href: '/msp-seo/' },
+      { label: 'MSP marketing services', href: '/msp-marketing-services/' },
     ],
   },
   {
-    title: 'The Model',
+    title: 'Engagement',
     links: [
+      { label: 'The process', href: '/process/' },
       { label: 'Phase 1 — GTM Foundation', href: '/gtm-foundation/' },
       { label: 'Phase 2 — Growth Engine', href: '/growth-engine/' },
-      { label: 'About us', href: '/about/' },
-      { label: 'Contact', href: '/contact/' },
+      { label: 'MSP pricing models', href: '/msp-pricing-models/' },
     ],
   },
   {
-    title: 'Resources',
+    title: 'Company',
     links: [
-      { label: 'MSP keyword research', href: '/resources/msp-keyword-research/' },
-      { label: 'MSP pricing models', href: '/resources/msp-pricing-models/' },
-      { label: 'Resource library', href: '/resources/' },
+      { label: 'About', href: '/about/' },
+      { label: 'Contact', href: '/contact/' },
+      { label: 'Privacy', href: '/privacy/' },
     ],
   },
 ]

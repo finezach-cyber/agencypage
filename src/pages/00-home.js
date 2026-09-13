@@ -1,55 +1,66 @@
-import { hero, section, sectionHead, cards, steps, keywordTable, faq, cta, callout, checklist } from '../components.js'
-import { buyerDemand } from '../data/keywords.js'
+import {
+  hero, section, sectionHead, cards, faq, cta, callout,
+  checklist, processDiagram, keywordTable,
+} from '../components.js'
+import { coreCluster } from '../data/keywords.js'
 
 const faqBlock = faq([
   {
-    q: 'What does an MSP marketing agency actually do differently?',
-    a: `<p>A generalist agency starts with tactics — blogs, ads, a website refresh. We start with the commercial question: what should you be selling, to whom, and why should they pick you over the MSP down the road? Managed services is a market where nearly every provider lists the same four services and competes on nothing. The work that moves the number is positioning first, execution second.</p>`,
+    q: 'What makes this different from other MSP marketing agencies?',
+    a: `<p>Most agencies begin with execution: a website refresh, a content calendar, an ad account. We begin with the commercial question that determines whether any of it works — which of your services to lead with, for which buyers, and on what grounds they should select you. Month 1 answers that question and delivers the website and campaign plan built on the answer. Only then do we run campaigns.</p>`,
   },
   {
-    q: 'Do I have to sign a long contract?',
-    a: `<p>No. Month one is the <a href="/gtm-foundation/">GTM Foundation</a> — a one-time engagement that produces your positioning, service packaging, SEO strategy and a rebuilt website. If you never work with us again, you keep all of it. The <a href="/growth-engine/">Growth Engine</a> that follows has a three-month minimum because nothing in search or outbound produces a fair read in less time.</p>`,
+    q: 'What does Month 1 cost, and what am I committing to?',
+    a: `<p>Month 1 is a fixed-fee engagement, quoted after the first call and before any work begins. It commits you to nothing beyond that month. At the end you hold the positioning, the website and the campaign plan, and you decide whether to continue. See <a href="/process/">the process</a> for the full sequence.</p>`,
   },
   {
-    q: 'What size MSP is this built for?',
-    a: `<p>Managed service providers between roughly $2M and $5M in annual revenue. Below that, you usually need sales activity more than you need marketing infrastructure. Above about $10M, you typically have an internal marketing team and need specialists rather than an outsourced growth function.</p>`,
+    q: 'What happens if I decline Phase 2?',
+    a: `<p>You keep everything produced in Month 1 — the website, the domain, the copy, the research and the campaign plan — in full, with no licence, no ongoing fee and no claw-back. You are free to execute the plan in-house or with another firm.</p>`,
   },
   {
-    q: 'How long before we see leads?',
-    a: `<p>Outbound and Google Business Profile work can produce conversations in the first few weeks. Organic search is slower: new service and location pages usually take three to six months to settle into meaningful positions, longer in dense metros. Anyone promising ranked-and-converting inside 30 days is selling you something else.</p>`,
+    q: 'How should I evaluate an MSP marketing company?',
+    a: `<p>Three questions separate most of the field. Does the firm establish your positioning before selling execution, or does it begin with deliverables? Can it show what it would do differently for your market specifically, rather than describing its process? And does it report on booked meetings and revenue by source, or on impressions and rankings? An MSP marketing company that cannot answer the first question will produce activity irrespective of how competent the execution is.</p>`,
   },
   {
-    q: 'Do you work with more than one MSP in the same city?',
-    a: `<p>No. We take one MSP per metro. Ranking two clients for <em>managed it services near me</em> in the same market means one of them paid us to lose.</p>`,
+    q: 'What does MSP digital marketing include?',
+    a: `<p>In this engagement, MSP digital marketing covers the website, organic and local search, review generation and Google Business Profile, email and LinkedIn outbound, content, conversion optimisation and the analytics and CRM configuration that connects all of it to pipeline. It does not include paid advertising as a primary channel, for the reason given above. Every component is documented in the <a href="/msp-marketing-services/">services scope</a>.</p>`,
   },
   {
-    q: 'Do you do paid ads?',
-    a: `<p>Not as the main engine. With clicks on terms like <em>managed it services provider</em> running near $98, paid search is an expensive way to learn what your market responds to. We prefer to learn that through organic and outbound, then let you buy clicks later on the messages that already convert.</p>`,
+    q: 'Which MSPs do you work with?',
+    a: `<p>Managed service providers between roughly $2M and $5M in annual revenue, with the capacity to service new clients when they arrive. We accept one MSP per metropolitan market so that our clients never compete against each other in search results.</p>`,
+  },
+  {
+    q: 'How quickly does this produce pipeline?',
+    a: `<p>Outbound typically produces first conversations within weeks of launch. Organic search compounds over three to six months and longer in dense markets. We sequence both so that near-term activity runs while search positions build. Any firm promising ranked, converting demand within 30 days is describing something other than search.</p>`,
+  },
+  {
+    q: 'Do you run paid advertising?',
+    a: `<p>Not as the primary channel. Clicks in this category run between $28 and $98, which makes paid search an expensive place to discover what your market responds to. We establish the message through outbound and organic first, then paid becomes an option for amplifying what already converts.</p>`,
   },
 ])
 
 const body = `
 ${hero({
   eyebrow: 'MSP marketing agency',
-  title: 'We help MSPs build the path from $2M to $10M',
-  lede: `Most managed service providers don't have a marketing problem. They have a positioning problem that marketing can't fix. We find what you should actually be selling, build the website around that thesis, then run the engine that puts it in front of buyers.`,
-  primary: { href: '/contact/', label: 'Book a GTM call' },
-  secondary: { href: '/gtm-foundation/', label: 'See how it works' },
+  title: 'The top MSP marketing solution for managed service providers',
+  lede: `We determine what your MSP should be selling, and to whom, before a dollar goes to demand generation. Month 1 delivers your positioning, an SEO-optimised website and a complete campaign plan. What happens next is your decision.`,
+  primary: { href: '/contact/', label: 'Book a strategy call' },
+  secondary: { href: '/process/', label: 'See the process' },
   stats: [
-    { label: 'Built for', value: '$2–5M MSPs' },
-    { label: 'Foundation', value: '30 days' },
-    { label: 'One client', value: 'per metro' },
+    { label: 'Month 1', value: 'Fixed fee' },
+    { label: 'Deliverable', value: 'Site + plan' },
+    { label: 'Coverage', value: 'One MSP per metro' },
   ],
   aside: `<div class="panel">
-    <p class="panel__label">What your buyers search every month</p>
+    <p class="panel__label">Month 1 deliverables</p>
     <ul>
-      <li><span>it support near me</span> <b>9,900</b></li>
-      <li><span>managed it services near me</span> <b>8,100</b></li>
-      <li><span>it services near me</span> <b>8,100</b></li>
-      <li><span>managed it services provider</span> <b>5,400</b></li>
-      <li><span>it support company</span> <b>5,400</b></li>
+      <li><span>Capability and margin audit</span> <b>&#10003;</b></li>
+      <li><span>Market and competitor research</span> <b>&#10003;</b></li>
+      <li><span>Positioning and service packaging</span> <b>&#10003;</b></li>
+      <li><span>SEO-optimised website, built</span> <b>&#10003;</b></li>
+      <li><span>Inbound and outbound campaign plan</span> <b>&#10003;</b></li>
     </ul>
-    <p class="panel__foot">US volume. Clicks on these terms cost $28–$98 in Google Ads. <a href="/resources/msp-keyword-research/">See the full demand map &rarr;</a></p>
+    <p class="panel__foot">Yours to keep whether or not you continue to Phase 2.</p>
   </div>`,
 })}
 
@@ -57,27 +68,32 @@ ${section({
   tone: 'muted',
   inner: `
   ${sectionHead({
-    eyebrow: 'The real problem',
-    title: 'Your website says the same four things as every competitor',
-    intro: `Managed IT Services. Cybersecurity. Cloud Solutions. IT Support. Open five MSP websites in your market and you will find the same list, in roughly the same order, under a stock photo of a server room.`,
+    eyebrow: 'The problem',
+    title: 'Most MSP marketing fails before the first campaign runs',
+    intro: `Not because the execution is poor. Because the positioning underneath it was never established, and marketing can only amplify the message it is given.`,
   })}
   <div class="split">
     <div class="stack">
-      <p>This is not a copywriting failure. It is what happens when a technically excellent company has never been forced to decide what it is <em>for</em>. You are good at a lot of things, so you list a lot of things, and the buyer — who cannot evaluate any of it — falls back on price and proximity.</p>
-      <p>That is why so much MSP marketing spend disappears without a trace. Ads, SEO and outbound all amplify a message. If the message is "we do IT, and we're nice people," amplifying it just means more people hear something unremarkable.</p>
-      <p>The fix is not a better tagline. It is figuring out which slice of the market you win in disproportionately, what it is worth to them, and then rebuilding the entire go-to-market around that answer.</p>
+      <p>Open five managed service provider websites in any market and you will find the same four services listed in the same order: managed IT, cybersecurity, cloud, IT support. The language is interchangeable. So is the proof. A buyer who cannot evaluate the technical substance of any of it defaults to the two variables they can compare — price and proximity.</p>
+      <p>This is a positioning failure, not a copywriting failure. It is what happens when a technically capable firm has never been required to decide which part of the market it is built to serve. Breadth of capability becomes breadth of message, and breadth of message reads as no message at all.</p>
+      <p>The consequence is that marketing spend produces activity without producing pipeline. Traffic rises. Enquiries do not. The conclusion drawn is usually that marketing does not work for managed services, when what did not work was promoting an undifferentiated offer to an undefined buyer.</p>
+      <p><strong>We do not take generic copy and generic offers to market.</strong> That is the entire reason Month 1 exists.</p>
     </div>
     <div>
       ${callout({
-        tone: 'warn',
-        title: 'The symptom you actually feel',
+        title: 'Symptoms of an unresolved position',
         body: `<ul class="tick-list">
-          <li>Referrals are the only reliable source of new logos</li>
-          <li>Deals stall on price because nothing else separates you</li>
-          <li>You rank for your company name and nothing else</li>
-          <li>The website gets traffic and produces almost no calls</li>
-          <li>You've hired a marketer or an agency before and got activity, not pipeline</li>
+          <li>Referrals are the only dependable source of new clients</li>
+          <li>Deals stall on price, because nothing else distinguishes the options</li>
+          <li>The company ranks for its own name and little else</li>
+          <li>The website receives traffic and produces few enquiries</li>
+          <li>Previous marketing investment produced reports rather than revenue</li>
         </ul>`,
+      })}
+      ${callout({
+        tone: 'warn',
+        title: 'The diagnostic',
+        body: `<p>If your website copy would remain accurate with a competitor's name placed at the top of it, the position has not been established — and no amount of SEO, content or outbound will compensate for that.</p>`,
       })}
     </div>
   </div>`,
@@ -86,41 +102,43 @@ ${section({
 ${section({
   inner: `
   ${sectionHead({
-    eyebrow: 'Two products, in order',
-    title: 'Find the market. Then build the machine.',
-    intro: `We don't sell a retainer that starts with three blog posts a month. We sell a foundation, and then the execution of that foundation. You can stop after the first one.`,
+    eyebrow: 'The approach',
+    title: 'A defined sequence, with a decision point in the middle',
+    intro: `Month 1 establishes the commercial foundation and builds the assets. You then decide whether we execute. Select any stage to see what it involves and what it produces.`,
+  })}
+  ${processDiagram({ compact: true })}
+  <p class="pmap__foot"><a href="/process/">Read the full process, stage by stage &rarr;</a></p>`,
+})}
+
+${section({
+  tone: 'dark',
+  inner: `
+  ${sectionHead({
+    eyebrow: 'Month 1',
+    title: 'What the first month produces',
+    intro: `A fixed-fee engagement that ends with a commercial strategy and the assets required to execute it — not a strategy document.`,
   })}
   ${cards(
     [
       {
-        kicker: 'Phase 1 · Month 1 · one-time',
-        title: 'GTM Foundation',
-        href: '/gtm-foundation/',
-        linkLabel: 'See what month one produces',
-        body: `Before we spend a dollar generating leads, we determine what you should be selling, to whom, and why they should choose you. Then we build the digital foundation for that answer — including the website itself, not a strategy deck.`,
-        list: [
-          'Market and competitor research',
-          'ICP and vertical selection',
-          'Positioning and service packaging',
-          'Keyword and demand mapping',
-          'Messaging and site architecture',
-          'A rebuilt, ranking-ready website',
-        ],
+        kicker: 'Stage 01–02',
+        title: 'Capability audit and market research',
+        body: `We establish what your firm is genuinely strong at, where margin and retention actually come from, and which verticals you have already concentrated in. That is then tested against the market: search demand across your service area, competitor positioning, and the gaps nobody is answering well.`,
       },
       {
-        kicker: 'Phase 2 · 3-month minimum',
-        title: 'Growth Engine',
-        href: '/growth-engine/',
-        linkLabel: 'See the execution scope',
-        body: `Your outsourced growth team. We operationalise the strategy we just built across inbound, outbound, reputation and content — and wire up the infrastructure that lets you see what is working.`,
-        list: [
-          'SEO, local SEO and landing pages',
-          'Review generation and Google Business Profile',
-          'Email and LinkedIn outbound',
-          'Content, case studies and sales collateral',
-          'CRM, forms, tracking and attribution',
-          'Monthly reporting against pipeline',
-        ],
+        kicker: 'Stage 03',
+        title: 'Positioning and service packaging',
+        body: `The research resolves into decisions. Which services lead, which buyers they are aimed at, how the offer is packaged and priced, and what is no longer actively marketed. Every subsequent asset is built from this.`,
+      },
+      {
+        kicker: 'Stage 04',
+        title: 'An SEO-optimised website',
+        body: `Built on the positioning and structured against the demand map: a page for each commercial intent your buyers search, technically sound, fast, and built to convert. Delivered live within the month, owned outright by you.`,
+      },
+      {
+        kicker: 'Stage 05',
+        title: 'A tailored campaign plan',
+        body: `Inbound and outbound specified for your market — the search targets, the account list and segmentation, the messaging by segment, the sequence of channels, and the metrics against which performance is judged.`,
       },
     ],
     { columns: 2 },
@@ -128,85 +146,64 @@ ${section({
 })}
 
 ${section({
+  inner: `
+  <div class="split">
+    <div>
+      ${sectionHead({
+        eyebrow: 'The decision',
+        title: 'At the end of Month 1, you choose',
+        intro: `The separation between the two phases is deliberate. It removes the requirement to commit to a long engagement before seeing the quality of the thinking.`,
+      })}
+      <p><strong>Continue.</strong> Phase 2 is a three-month agreement in which we execute the plan: search, content, outbound, reputation and reporting, run as one system and measured on booked meetings. <a href="/growth-engine/">Review the Growth Engine scope</a>.</p>
+      <p><strong>Stop.</strong> The website, the copy, the research and the campaign plan are yours in full — no licence, no ongoing fee, nothing that stops working. Execute it internally or hand it to another firm.</p>
+      <p>Either outcome is acceptable to us. An MSP that leaves after Month 1 with a clear position and a working website is better served than one retained on a contract that was never earned.</p>
+    </div>
+    <div>
+      ${callout({
+        tone: 'success',
+        title: 'What you own after Month 1',
+        body: `<ul class="tick-list">
+          <li>The website, domain, copy and analytics</li>
+          <li>The market and competitor research</li>
+          <li>The positioning and packaging decisions</li>
+          <li>The demand map for your service area</li>
+          <li>The inbound and outbound campaign plan</li>
+        </ul>`,
+      })}
+    </div>
+  </div>`,
+})}
+
+${section({
   tone: 'muted',
   inner: `
   ${sectionHead({
-    eyebrow: 'Services',
-    title: 'What we do for managed service providers',
-    intro: `Each of these is part of the engine, not a standalone product. They are listed separately because that is how people search for them.`,
+    eyebrow: 'MSP marketing services',
+    title: 'What we execute in Phase 2',
+    intro: `Each discipline is part of one system. They are documented separately because that is how they are evaluated.`,
   })}
   ${cards([
     {
       title: 'MSP lead generation',
       href: '/msp-lead-generation/',
-      body: `Inbound and outbound working the same ICP list, so the people who find you and the people we contact hear the same story. Built to produce qualified conversations, not form fills.`,
-    },
-    {
-      title: 'SEO for MSPs',
-      href: '/msp-seo/',
-      body: `Local and organic search for the terms your buyers actually type — <em>it support near me</em>, <em>managed it services provider</em>, and the vertical variants where you have a real right to win.`,
-    },
-    {
-      title: 'MSP website design',
-      href: '/msp-website-design/',
-      body: `A website built to rank and convert, structured around your positioning: service pages, location pages, proof, and a path to a conversation on every page.`,
+      body: `Inbound and outbound directed at a single defined ICP with a single message. Account targeting, list construction, sequenced outreach and appointment setting, measured on booked meetings rather than form completions.`,
     },
     {
       title: 'MSP marketing strategy',
       href: '/msp-marketing-strategy/',
-      body: `The research and decisions that come before execution: who you sell to, what you package, what you charge, and where the demand actually sits in your market.`,
-    },
-  ])}`,
-})}
-
-${section({
-  inner: `
-  ${sectionHead({
-    eyebrow: 'The journey',
-    title: 'Diagnose &rarr; Build &rarr; Activate &rarr; Optimize',
-  })}
-  ${steps([
-    {
-      title: 'Diagnose',
-      body: `We learn what you are genuinely good at, where your margin actually comes from, which customers and verticals you have quietly concentrated in, what your service area really is, and how your competitors are positioned. Then we map that against what buyers in your market are searching for.`,
+      body: `The decisions that precede execution: ideal customer profile, positioning, service packaging, demand mapping and channel sequencing — documented as a marketing plan your team can act on.`,
     },
     {
-      title: 'Build',
-      body: `Research becomes a decision: your ICP, your positioning, your service packaging, your keyword targets, your messaging. Then we build the website around that thesis — so month one ends with a tangible asset, not a recommendation.`,
+      title: 'MSP SEO',
+      href: '/msp-seo/',
+      body: `Search visibility for the terms your buyers use, across local and organic results. Technical foundation, service and location pages, and the reputation signals that determine local ranking.`,
     },
     {
-      title: 'Activate',
-      body: `The engine starts. Service and location pages go live and get indexed. Review generation begins. Outbound sequences go out to the ICP list we built. Content starts filling the gaps between what buyers search and what your site answers.`,
+      title: 'All MSP marketing services',
+      href: '/msp-marketing-services/',
+      body: `The complete scope of what we deliver across both phases, including content, reputation management and the reporting infrastructure that connects activity to pipeline.`,
     },
-    {
-      title: 'Optimize',
-      body: `Every month we look at what produced conversations and do more of it. Rankings, review velocity, reply rates, form conversions and booked calls — measured against pipeline, not vanity metrics.`,
-    },
-  ])}`,
-})}
-
-${section({
-  tone: 'dark',
-  inner: `
-  ${sectionHead({
-    eyebrow: 'The demand is there',
-    title: 'There are 40,970 searches a month from people trying to hire an MSP',
-    intro: `Not from people who want marketing advice — from businesses actively looking for a provider. This is the demand your website should be capturing, and most MSP websites capture almost none of it.`,
-  })}
-  <div class="split">
-    <div>
-      ${keywordTable({
-        rows: buyerDemand,
-        totalLabel: 'Total monthly searches',
-        caption: 'US monthly search volume and Google Ads cost per click.',
-      })}
-    </div>
-    <div class="stack">
-      <p>Two things stand out. First, the volume is dominated by <em>near me</em> and local-intent searches, which means this is won with local SEO, Google Business Profile and location pages — not with clever content.</p>
-      <p>Second, look at the cost per click. A click on <em>managed it services provider</em> costs about $98 in Google Ads. Your competitors are paying that because the lead is worth it. Every organic position you hold is traffic you are not renting.</p>
-      <p><a href="/resources/msp-keyword-research/">See the full MSP keyword research, including vertical demand &rarr;</a></p>
-    </div>
-  </div>`,
+  ], { columns: 4 })}`,
 })}
 
 ${section({
@@ -214,32 +211,36 @@ ${section({
   <div class="split">
     <div>
       ${sectionHead({
-        eyebrow: 'Why MSPs',
-        title: 'We only work with managed service providers',
-        intro: `Specialisation is not a marketing line here. It is the reason the work compounds.`,
+        eyebrow: 'Specialisation',
+        title: 'We work exclusively with managed service providers',
       })}
-      <p>Every engagement teaches us something the next one inherits: which services have real demand, which verticals convert, which offers land, which website structures produce calls, which outbound messages get replies, which review strategies move the map pack. A generalist agency starts each client from zero. We start from a pattern.</p>
-      <p>It also means we understand what we are selling. We know what a stack looks like, what co-managed means, why a vCISO offer prices differently from break-fix, and why "we're proactive, not reactive" stopped being a differentiator around 2011.</p>
+      <p>Working in one category compounds. Each engagement adds to a body of evidence the next one begins with: which services carry genuine demand, which verticals convert, which offers hold up under scrutiny, which site structures produce enquiries, and which outbound messages earn replies.</p>
+      <p>It also means the work does not require translation. We understand what co-managed IT involves, why a vCISO offer prices differently from break-fix, and why claiming to be proactive rather than reactive has not differentiated a provider for over a decade.</p>
+      ${keywordTable({
+        rows: coreCluster,
+        totalLabel: 'Monthly searches',
+        caption: 'What MSP owners search when they decide to engage a marketing firm.',
+      })}
     </div>
     <div>
-      <h3>This is a fit if</h3>
+      <h3>This engagement fits</h3>
       ${checklist(
         [
-          'You do roughly $2–5M in annual revenue',
-          'Growth today depends mostly on referrals',
-          'You have real technical strengths you have never marketed',
-          'You want pipeline, and can service it when it arrives',
-          'You are willing to narrow what you sell to win a segment',
+          'MSPs at roughly $2–5M in annual revenue',
+          'Growth currently dependent on referral',
+          'Technical strengths that have never been marketed',
+          'Capacity to service new clients on arrival',
+          'Willingness to lead with a defined segment',
         ],
         { columns: 1 },
       )}
-      <h3>This is not a fit if</h3>
+      <h3>This engagement does not fit</h3>
       ${checklist(
         [
-          'You want leads next week with no foundation',
-          'You want to stay a generalist and out-market everyone',
-          'Nobody internally can take a sales call within 24 hours',
-          'You are looking for the cheapest per-blog-post option',
+          'A requirement for enquiries within the month',
+          'An intention to remain a generalist provider',
+          'No internal capacity to take a sales call promptly',
+          'A procurement process optimised for lowest cost per deliverable',
         ],
         { columns: 1 },
       )}
@@ -247,19 +248,16 @@ ${section({
   </div>`,
 })}
 
-${section({
-  tone: 'muted',
-  inner: faqBlock.html,
-})}
+${section({ tone: 'muted', inner: faqBlock.html })}
 
 ${cta()}
 `
 
 export default {
   path: '/',
-  title: 'MSP Marketing Agency | Build the Path From $2M to $10M',
+  title: 'MSP Marketing Agency | The Top MSP Marketing Solution',
   description:
-    'MSP marketing built for managed service providers doing $2–5M. We find your wedge, build the website around it, then run SEO, outbound and reputation.',
+    'An MSP marketing agency that defines your market before building demand. Month 1 delivers positioning, an SEO-optimised website and a full campaign plan.',
   priority: 1.0,
   changefreq: 'weekly',
   schema: [faqBlock.schema],

@@ -1,38 +1,46 @@
 import {
   hero, section, sectionHead, cards, steps, keywordTable, faq, cta,
-  callout, checklist, breadcrumbs, relatedLinks, serviceSchema, quote,
+  callout, checklist, breadcrumbs, relatedLinks, serviceSchema,
 } from '../components.js'
 import { leadGenCluster } from '../data/keywords.js'
 
 const crumbs = [
-  { label: 'Services', href: '/services/' },
+  { label: 'Services', href: '/msp-marketing-services/' },
   { label: 'MSP Lead Generation', href: '/msp-lead-generation/' },
 ]
 
 const faqBlock = faq([
   {
     q: 'Do you sell MSP leads?',
-    a: `<p>No. We do not sell lists, we do not sell shared leads, and we do not sell appointments sourced from a pool that three other MSPs also bought. Everything we generate is generated for you, against an ICP we defined with you, using messaging built on your positioning. A purchased lead has no relationship to you and no reason to take your call.</p>`,
+    a: `<p>No. We do not resell lists, shared leads or appointments sourced from a pool that other providers have also purchased. Every conversation is generated for you, against an ideal customer profile defined with you, using messaging derived from your positioning. A purchased lead has no relationship to your firm and no reason to take the call.</p>`,
   },
   {
-    q: 'How many leads should we expect per month?',
-    a: `<p>We will not give you a number before we have seen your market, your ICP size, your service area and your offer — anyone who does is guessing to win the deal. What we will do in the first month is size the addressable list, so you know exactly how many accounts exist that match your ICP. That number, plus realistic reply and conversion rates, is a forecast you can actually hold us to.</p>`,
+    q: 'How many leads should we expect each month?',
+    a: `<p>We do not forecast before establishing the size of your addressable market. During Month 1 we determine how many accounts in your service area actually match your ICP. That figure, combined with realistic reply and conversion rates, produces a forecast that can be held to. A number offered before that work is a number invented to win the engagement.</p>`,
   },
   {
-    q: 'What counts as a qualified lead?',
-    a: `<p>We define it with you before we start, and it is usually: a company inside your service area, in your target size band, matching your ICP criteria, that has agreed to a scheduled conversation. Not a form fill. Not a content download. Not a LinkedIn connection. If the definition is loose, the reporting is meaningless.</p>`,
+    q: 'How do you define a qualified lead?',
+    a: `<p>The definition is agreed before launch, and is typically: an organisation within your service area, in the target size band, matching the ICP criteria, that has accepted a scheduled meeting. Not a form completion, a content download or a connection request. Without a firm definition the reporting means nothing.</p>`,
   },
   {
-    q: 'Is outbound still effective for managed services?',
-    a: `<p>Generic outbound is not. "Are you happy with your current IT provider?" gets ignored because every MSP in the country sends it. Outbound that references a specific trigger — a compliance deadline in their industry, a vertical-specific workflow problem, an acquisition, a hiring pattern that signals growth — still works, because it is evidently not a blast. The difference is the research, which is why we do positioning before outreach.</p>`,
+    q: 'Where do MSP leads actually originate?',
+    a: `<p>Across our engagements, MSP leads arrive from three sources in roughly descending order of predictability: outbound to a defined account list, local search and reputation, and referral. The proportions vary by market and by how established the position is. What does not vary is that purchased lists sit outside all three — a bought record is not a lead, it is a name with no relationship to your firm.</p>`,
   },
   {
-    q: 'How fast does lead generation start producing?',
-    a: `<p>Outbound produces conversations fastest — typically the first meaningful replies land within three to six weeks of sequences going live, once list building and warmup are done. Inbound takes longer: see the honest timeline on our <a href="/msp-seo/">MSP SEO page</a>. We run both because one funds your patience for the other.</p>`,
+    q: 'Is IT services lead generation different from managed services lead generation?',
+    a: `<p>The buyer is the same; the search language is not. Organisations describe what they need as IT services, IT support or outsourced IT, and rarely as managed services. IT services lead generation therefore targets the same accounts through the vocabulary those accounts actually use — which is one of the specific outputs of the <a href="/process/#research">demand mapping</a> stage.</p>`,
   },
   {
-    q: 'Will you use our CRM?',
-    a: `<p>Yes, and if it is a mess we will clean it up first — that is part of the growth infrastructure work in the <a href="/growth-engine/">Growth Engine</a>. Leads that land in an inbox instead of a pipeline stage do not get worked, and then the channel gets blamed.</p>`,
+    q: 'Does outbound still work for managed services?',
+    a: `<p>Generic outbound does not. Enquiring whether a prospect is satisfied with their current IT provider is the message every MSP sends, and it is filtered accordingly. Outbound referencing a specific trigger — a compliance deadline in their sector, an acquisition, a hiring pattern indicating growth, a workflow problem particular to their vertical — continues to perform, because it is evidently not a broadcast. The difference is research, which is why positioning precedes outreach.</p>`,
+  },
+  {
+    q: 'How quickly does lead generation produce meetings?',
+    a: `<p>Outbound is the faster channel: first substantive replies typically arrive three to six weeks after sequences launch, once list construction and domain warm-up are complete. Inbound compounds over a longer horizon — see the timeline on our <a href="/msp-seo/">MSP SEO page</a>. We run both so the faster channel sustains activity while search matures.</p>`,
+  },
+  {
+    q: 'Will you work inside our CRM?',
+    a: `<p>Yes, and if its state prevents reliable routing we will address that first. Leads arriving in a shared inbox rather than an owned pipeline stage do not get worked, and the channel is then blamed for a process failure.</p>`,
   },
 ])
 
@@ -41,25 +49,25 @@ ${breadcrumbs(crumbs)}
 
 ${hero({
   eyebrow: 'MSP lead generation',
-  title: 'Lead generation for MSPs that produces conversations, not form fills',
-  lede: `Inbound and outbound working the same ICP, telling the same story. We build the target list, write the messaging off your positioning, and run the sequences — while search compounds underneath.`,
-  primary: { href: '/contact/', label: 'Book a GTM call' },
-  secondary: { href: '/growth-engine/', label: 'See the full engine' },
+  title: 'MSP lead generation built on a defined position',
+  lede: `Inbound and outbound directed at one ideal customer profile, carrying one message. We construct the target list, derive the messaging from your positioning, and run the sequences — measured on booked meetings.`,
+  primary: { href: '/contact/', label: 'Book a strategy call' },
+  secondary: { href: '/process/', label: 'See the process' },
   stats: [
-    { label: 'Channels', value: 'In + outbound' },
-    { label: 'Lists', value: 'Built, not bought' },
-    { label: 'Measured on', value: 'Booked calls' },
+    { label: 'Channels', value: 'Inbound + outbound' },
+    { label: 'Lists', value: 'Built, not purchased' },
+    { label: 'Measured on', value: 'Booked meetings' },
   ],
   aside: `<div class="panel">
-    <p class="panel__label">Why most MSP lead gen fails</p>
+    <p class="panel__label">Why MSP lead generation underperforms</p>
     <ul>
-      <li><span>Bought lists with no ICP behind them</span> <b>1</b></li>
-      <li><span>"Happy with your IT provider?" emails</span> <b>2</b></li>
-      <li><span>Leads that land nowhere in the CRM</span> <b>3</b></li>
-      <li><span>A website that cannot close the traffic</span> <b>4</b></li>
-      <li><span>No follow-up after the first no-reply</span> <b>5</b></li>
+      <li><span>Purchased lists with no ICP behind them</span> <b>01</b></li>
+      <li><span>Messaging indistinguishable from competitors</span> <b>02</b></li>
+      <li><span>Leads arriving without an owner or a stage</span> <b>03</b></li>
+      <li><span>A website unable to convert the traffic</span> <b>04</b></li>
+      <li><span>No follow-up beyond the first non-reply</span> <b>05</b></li>
     </ul>
-    <p class="panel__foot">Every one of these is a fixable process problem, not a channel problem.</p>
+    <p class="panel__foot">Each of these is a process failure rather than a channel failure.</p>
   </div>`,
 })}
 
@@ -67,31 +75,31 @@ ${section({
   inner: `
   <div class="split">
     <div class="prose">
-      <h2>Why MSP lead generation usually disappoints</h2>
-      <p>Most MSPs have tried it. They bought a list, ran a sequence, got a handful of replies — half of them unsubscribes — and concluded outbound does not work for managed services. Or they hired an agency that delivered "leads" that turned out to be content downloads from people in other states.</p>
-      <p>The channel is rarely the problem. Four things underneath it usually are.</p>
+      <h2>Why lead generation for MSPs commonly disappoints</h2>
+      <p>Most managed service providers have attempted it. A list was purchased, a sequence was sent, a handful of replies arrived — several of them unsubscribes — and the conclusion drawn was that outbound does not work in this category. Or an agency was engaged and delivered leads that proved to be content downloads from organisations outside the service area.</p>
+      <p>The channel is rarely the cause. Four conditions beneath it usually are.</p>
 
-      <h3>You are selling to a market you have not defined</h3>
-      <p>"Businesses with 20–200 seats within an hour's drive" is a geography, not an ICP. It does not tell you what to say. An ICP is a segment where you can articulate why <em>you specifically</em> are the right provider — an industry whose compliance regime you already handle, a stack you have unusual depth in, a size band where your onboarding is genuinely better. Until that exists, every message defaults to "we do IT and we care about service."</p>
+      <h3>The market has not been defined</h3>
+      <p>Organisations of 20 to 200 seats within an hour's drive is a geography, not an ideal customer profile. It provides no basis for deciding what to say. An ICP is a segment in which you can articulate why your firm specifically is the correct provider: a regulatory environment you already operate in, a platform you hold unusual depth in, a size band where your onboarding is demonstrably better. Absent that, every message reverts to competence and service quality — claims every competitor also makes.</p>
 
-      <h3>Your message is the same as everyone else's</h3>
-      <p>The average MSP prospect gets multiple versions of the same email every month. Responsive support, proactive monitoring, strategic partner, free network assessment. It is not that the offer is bad; it is that it is indistinguishable, and indistinguishable mail gets deleted without being read.</p>
+      <h3>The message is interchangeable</h3>
+      <p>The average MSP prospect receives several versions of the same approach each month: responsive support, proactive monitoring, strategic partnership, a complimentary network assessment. The offer is not poor. It is indistinguishable, and indistinguishable correspondence is deleted before it is read.</p>
 
-      <h3>Inbound and outbound are run as separate projects</h3>
-      <p>A prospect gets your email, looks you up, and lands on a website that describes a different, more generic company than the one that just emailed them about their industry's compliance problem. The disconnect is enough to kill the deal quietly. When the same positioning drives both, the outbound email makes the website more credible and the website makes the email more credible.</p>
+      <h3>Inbound and outbound are run as separate programmes</h3>
+      <p>A prospect receives an email referencing their sector's compliance requirements, researches the sender, and arrives at a website describing a materially more generic firm. The discrepancy is sufficient to end the evaluation quietly. When both channels are driven by the same positioning, each increases the credibility of the other.</p>
 
       <h3>Nothing happens after the lead arrives</h3>
-      <p>Leads land in a shared inbox. Nobody owns the follow-up. The one who does get a call has a great conversation and then hears nothing for three weeks. We have seen engagements where fixing routing and follow-up produced more closed business than adding any new channel would have.</p>
+      <p>Enquiries land in a shared inbox with no owner. Follow-up is inconsistent. A prospect has a productive first conversation and hears nothing for three weeks. We have seen engagements where correcting routing and follow-up produced more closed revenue than any additional channel would have.</p>
     </div>
     <div>
       ${callout({
         tone: 'warn',
-        title: 'On buying MSP leads',
-        body: `<p>Shared-lead services sell the same prospect to several MSPs. You are then competing on response speed and price with providers the buyer sees as interchangeable — which is the exact position good positioning is meant to get you out of.</p>
-        <p>It can produce volume. It rarely produces the kind of client you wanted.</p>`,
+        title: 'On purchased leads',
+        body: `<p>Shared-lead services sell the same prospect to several providers simultaneously. You then compete on response time and price against firms the buyer regards as interchangeable — which is precisely the position that establishing a position is intended to escape.</p>`,
       })}
-      ${quote({
-        text: `If your outbound email would still make sense with a competitor's logo pasted on it, it is not going to work.`,
+      ${callout({
+        title: 'The test we apply to every sequence',
+        body: `<p>If the email would remain accurate with a competitor's name on it, it is not ready to send.</p>`,
       })}
     </div>
   </div>`,
@@ -101,38 +109,38 @@ ${section({
   tone: 'muted',
   inner: `
   ${sectionHead({
-    eyebrow: 'The approach',
-    title: 'Two engines, one story',
-    intro: `Inbound and outbound are not separate campaigns here. They target the same ICP with the same positioning, and each one makes the other work harder.`,
+    eyebrow: 'Approach',
+    title: 'Two channels, one message',
+    intro: `Inbound and outbound are not run as separate campaigns. They address the same ICP with the same positioning, and each improves the performance of the other.`,
   })}
   ${cards(
     [
       {
         kicker: 'Inbound',
-        title: 'Get found by people already looking',
-        body: `There are 40,970 searches a month from businesses actively trying to hire an MSP. Inbound captures the ones in your service area — through local search, service and vertical pages, reviews, and a website built to convert the traffic it earns.`,
+        title: 'Capture buyers already in market',
+        body: `A substantial volume of search demand comes from organisations actively seeking a provider. Inbound captures the portion within your service area through local search visibility, service and vertical pages, reputation signals, and a website built to convert the traffic it earns.`,
         list: [
-          'Local SEO and Google Business Profile',
+          'Local search visibility and Google Business Profile',
           'Service, location and vertical landing pages',
-          'Review generation that feeds the map pack',
-          'Conversion optimisation on the pages that already get traffic',
+          'Review generation feeding local ranking',
+          'Conversion work on pages already receiving traffic',
         ],
         href: '/msp-seo/',
-        linkLabel: 'How we do MSP SEO',
+        linkLabel: 'MSP SEO in detail',
       },
       {
         kicker: 'Outbound',
-        title: 'Start conversations with accounts that fit',
-        body: `Search only reaches people already in market. Outbound reaches the accounts you want before they start looking — which, for a service with multi-year contracts, is most of them.`,
+        title: 'Reach accounts before they search',
+        body: `Search reaches only those already evaluating. Outbound reaches the accounts you want in advance of that — which, for a service sold on multi-year agreements, is the majority of them at any given time.`,
         list: [
           'ICP definition and addressable market sizing',
-          'Prospect list building and verification',
-          'Email sequences built on trigger events',
-          'LinkedIn touches that are not automation spam',
+          'List construction, verification and enrichment',
+          'Sequences built on segment-specific trigger events',
+          'LinkedIn engagement conducted manually, not automated',
           'Follow-up cadences and appointment setting',
         ],
         href: '/growth-engine/',
-        linkLabel: 'See the outbound scope',
+        linkLabel: 'Execution scope',
       },
     ],
     { columns: 2 },
@@ -142,34 +150,35 @@ ${section({
 ${section({
   inner: `
   ${sectionHead({
-    eyebrow: 'Process',
-    title: 'How we build the lead generation engine',
+    eyebrow: 'Method',
+    title: 'How the lead generation engine is constructed',
+    intro: `Stages one to three occur during Month 1. Execution begins in Phase 2. <a href="/process/">See the full process</a>.`,
   })}
   ${steps([
     {
       title: 'Define the ICP and size the market',
-      body: `Which industries, which size band, which geography, which triggers. Then we count it — the actual number of addressable accounts. That number sets realistic expectations before anyone promises you a lead volume.`,
+      body: `Which sectors, which size band, which geography, which trigger events — then the addressable account count. That figure establishes realistic expectations before any volume is forecast.`,
       list: [
-        'Analysis of your existing client base for hidden concentrations',
-        'Margin and retention by segment, not just revenue',
-        'Competitive density per segment',
+        'Analysis of the existing client base for unrecognised concentration',
+        'Margin and retention by segment, not revenue alone',
+        'Competitive density within each candidate segment',
       ],
     },
     {
-      title: 'Build the list',
-      body: `Firmographic filtering, verification, deduplication against your CRM, and enrichment with the signals that make a message specific — stack, headcount trend, compliance exposure, recent moves.`,
+      title: 'Construct the list',
+      body: `Firmographic filtering, verification, de-duplication against your CRM, and enrichment with the signals that allow a message to be specific: platform, headcount trajectory, regulatory exposure, recent corporate activity.`,
     },
     {
-      title: 'Write the messaging',
-      body: `Off your positioning, not off a template. Different sequences for different segments, because the reason a dental practice switches providers is not the reason a manufacturer does.`,
+      title: 'Derive the messaging',
+      body: `From your positioning rather than a template. Separate sequences per segment, because the reason a dental practice changes provider is not the reason a manufacturer does.`,
     },
     {
-      title: 'Run, follow up, and route',
-      body: `Sequences go live with proper domain warmup and sending hygiene. Replies get worked. Interested accounts get booked. Everything lands in your CRM in a stage with an owner, not in an inbox.`,
+      title: 'Launch, follow up and route',
+      body: `Sequences launch with proper domain warm-up and sending hygiene. Replies are worked, interested accounts are booked, and every record enters your CRM at a defined stage with a named owner.`,
     },
     {
       title: 'Read the data and adjust',
-      body: `Reply rate by segment, by message, by trigger. Booked-call rate. Show rate. Close rate by source. Within a couple of months the data tells you which segment is genuinely your best market — and that often changes the strategy.`,
+      body: `Reply rate by segment, by message and by trigger. Meeting rate, attendance rate, close rate by source. Within two months the data indicates which segment is genuinely your strongest market — an answer that frequently revises the strategy.`,
     },
   ])}`,
 })}
@@ -179,15 +188,15 @@ ${section({
   inner: `
   ${sectionHead({
     eyebrow: 'Search demand',
-    title: 'What MSP owners search when they go looking for this',
-    intro: `If you found this page through one of these, the data is worth seeing — it is the same kind of analysis we run on your market, just pointed at ours.`,
+    title: 'What MSP owners search when seeking this service',
+    intro: `If you arrived through one of these terms, the analysis is worth noting — it is the same method we apply to your market, directed at ours.`,
   })}
   <div class="split">
     <div>${keywordTable({ rows: leadGenCluster, totalLabel: 'Total monthly searches' })}</div>
     <div class="stack">
-      <p>Note the cost per click. <em>msp lead generation</em> runs $66.96 a click and <em>msp lead generation services</em> $61.67. Agencies pay that because an MSP retainer is worth it.</p>
-      <p>We would rather rank than rent — and the same logic applies to your market, where the clicks cost $28 to $98.</p>
-      <p><a href="/resources/msp-keyword-research/">See the full demand map for MSP buyers &rarr;</a></p>
+      <p>The cost per click is the informative column. <em>msp lead generation</em> commands $66.96 and <em>msp lead generation services</em> $61.67, because a managed services retainer justifies that acquisition cost.</p>
+      <p>We would rather hold the position than rent it. The same reasoning governs the recommendations we make in your market, where clicks carry comparable and often higher costs.</p>
+      <p><a href="/process/#research">How we map demand in your service area &rarr;</a></p>
     </div>
   </div>`,
 })}
@@ -196,36 +205,33 @@ ${section({
   inner: `
   <div class="split">
     <div>
-      ${sectionHead({
-        eyebrow: 'What you get',
-        title: 'Included in the lead generation scope',
-      })}
+      ${sectionHead({ eyebrow: 'Scope', title: 'What lead generation covers' })}
       ${checklist([
         'ICP definition and addressable market sizing',
-        'Prospect list building, verification and enrichment',
-        'CRM deduplication and hygiene',
-        'Email sequence copy by segment',
-        'Sending infrastructure, domain warmup and deliverability',
+        'List construction, verification and enrichment',
+        'CRM de-duplication and record hygiene',
+        'Sequence copy written by segment',
+        'Sending infrastructure, warm-up and deliverability',
         'LinkedIn outreach and connection cadences',
         'Inbound landing pages and conversion paths',
         'Lead routing, forms and notification rules',
-        'Appointment setting and calendar handoff',
+        'Appointment setting and calendar handover',
         'Follow-up cadences for non-responders',
         'Source attribution and pipeline reporting',
-        'Monthly review against booked calls, not clicks',
+        'Monthly review against booked meetings',
       ])}
     </div>
     <div>
       ${callout({
         tone: 'success',
-        title: 'What we need from you',
+        title: 'What the engagement requires from you',
         body: `<ul class="tick-list">
-          <li>Someone who can take a sales call within 24 hours of a booking</li>
-          <li>Access to your CRM and existing client data</li>
-          <li>An hour a week, mostly in the first month</li>
-          <li>Willingness to say no to segments that are not worth serving</li>
+          <li>A named person able to take a sales call within one business day</li>
+          <li>Access to the CRM and existing client data</li>
+          <li>Approximately one hour weekly, concentrated in the first month</li>
+          <li>A willingness to decline segments not worth serving</li>
         </ul>
-        <p>Lead generation fails more often from slow follow-up on the client side than from anything that happens in the campaign.</p>`,
+        <p>Lead generation fails more often through delayed follow-up on the client side than through anything occurring within the campaign.</p>`,
       })}
     </div>
   </div>`,
@@ -234,14 +240,14 @@ ${section({
 ${section({ tone: 'muted', inner: faqBlock.html })}
 
 ${cta({
-  title: 'Find out how many accounts actually match your ICP',
-  body: 'On a 30-minute call we will define your ideal customer profile and size the addressable market in your service area. You will leave with a real number whether or not we work together.',
+  title: 'Establish how many accounts match your ICP',
+  body: 'On a 30-minute call we will define your ideal customer profile and size the addressable market within your service area. You leave with that figure regardless of whether we proceed.',
 })}
 
 ${relatedLinks([
-  { href: '/msp-seo/', label: 'SEO for MSPs', body: 'The inbound half — how we capture buyers already searching for a provider.' },
-  { href: '/msp-website-design/', label: 'MSP website design', body: 'Where every lead lands. If it does not convert, nothing upstream matters.' },
-  { href: '/gtm-foundation/', label: 'GTM Foundation', body: 'The positioning work that makes outbound messaging worth reading.' },
+  { href: '/msp-seo/', label: 'MSP SEO', body: 'The inbound channel — capturing buyers already searching for a provider.' },
+  { href: '/msp-marketing-strategy/', label: 'MSP marketing strategy', body: 'The positioning work that makes outbound messaging worth reading.' },
+  { href: '/process/', label: 'The process', body: 'Where lead generation sits across the two phases.' },
 ])}
 `
 
@@ -249,7 +255,7 @@ export default {
   path: '/msp-lead-generation/',
   title: 'MSP Lead Generation Services | Qualified IT Leads',
   description:
-    'MSP lead generation that builds your list instead of buying it. Inbound and outbound run off one ICP and one positioning, measured on booked calls.',
+    'MSP lead generation that builds your list rather than buying it. Inbound and outbound run from one ICP and one position, measured on booked meetings.',
   breadcrumbs: crumbs,
   priority: 0.9,
   schema: [
@@ -257,7 +263,7 @@ export default {
     serviceSchema({
       name: 'MSP Lead Generation',
       description:
-        'Inbound and outbound lead generation for managed service providers: ICP definition, list building, email and LinkedIn outbound, landing pages and appointment setting.',
+        'Inbound and outbound lead generation for managed service providers: ICP definition, list construction, email and LinkedIn outbound, landing pages and appointment setting.',
       path: '/msp-lead-generation/',
       serviceType: 'Lead Generation',
     }),

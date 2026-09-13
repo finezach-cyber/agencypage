@@ -179,11 +179,11 @@ export function faq(items, { title = 'Frequently asked questions', intro } = {})
 }
 
 export function cta({
-  title = 'Find out what your MSP should actually be selling',
-  body = 'A 30-minute call. We look at your services, your market and your competitors, and tell you where the demand is. No deck, no pitch sequence.',
-  primaryLabel = 'Book a GTM call',
-  secondaryLabel = 'See the engagement model',
-  secondaryHref = '/gtm-foundation/',
+  title = 'Establish what your MSP should be selling',
+  body = 'A 30-minute call. We review your services, your market and your competitors, and tell you where the demand sits. No presentation, no sequence.',
+  primaryLabel = 'Book a strategy call',
+  secondaryLabel = 'See the process',
+  secondaryHref = '/process/',
 } = {}) {
   return `<section class="cta-band">
   <div class="container cta-band__inner">
@@ -218,7 +218,100 @@ export function relatedLinks(items, { title = 'Keep reading' } = {}) {
 </section>`
 }
 
-/** Service schema helper for the four money pages. */
+/**
+ * The engagement diagram. Rendered on the home page as the overview and again
+ * at the top of /process/.
+ *
+ * Deliberately semantic HTML rather than SVG: every node is a real anchor, so
+ * focus rings, tap targets, text scaling and mobile stacking all work without
+ * fighting a viewBox. `compact` drops the per-node detail line for the
+ * home-page overview.
+ */
+export function processDiagram({ compact = false, base = '/process/' } = {}) {
+  const phaseOne = [
+    {
+      id: 'capabilities',
+      label: 'Capability audit',
+      detail: 'What you are genuinely good at, and where the margin is.',
+    },
+    {
+      id: 'research',
+      label: 'Market research',
+      detail: 'Demand, competitors and gaps across your service area.',
+    },
+    {
+      id: 'positioning',
+      label: 'Positioning &amp; offer',
+      detail: 'The services to lead with, packaged and priced.',
+    },
+    {
+      id: 'website',
+      label: 'Website build',
+      detail: 'An SEO-optimised site built on the positioning.',
+    },
+    {
+      id: 'campaign-plan',
+      label: 'Campaign plan',
+      detail: 'Inbound and outbound, sequenced for your market.',
+    },
+  ]
+
+  const node = (step, index) => `<li class="pnode">
+      <a href="${base}#${step.id}">
+        <span class="pnode__num">${String(index + 1).padStart(2, '0')}</span>
+        <span class="pnode__label">${step.label}</span>
+        ${compact ? '' : `<span class="pnode__detail">${step.detail}</span>`}
+      </a>
+    </li>`
+
+  return `<div class="pmap">
+  <section class="pband pband--one" aria-labelledby="pband-one">
+    <header class="pband__head">
+      <p class="pband__tag">Phase 1</p>
+      <h3 class="pband__title" id="pband-one"><a href="/gtm-foundation/">GTM Foundation</a></h3>
+      <p class="pband__meta">Month 1 &middot; one-time &middot; fixed fee</p>
+    </header>
+    <ol class="pband__nodes">${phaseOne.map(node).join('')}</ol>
+  </section>
+
+  <div class="pfork">
+    <a class="pfork__hub" href="${base}#decision">
+      <span class="pfork__mark" aria-hidden="true">&#9670;</span>
+      <span class="pfork__label">Your decision</span>
+      <span class="pfork__sub">At the end of Month 1, with the work in hand</span>
+    </a>
+    <ul class="pfork__paths">
+      <li class="ppath ppath--stop">
+        <span class="ppath__head">If you stop here</span>
+        <span class="ppath__body">The website and the campaign plan are yours, in full. No further cost, no licence, no claw-back.</span>
+      </li>
+      <li class="ppath ppath--go">
+        <span class="ppath__head">If you continue</span>
+        <span class="ppath__body">We execute the plan we built, under a three-month agreement.</span>
+      </li>
+    </ul>
+  </div>
+
+  <section class="pband pband--two" aria-labelledby="pband-two">
+    <header class="pband__head">
+      <p class="pband__tag">Phase 2</p>
+      <h3 class="pband__title" id="pband-two"><a href="/growth-engine/">Growth Engine</a></h3>
+      <p class="pband__meta">Three-month agreement &middot; optional</p>
+    </header>
+    <ol class="pband__nodes pband__nodes--wide">
+      <li class="pnode pnode--wide">
+        <a href="${base}#execution">
+          <span class="pnode__num">06</span>
+          <span class="pnode__label">Execution</span>
+          ${compact ? '' : '<span class="pnode__detail">SEO, content, outbound, reputation and reporting — run against the plan, measured on booked meetings.</span>'}
+        </a>
+      </li>
+    </ol>
+  </section>
+</div>`
+}
+
+/** Service schema helper for the ranking pages. */
 export function serviceSchema({ name, description, path, serviceType }) {
   return {
     '@type': 'Service',

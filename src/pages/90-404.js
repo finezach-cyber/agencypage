@@ -7,7 +7,7 @@ ${section({
     ${sectionHead({
       eyebrow: 'Error 404',
       title: 'That page does not exist',
-      intro: `The link may be out of date, or the page may have moved. Here is where most people are heading.`,
+      intro: `The link may be out of date, or the page may have moved. The most frequently requested pages are below.`,
       align: 'center',
       level: 1,
     })}
@@ -15,10 +15,10 @@ ${section({
   </div>
   <div style="margin-top:3.5rem">
     ${cards([
-      { title: 'MSP lead generation', href: '/msp-lead-generation/', body: 'Inbound and outbound built on one ICP and one story.' },
-      { title: 'SEO for MSPs', href: '/msp-seo/', body: 'Local and organic search for the terms your buyers type.' },
-      { title: 'MSP website design', href: '/msp-website-design/', body: 'Sites built to rank and convert, shipped in month one.' },
-      { title: 'MSP keyword research', href: '/resources/msp-keyword-research/', body: '40,970 monthly searches, mapped and explained.' },
+      { title: 'The process', href: '/process/', body: 'Both phases, with inputs and deliverables at every stage.' },
+      { title: 'MSP lead generation', href: '/msp-lead-generation/', body: 'Inbound and outbound run from one ICP and one position.' },
+      { title: 'MSP SEO', href: '/msp-seo/', body: 'Local and organic search for the terms your buyers use.' },
+      { title: 'MSP marketing services', href: '/msp-marketing-services/', body: 'The full scope across both engagements.' },
     ], { columns: 4 })}
   </div>`,
 })}

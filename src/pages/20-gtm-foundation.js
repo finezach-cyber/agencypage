@@ -1,66 +1,63 @@
 import {
-  hero, section, sectionHead, cards, steps, faq, cta,
-  callout, checklist, breadcrumbs, relatedLinks, quote,
+  hero, section, sectionHead, cards, faq, cta,
+  callout, checklist, breadcrumbs, relatedLinks, processDiagram,
 } from '../components.js'
 
-const crumbs = [
-  { label: 'How It Works', href: '/gtm-foundation/' },
-  { label: 'GTM Foundation', href: '/gtm-foundation/' },
-]
+const crumbs = [{ label: 'GTM Foundation', href: '/gtm-foundation/' }]
 
 const faqBlock = faq([
   {
     q: 'What does the GTM Foundation cost?',
-    a: `<p>It is a fixed-fee, one-time engagement, priced on the size of your service area, the number of services and verticals in scope, and the size of the website. We quote it after the first call, before any work starts — no hourly billing and no scope creep.</p>`,
+    a: `<p>It is a fixed fee, determined by the size of your service area, the number of services and verticals in scope, and the scale of the website. We quote after the first call and before any work begins. There is no hourly billing and no variation without a written change of scope.</p>`,
   },
   {
-    q: 'What happens if we stop after month one?',
-    a: `<p>You keep everything: the research, the positioning, the packaging, the keyword map, the messaging and the website, with full ownership and no platform lock-in. You can execute the plan in-house, hand it to another agency, or do nothing with it. There is no clause that makes the foundation less useful if you walk away.</p>`,
+    q: 'What happens if we stop after Month 1?',
+    a: `<p>You retain everything: the research, the positioning, the packaging, the demand map, the messaging framework, the campaign plan and the website — owned outright, with no licence and no platform dependency. You may execute the plan internally, engage another firm, or do neither. No clause reduces the value of the work if you leave.</p>`,
   },
   {
-    q: 'How much of our time does it take?',
-    a: `<p>Roughly four to six hours in the first two weeks — a kickoff session, interviews with you and one or two technical people, access to your client and financial data, and a content review. After that it is a couple of review checkpoints. We do the work; we need your knowledge, not your labour.</p>`,
+    q: 'How much of our time does it require?',
+    a: `<p>Approximately four to six hours across the first fortnight: a kickoff session, interviews with you and one or two technical leads, access to client and financial data, and a content review. Two review checkpoints follow. We require your knowledge rather than your labour.</p>`,
   },
   {
-    q: 'Can you really do all of this in a month?',
-    a: `<p>Yes, because it is a defined scope run by people who have done it before, and because we do not wait on committees. What extends it is usually on the client side: delayed interviews, slow content review, or an internal debate about positioning that needs to happen anyway. We would rather that debate happen than ship a site nobody believes in.</p>`,
+    q: 'Can this genuinely be completed in a month?',
+    a: `<p>Yes. It is a defined scope executed by people who have run it before, without committee review cycles. Where timelines extend it is generally on the client side: delayed interviews, slow content approval, or an unresolved internal disagreement about positioning. We would rather that disagreement surface than publish a site the leadership does not stand behind.</p>`,
   },
   {
-    q: 'Do we have to sign up for the Growth Engine afterward?',
-    a: `<p>No. Separating the two is the point. You get a complete, useful deliverable without committing to a long retainer, and we get to prove the thinking before asking for one. Plenty of clients take a month or two to decide.</p>`,
+    q: 'Are we obliged to proceed to Phase 2?',
+    a: `<p>No, and the separation is deliberate. You receive a complete, usable deliverable without committing to an execution retainer, and we demonstrate the quality of the thinking before requesting one. Clients frequently take a month or two to decide.</p>`,
   },
   {
     q: 'What if we already have a recent website?',
-    a: `<p>Then we may be restructuring rather than rebuilding — new architecture, new copy, new pages against the keyword map, on the existing design system. The research and positioning work is identical; only the build scope changes, and the quote reflects that.</p>`,
+    a: `<p>The build becomes a restructure rather than a rebuild: new architecture, new copy and new pages mapped to demand, applied to your existing design system. The research and positioning work is unchanged; the quote reflects the narrower build scope.</p>`,
   },
 ])
 
 const body = `
-${breadcrumbs([{ label: 'GTM Foundation', href: '/gtm-foundation/' }])}
+${breadcrumbs(crumbs)}
 
 ${hero({
-  eyebrow: 'Phase 1 · Month one · one-time',
-  title: 'GTM Foundation: find your market, build your position, ship the site',
-  lede: `Before we spend a dollar generating leads, we determine exactly what you should be selling, to whom, and why they should choose you. Then we build the digital foundation for that answer — including the website itself.`,
-  primary: { href: '/contact/', label: 'Book a GTM call' },
-  secondary: { href: '/growth-engine/', label: 'See what comes next' },
+  eyebrow: 'Phase 1 · Month 1 · fixed fee',
+  title: 'GTM Foundation: establish the position, build the assets',
+  lede: `Before any budget is directed at demand generation, we determine what your firm should be selling, to whom, and on what grounds they should select you. Month 1 then delivers the digital foundation for that answer — including the website itself.`,
+  primary: { href: '/contact/', label: 'Book a strategy call' },
+  secondary: { href: '/process/', label: 'See every stage' },
   stats: [
     { label: 'Duration', value: '30 days' },
-    { label: 'Commitment', value: 'One-time' },
-    { label: 'Ends with', value: 'A live site' },
+    { label: 'Commitment', value: 'Month 1 only' },
+    { label: 'Concludes with', value: 'A live site' },
   ],
   aside: `<div class="panel">
-    <p class="panel__label">Month one produces</p>
+    <p class="panel__label">Delivered in Month 1</p>
     <ul>
-      <li><span>Market &amp; competitor research</span> <b>&#10003;</b></li>
-      <li><span>ICP definition</span> <b>&#10003;</b></li>
-      <li><span>Positioning thesis</span> <b>&#10003;</b></li>
-      <li><span>Service packaging</span> <b>&#10003;</b></li>
-      <li><span>Keyword &amp; demand map</span> <b>&#10003;</b></li>
-      <li><span>Messaging framework</span> <b>&#10003;</b></li>
-      <li><span>A rebuilt website</span> <b>&#10003;</b></li>
+      <li><span>Capability and margin assessment</span> <b>&#10003;</b></li>
+      <li><span>Market and competitor research</span> <b>&#10003;</b></li>
+      <li><span>ICP and positioning</span> <b>&#10003;</b></li>
+      <li><span>Service packaging and pricing model</span> <b>&#10003;</b></li>
+      <li><span>Demand map for your service area</span> <b>&#10003;</b></li>
+      <li><span>SEO-optimised website, live</span> <b>&#10003;</b></li>
+      <li><span>90-day campaign plan</span> <b>&#10003;</b></li>
     </ul>
-    <p class="panel__foot">Yours to keep whether or not you continue.</p>
+    <p class="panel__foot">Retained in full whether or not you continue.</p>
   </div>`,
 })}
 
@@ -68,31 +65,28 @@ ${section({
   inner: `
   <div class="split">
     <div class="prose">
-      <h2>Why this comes before lead generation</h2>
-      <p>The usual sequence is backwards. An MSP decides it needs more leads, hires an agency, and the agency starts generating traffic toward a website that says the same thing as every competitor. Traffic goes up. Conversations do not. Eighteen months later the conclusion is "marketing does not work for us."</p>
-      <p>Marketing worked exactly as designed. It amplified an undifferentiated message, and an amplified undifferentiated message is just a more expensive way to be ignored.</p>
-      <p>So we start with the commercial question instead: <strong>what should this company be selling, to whom, and why would they choose it?</strong> That is not a marketing question. It is a strategy question that marketing cannot answer for you — and once it is answered, every downstream decision gets easier and cheaper.</p>
-      ${quote({
-        text: `You shouldn't market yourself as another MSP. Your wedge is X, for Y companies, because Z.`,
-      })}
-      <p>The second reason this comes first is that it makes the work falsifiable. At the end of month one you have a thesis specific enough to be wrong — and therefore specific enough to test. "We should get more leads" cannot be tested. "Dental practices in this metro will switch providers for compliance-grade support at this price point" can.</p>
+      <h2>Why this precedes demand generation</h2>
+      <p>The conventional sequence is inverted. A provider determines it requires more enquiries, engages an agency, and the agency directs traffic toward a website that states what every competitor states. Traffic increases. Conversations do not. Eighteen months later the conclusion is that marketing does not work in managed services.</p>
+      <p>Marketing performed exactly as designed. It amplified an undifferentiated message, and an amplified undifferentiated message is a more expensive route to the same indifference.</p>
+      <p>So we begin with the commercial question instead: <strong>what should this firm be selling, to whom, and why would they select it?</strong> That is not a marketing question. It is a strategic one that marketing cannot answer on your behalf — and once it is answered, every subsequent decision becomes cheaper and more accurate.</p>
+      <p>The second reason concerns accountability. At the end of Month 1 you hold a thesis specific enough to be wrong, and therefore specific enough to test. "We need more leads" cannot be tested. "Dental practices in this metropolitan area will change provider for compliance-grade support at this price point" can be, and within a quarter.</p>
     </div>
     <div>
       ${callout({
-        title: 'Not a strategy deck',
+        title: 'Not a strategy document',
         body: `<p>The deliverable is the strategy <em>and</em> the website built on it.</p>
-        <p>A deck that never gets implemented has produced nothing. Most consulting engagements end exactly where the risk starts.</p>`,
+        <p>A plan that is never implemented has produced nothing. Most consulting engagements conclude precisely where the execution risk begins.</p>`,
       })}
       ${callout({
         tone: 'success',
-        title: 'What you own at the end',
+        title: 'What you own at the conclusion',
         body: `<ul class="tick-list">
-          <li>The research and the plan</li>
+          <li>The research and the documented plan</li>
           <li>The website, domain and analytics</li>
           <li>All copy and content</li>
-          <li>The keyword map and page architecture</li>
+          <li>The demand map and page architecture</li>
         </ul>
-        <p>No proprietary platform, no lock-in.</p>`,
+        <p>No proprietary platform, no licence, no dependency.</p>`,
       })}
     </div>
   </div>`,
@@ -102,36 +96,36 @@ ${section({
   tone: 'muted',
   inner: `
   ${sectionHead({
-    eyebrow: 'What we learn',
-    title: 'The research behind the thesis',
-    intro: `Half internal, half external. The internal half tells us where you already win; the external half tells us whether anyone is looking for it.`,
+    eyebrow: 'Research',
+    title: 'What the month establishes',
+    intro: `Half internal, half external. The internal half identifies where you already win; the external half establishes whether anyone is searching for it.`,
   })}
   ${cards(
     [
       {
         kicker: 'Internal',
-        title: 'What you are actually good at',
-        body: `Most MSPs cannot articulate this, because everything they do feels routine to them. We find it by looking at the work rather than asking for a summary.`,
+        title: 'What your firm is actually strong at',
+        body: `Most providers cannot articulate this, because work performed daily ceases to appear remarkable. We establish it by examining the evidence rather than requesting a summary.`,
         list: [
-          'Services you genuinely excel at, not just offer',
-          'Highest-margin and highest-value capabilities',
-          'Existing client base and vertical concentrations',
-          'Retention and margin patterns by segment',
-          'Real geography and service area',
-          'Where your delivery is unusually strong',
+          'Services delivered with depth, not merely offered',
+          'Highest-margin and highest-retention capabilities',
+          'Existing client base and vertical concentration',
+          'Margin and retention patterns by segment',
+          'The genuine service area and response capability',
+          'Where delivery is demonstrably superior',
         ],
       },
       {
         kicker: 'External',
         title: 'What the market is doing',
-        body: `Positioning made in a vacuum is guessing. We check it against demand, competitors and what buyers in your market are actually searching.`,
+        body: `Positioning established without external reference is conjecture. We test it against demand, competitors and the language buyers in your market actually use.`,
         list: [
-          'Competitive positioning and messaging in your market',
-          'What buyers are searching for, and how much',
-          'Where competitors are winning and why',
-          'Which services have real search demand',
+          'Competitor positioning and messaging across your markets',
+          'What buyers search, and in what volume',
+          'Where competitors currently hold position',
+          'Which services carry verified search demand',
           'Which verticals are attractive and reachable',
-          'What your brand and site are failing to communicate',
+          'What the current site and brand fail to communicate',
         ],
       },
     ],
@@ -142,37 +136,11 @@ ${section({
 ${section({
   inner: `
   ${sectionHead({
-    eyebrow: 'The month',
-    title: 'Research becomes a path to market',
-    intro: `Market research &rarr; ICP &rarr; positioning &rarr; service packaging &rarr; SEO strategy &rarr; messaging &rarr; website.`,
+    eyebrow: 'Sequence',
+    title: 'The five stages of Month 1',
+    intro: `Select any stage for its inputs, method and deliverable.`,
   })}
-  ${steps([
-    {
-      title: 'Week 1 — Discovery and data',
-      body: `Kickoff, interviews with you and your technical leads, access to client and financial data, analytics and CRM review, and a full audit of the current site and search footprint.`,
-      list: ['Client base analysis for hidden concentration', 'Margin and retention by segment', 'Technical and content audit of the current site'],
-    },
-    {
-      title: 'Week 1–2 — Market and competitor research',
-      body: `Competitor positioning, messaging and site structures. Search demand mapped across services, locations and verticals in your service area. Gap analysis: where demand exists that nobody in your market is answering well.`,
-    },
-    {
-      title: 'Week 2 — ICP, positioning and packaging',
-      body: `The decisions. Who you lead with, what the thesis is, how services are packaged and priced, and what stops being marketed. This is where the uncomfortable conversation happens, and it is the most valuable part of the month.`,
-    },
-    {
-      title: 'Week 2–3 — Architecture, messaging and copy',
-      body: `Keyword map to page architecture with one commercial intent per page. Messaging framework — the language for the site, outbound, sales conversations and collateral. Then the copy itself, written and reviewed.`,
-    },
-    {
-      title: 'Week 3–4 — Design and build',
-      body: `The website: fast, accessible, structured for search, with real conversion paths. Schema markup, analytics, tracking, forms, and a migration plan that preserves whatever the old site had earned.`,
-    },
-    {
-      title: 'Week 4 — Launch and handover',
-      body: `Site live, redirects verified, tracking confirmed, post-launch crawl. Then a working session walking your team through the positioning and the plan, so it survives contact with your sales conversations.`,
-    },
-  ])}`,
+  ${processDiagram()}`,
 })}
 
 ${section({
@@ -180,94 +148,65 @@ ${section({
   inner: `
   <div class="split">
     <div>
-      ${sectionHead({
-        eyebrow: 'Deliverables',
-        title: 'Everything you walk away with',
-      })}
+      ${sectionHead({ eyebrow: 'Deliverables', title: 'Everything you receive' })}
       ${checklist([
+        'Capability and margin assessment',
         'Market and competitor research findings',
         'ICP definition with addressable market sizing',
-        'Positioning thesis and rationale',
+        'Positioning statement and supporting rationale',
         'Service packaging and pricing framework',
-        'Keyword and demand map for your service area',
+        'Demand map for your service area',
         'Messaging framework for site, sales and outbound',
         'Site architecture and internal linking plan',
         'A complete, live website with all copy',
         'Analytics, conversion tracking and call tracking',
-        'A 90-day channel plan with sequencing',
+        'A documented 90-day campaign plan',
       ])}
     </div>
     <div>
       <h3>Who this is for</h3>
       ${checklist(
         [
-          'MSPs doing roughly $2–5M in annual revenue',
-          'Growth currently dependent on referrals',
-          'Real technical strengths that have never been marketed',
-          'Capacity to service new clients when they arrive',
-          'Willingness to narrow the message to win a segment',
+          'MSPs at roughly $2–5M in annual revenue',
+          'Growth presently dependent on referral',
+          'Technical strengths that have never been marketed',
+          'Capacity to service new clients on arrival',
+          'Willingness to lead with a defined segment',
         ],
         { columns: 1 },
       )}
       ${callout({
         tone: 'warn',
-        title: 'One MSP per metro',
-        body: `<p>We do not take two clients competing in the same market. If your metro is taken we will tell you on the first call rather than sell you something compromised.</p>`,
+        title: 'One MSP per metropolitan market',
+        body: `<p>We do not accept two clients competing in the same market. Where yours is already held, we will say so on the first call rather than propose a compromised engagement.</p>`,
       })}
     </div>
   </div>`,
 })}
 
-${section({
-  tone: 'muted',
-  inner: `
-  ${sectionHead({
-    eyebrow: 'Then what',
-    title: 'Diagnose &rarr; Build &rarr; Activate &rarr; Optimize',
-    intro: `The Foundation covers Diagnose and Build. If you want the rest, the <a href="/growth-engine/">Growth Engine</a> picks up where it ends.`,
-  })}
-  ${cards(
-    [
-      {
-        kicker: 'You are here',
-        title: 'GTM Foundation',
-        body: `One month, one-time. Find the market, build the position, ship the site. You own everything at the end and owe nothing further.`,
-      },
-      {
-        kicker: 'Optional next',
-        title: 'Growth Engine',
-        href: '/growth-engine/',
-        linkLabel: 'See the execution scope',
-        body: `Three-month minimum. We become your outsourced growth team — inbound, outbound, reputation, content and the infrastructure that measures it.`,
-      },
-    ],
-    { columns: 2 },
-  )}`,
-})}
-
-${section({ inner: faqBlock.html })}
+${section({ tone: 'muted', inner: faqBlock.html })}
 
 ${cta({
-  title: 'Start with one call',
-  body: 'Thirty minutes. We will look at your services, your client base and your market, and give you an honest read on where your wedge probably is — before you commit to anything.',
-  secondaryLabel: 'See the Growth Engine',
+  title: 'Begin with one call',
+  body: 'Thirty minutes covering your services, your client base and your market. You will receive a candid assessment of where your position most likely lies, before committing to anything.',
+  secondaryLabel: 'Phase 2 — Growth Engine',
   secondaryHref: '/growth-engine/',
 })}
 
 ${relatedLinks([
+  { href: '/process/', label: 'The process', body: 'All five stages with inputs and deliverables stated.' },
   { href: '/msp-marketing-strategy/', label: 'MSP marketing strategy', body: 'The framework behind the research and the decisions it produces.' },
-  { href: '/msp-website-design/', label: 'MSP website design', body: 'How the site that ships at the end of month one is built.' },
-  { href: '/growth-engine/', label: 'Growth Engine', body: 'The three-month execution engagement that turns the foundation into pipeline.' },
+  { href: '/growth-engine/', label: 'Phase 2 — Growth Engine', body: 'The optional execution agreement that follows.' },
 ])}
 `
 
 export default {
   path: '/gtm-foundation/',
-  title: 'GTM Foundation for MSPs | Positioning + Website in 30 Days',
+  title: 'GTM Foundation | Positioning and Website in 30 Days',
   description:
-    'A one-month go-to-market engagement for MSPs: market research, ICP, positioning, service packaging, SEO strategy and a rebuilt website you own outright.',
-  breadcrumbs: [{ label: 'GTM Foundation', href: '/gtm-foundation/' }],
-  priority: 0.9,
+    'A fixed-fee Month 1 engagement for MSPs: capability audit, market research, positioning, service packaging and an SEO-optimised website you own outright.',
+  breadcrumbs: crumbs,
+  priority: 0.8,
   schema: [faqBlock.schema],
   body,
 }

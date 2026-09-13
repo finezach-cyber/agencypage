@@ -6,40 +6,40 @@ ${breadcrumbs([{ label: 'About', href: '/about/' }])}
 ${hero({
   eyebrow: 'About us',
   title: 'We only work with managed service providers',
-  lede: `Specialisation is not a positioning line we borrowed from our own advice. It is the reason the work compounds — every engagement teaches us something the next one starts with.`,
-  primary: { href: '/contact/', label: 'Book a GTM call' },
-  secondary: { href: '/gtm-foundation/', label: 'How we work' },
+  lede: `Specialisation is not a line borrowed from our own advice. It is the mechanism by which the work compounds: every engagement produces evidence the next one begins with.`,
+  primary: { href: '/contact/', label: 'Book a strategy call' },
+  secondary: { href: '/process/', label: 'See the process' },
 })}
 
 ${section({
   inner: `
   <div class="split">
     <div class="prose">
-      <h2>Why we narrowed to MSPs</h2>
-      <p>A generalist agency starts every client from zero. New industry, new buyer, new vocabulary, new competitive set — and a learning curve the client pays for. We did that for long enough to notice the pattern was more valuable than the hours.</p>
-      <p>Managed services turned out to be an unusually good market to specialise in, for a reason that is slightly uncomfortable to say out loud: MSPs are, almost without exception, technically excellent and commercially generic. They can genuinely solve problems their buyers cannot evaluate, and they describe that capability in the same four bullet points as every competitor.</p>
-      <p>That gap between real capability and its expression is the most fixable problem in marketing. It is also the one where a focused agency has an enormous advantage over a generalist, because the answer is never "post more" — it is "decide what you are."</p>
+      <h2>Why we narrowed to managed services</h2>
+      <p>A generalist agency begins every engagement from zero: a new sector, a new buyer, an unfamiliar vocabulary and a new competitive set, with a learning curve the client funds. We operated that way long enough to observe that the accumulated pattern was worth more than the hours.</p>
+      <p>Managed services proved an unusually suitable category to specialise in, for a reason worth stating plainly: providers in this market are, with few exceptions, technically excellent and commercially generic. They resolve problems their buyers are unequipped to evaluate, and they describe that capability in the same four bullet points as every competitor.</p>
+      <p>The distance between genuine capability and its expression is the most correctable problem in marketing, and the one where a focused firm holds the greatest advantage over a generalist — because the remedy is never to publish more. It is to determine what the firm is.</p>
 
-      <h2>What we accumulate</h2>
-      <p>Working only in this market means every engagement adds to a picture a generalist never builds: which MSP services have real search demand, which verticals convert and which just sound lucrative, which offers land with a 60-seat manufacturer versus a 15-seat dental practice, which website structures produce calls, which outbound messages get replies rather than unsubscribes, which reputation strategies move the map pack.</p>
-      <p>You are buying that pattern alongside the execution. It is the reason we can tell you in the first month that a vertical you are excited about has four reachable prospects in your service area — before you spend a year finding out.</p>
+      <h2>What the specialisation produces</h2>
+      <p>Working in a single category means every engagement contributes to a body of evidence a generalist never assembles: which services carry verified search demand, which verticals convert and which merely sound lucrative, which offers land with a 60-seat manufacturer as against a 15-seat dental practice, which site structures produce enquiries, which outbound messages earn replies rather than unsubscribes, and which reputation strategies move local rankings.</p>
+      <p>That pattern forms part of what the engagement provides. It is why we can establish within the first month that a vertical you are enthusiastic about contains four reachable prospects in your service area, rather than your discovering it over a year.</p>
 
       <h2>How we work</h2>
-      <p>Foundation first, always. We will not sell an execution retainer to an MSP with no positioning, because amplifying a generic message is the most reliable way to waste a marketing budget and then conclude that marketing does not work.</p>
-      <p>One client per metro. Ranking two clients for the same local term means one of them paid us to lose.</p>
-      <p>And we do the work ourselves. There is no account-manager layer between you and the people executing, which is also why we cap how many MSPs we take on at once.</p>
+      <p>Foundation first, without exception. We do not sell an execution retainer to a provider with no established position, because amplifying a generic message is the most dependable way to expend a marketing budget and then conclude that marketing does not work in this category.</p>
+      <p>One client per metropolitan market. Ranking two clients for the same local term means one of them has paid us to lose.</p>
+      <p>And we perform the work ourselves. There is no account-management layer between you and the people executing it, which is also why the number of concurrent engagements is capped.</p>
     </div>
     <div>
-      ${quote({ text: `MSPs are technically excellent and commercially generic. That gap is the most fixable problem in marketing.` })}
+      ${quote({ text: `Providers in this category are technically excellent and commercially generic. That distance is the most correctable problem in marketing.` })}
       ${callout({
         title: 'The progression we are building toward',
-        body: `<p>$2–5M MSP &rarr; help them reach $10M &rarr; repeat the playbook.</p>
-        <p>That is a more defensible business than being another generalist agency, and it means our incentives point at your growth rather than at your retainer.</p>`,
+        body: `<p>A $2–5M provider, supported to $10M, with the method repeated.</p>
+        <p>It is a more defensible business than generalist agency work, and it aligns our incentive with your growth rather than with the duration of a retainer.</p>`,
       })}
       ${callout({
         tone: 'success',
         title: 'How we say no',
-        body: `<p>We turn down MSPs whose metro is taken, who need leads before they have capacity to serve them, and who want to stay generalists. It is a short call and an honest one.</p>`,
+        body: `<p>We decline providers whose metropolitan market is already held, who require enquiries before they have capacity to service them, and who intend to remain generalists. It is a brief conversation and a candid one.</p>`,
       })}
     </div>
   </div>`,
@@ -52,28 +52,28 @@ ${section({
   ${cards(
     [
       {
-        title: 'We will tell you when SEO is the wrong bet',
-        body: `If you need conversations this quarter, search alone will not do it. We will say so, and we will sequence outbound first rather than sell you a channel that pays out in month six.`,
+        title: 'We will say when search is the wrong channel',
+        body: `Where conversations are required this quarter, search alone will not deliver them. We will state that, and sequence outbound first, rather than sell a channel that returns in month six.`,
       },
       {
-        title: 'We will not promise lead volumes we cannot model',
-        body: `Before we forecast anything we size your addressable market. A number invented to win the deal is a number that loses the client in month four.`,
+        title: 'We do not forecast volumes we cannot model',
+        body: `No projection is offered before the addressable market has been sized. A figure invented to win the engagement is a figure that loses the client in month four.`,
       },
       {
-        title: 'We will not sell you shared leads',
-        body: `Everything is generated for you, against your ICP, on your positioning. Leads sold to three MSPs at once put you straight back into a price comparison.`,
+        title: 'We do not resell shared leads',
+        body: `Every conversation is generated for you, against your ICP and your positioning. A lead sold to three providers simultaneously returns you directly to a price comparison.`,
       },
       {
-        title: 'We will not build forty thin location pages',
-        body: `It used to work. Now it is the clearest thin-content signal there is, and it can suppress the pages that would have ranked on their own.`,
+        title: 'We do not publish forty thin location pages',
+        body: `The tactic previously worked. It is now a reliable thin-content signal and frequently suppresses the pages that would have ranked on their own merits.`,
       },
       {
-        title: 'We report on pipeline, not impressions',
-        body: `Booked calls, opportunities and closed revenue by source. If a metric cannot be connected to pipeline, it does not lead the report.`,
+        title: 'We report pipeline, not impressions',
+        body: `Booked meetings, opportunities created and revenue closed by source. A metric that cannot be connected to pipeline does not lead the report.`,
       },
       {
-        title: 'You own everything',
-        body: `Site, domain, copy, analytics, research. No proprietary platform, no lock-in, nothing that stops working the day you leave.`,
+        title: 'You own the output',
+        body: `Website, domain, copy, analytics and research. No proprietary platform, no licence, and nothing that ceases to function on the day you leave.`,
       },
     ],
     { columns: 3 },
@@ -87,12 +87,12 @@ ${section({
       ${sectionHead({ eyebrow: 'Fit', title: 'Who we work with' })}
       ${checklist(
         [
-          'Managed service providers doing roughly $2–5M annually',
-          'Growth today mostly from referrals and word of mouth',
-          'Real technical strengths that have never been marketed',
-          'Capacity to onboard new clients when they arrive',
-          'An owner willing to narrow the message to win a segment',
-          'A metro we are not already working in',
+          'Managed service providers at roughly $2–5M in annual revenue',
+          'Growth presently dependent on referral',
+          'Technical strengths that have never been marketed',
+          'Capacity to onboard new clients on arrival',
+          'A principal willing to lead with a defined segment',
+          'A metropolitan market we do not already serve',
         ],
         { columns: 1 },
       )}
@@ -101,11 +101,11 @@ ${section({
       ${sectionHead({ eyebrow: 'Not a fit', title: 'Who we are not for' })}
       ${checklist(
         [
-          'Sub-$1M MSPs — you need sales activity before marketing infrastructure',
-          'MSPs above roughly $10M with an internal marketing team',
-          'Anyone wanting leads next week with no foundation',
-          'Anyone shopping for the cheapest per-blog-post rate',
-          'Anyone unwilling to be specific about who they serve',
+          'Providers below $1M, who require sales activity before marketing infrastructure',
+          'Providers above roughly $10M with an internal marketing function',
+          'Any firm requiring enquiries within the month, with no foundation in place',
+          'Any firm procuring on lowest cost per deliverable',
+          'Any firm unwilling to be specific about who it serves',
         ],
         { columns: 1 },
       )}
@@ -114,22 +114,22 @@ ${section({
 })}
 
 ${cta({
-  title: 'A short call tells us both whether this fits',
-  body: 'Thirty minutes, no deck. We will look at your services, your client base and your market — and if it is not a fit, we will say so on that call.',
+  title: 'One call establishes whether this is a fit',
+  body: 'Thirty minutes, without a presentation. We review your services, your client base and your market — and if the engagement is not a fit, we will say so on that call.',
 })}
 
 ${relatedLinks([
-  { href: '/gtm-foundation/', label: 'GTM Foundation', body: 'What the first month looks like in detail.' },
-  { href: '/growth-engine/', label: 'Growth Engine', body: 'The ongoing execution engagement.' },
-  { href: '/resources/msp-keyword-research/', label: 'MSP keyword research', body: 'A sample of how we analyse a market before recommending anything.' },
+  { href: '/process/', label: 'The process', body: 'Every stage of the engagement, with deliverables stated.' },
+  { href: '/gtm-foundation/', label: 'Phase 1 — GTM Foundation', body: 'The Month 1 engagement in detail.' },
+  { href: '/growth-engine/', label: 'Phase 2 — Growth Engine', body: 'The three-month execution agreement.' },
 ])}
 `
 
 export default {
   path: '/about/',
-  title: 'About Us | An Agency That Only Works With MSPs',
+  title: 'About | A Marketing Firm for MSPs Exclusively',
   description:
-    'We are a marketing agency working exclusively with managed service providers doing $2–5M. How we work, what we will not do, and who we are a fit for.',
+    'A marketing firm working exclusively with managed service providers at $2–5M. How we work, what we decline to do, and the engagements we are a fit for.',
   breadcrumbs: [{ label: 'About', href: '/about/' }],
   priority: 0.6,
   schemaType: 'AboutPage',
