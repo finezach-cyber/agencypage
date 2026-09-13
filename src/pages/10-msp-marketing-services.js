@@ -27,11 +27,11 @@ ${section({
   ${cards([
     {
       title: 'Capability and margin assessment',
-      body: `Establishing which services your firm delivers with genuine depth, where margin and retention actually originate, and which verticals you have already concentrated in.`,
+      body: `Establishing which services your firm delivers with genuine depth, where margin and retention actually originate, and whether local search is relevant to your model.`,
     },
     {
-      title: 'Market and competitor research',
-      body: `Search demand across your service area, competitor positioning and site structures, and the demand nobody in your market is answering competently.`,
+      title: 'Opportunity analysis',
+      body: `Every service assessed for demand against competitive difficulty, producing the three strongest land-and-expand offers — sized, keyword-mapped and priced. Documented as the Opportunities Report.`,
     },
     {
       title: 'MSP marketing strategy',
@@ -40,7 +40,7 @@ ${section({
     },
     {
       title: 'Website design and build',
-      body: `An SEO-optimised website built on the positioning and structured against the demand map: one page per commercial intent, technically sound, fast, and built to convert. Delivered live within the month.`,
+      body: `An SEO-optimised website carrying your branding, built against the three opportunities: an optimised home page plus a dedicated page for each opportunity, delivered ready to deploy.`,
     },
   ], { columns: 2 })}`,
 })}
@@ -51,13 +51,13 @@ ${section({
   ${sectionHead({
     eyebrow: 'Phase 2 — Growth Engine',
     title: 'Execution against the plan',
-    intro: `A three-month agreement, entered only after Month 1 has been delivered and reviewed. <a href="/growth-engine/">Full scope and terms</a>.`,
+    intro: `Optional, and entered only after Month 1 has been delivered and reviewed. <a href="/growth-engine/">Full scope and terms</a>.`,
   })}
   ${cards([
     {
       title: 'MSP lead generation',
       href: '/msp-lead-generation/',
-      body: `Inbound and outbound directed at one ICP: account targeting, list construction, sequenced email and LinkedIn outreach, routing and appointment setting, measured on booked meetings.`,
+      body: `Inbound and outbound directed at the opportunities identified in Month 1: account targeting, list construction, sequenced email and LinkedIn outreach, routing and appointment setting, measured on booked meetings.`,
     },
     {
       title: 'MSP SEO',
@@ -106,7 +106,7 @@ ${section({
         [
           'Month 1 is fixed-fee and quoted before work begins',
           'Phase 2 is a separate decision, made after delivery',
-          'You own the website, copy, research and plan outright',
+          'You own both reports and the website outright',
           'One MSP per metropolitan market',
           'No account-management layer between you and the work',
           'Reporting against booked meetings and revenue by source',
@@ -132,7 +132,7 @@ ${cta()}
 ${relatedLinks([
   { href: '/process/', label: 'The process', body: 'Every stage, with inputs and deliverables stated.' },
   { href: '/gtm-foundation/', label: 'Phase 1 — GTM Foundation', body: 'The Month 1 engagement in full.' },
-  { href: '/growth-engine/', label: 'Phase 2 — Growth Engine', body: 'The three-month execution agreement.' },
+  { href: '/growth-engine/', label: 'Phase 2 — Growth Engine', body: 'Optional execution against the opportunities identified.' },
 ])}
 `
 
@@ -140,7 +140,7 @@ export default {
   path: '/msp-marketing-services/',
   title: 'MSP Marketing Services for Managed Service Providers',
   description:
-    'MSP marketing services across two engagements: strategy, research and an SEO-optimised website in Month 1, then lead generation, SEO and content execution.',
+    'MSP marketing services in two engagements: opportunity research and an SEO-optimised website in Month 1, then lead generation, SEO and content execution.',
   breadcrumbs: crumbs,
   priority: 0.8,
   schema: [

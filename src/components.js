@@ -226,39 +226,43 @@ export function relatedLinks(items, { title = 'Keep reading' } = {}) {
  * focus rings, tap targets, text scaling and mobile stacking all work without
  * fighting a viewBox. `compact` drops the per-node detail line for the
  * home-page overview.
+ *
+ * The `out` field marks the three stages that produce a named deliverable —
+ * two reports and the website. Those are what the client walks away with.
  */
 export function processDiagram({ compact = false, base = '/process/' } = {}) {
   const phaseOne = [
     {
-      id: 'capabilities',
-      label: 'Capability audit',
-      detail: 'What you are genuinely good at, and where the margin is.',
+      id: 'intake',
+      label: 'Capability intake',
+      detail: 'Your services, site and market, and whether local search applies.',
     },
     {
-      id: 'research',
-      label: 'Market research',
-      detail: 'Demand, competitors and gaps across your service area.',
-    },
-    {
-      id: 'positioning',
-      label: 'Positioning &amp; offer',
-      detail: 'The services to lead with, packaged and priced.',
+      id: 'opportunities',
+      label: 'Opportunity analysis',
+      detail: 'The three offers with the most demand and the least competition.',
+      out: 'Report 1',
     },
     {
       id: 'website',
       label: 'Website build',
-      detail: 'An SEO-optimised site built on the positioning.',
+      detail: 'An SEO-optimised site on your branding, one page per opportunity.',
+      out: 'Website',
     },
     {
-      id: 'campaign-plan',
-      label: 'Campaign plan',
-      detail: 'Inbound and outbound, sequenced for your market.',
+      id: 'impact',
+      label: 'Impact modelling',
+      detail: 'Projected rankings, and the revenue those rankings imply.',
+      out: 'Report 2',
     },
   ]
 
   const node = (step, index) => `<li class="pnode">
       <a href="${base}#${step.id}">
-        <span class="pnode__num">${String(index + 1).padStart(2, '0')}</span>
+        <span class="pnode__top">
+          <span class="pnode__num">${String(index + 1).padStart(2, '0')}</span>
+          ${step.out ? `<span class="pnode__out">${step.out}</span>` : ''}
+        </span>
         <span class="pnode__label">${step.label}</span>
         ${compact ? '' : `<span class="pnode__detail">${step.detail}</span>`}
       </a>
@@ -272,6 +276,7 @@ export function processDiagram({ compact = false, base = '/process/' } = {}) {
       <p class="pband__meta">Month 1 &middot; one-time &middot; fixed fee</p>
     </header>
     <ol class="pband__nodes">${phaseOne.map(node).join('')}</ol>
+    <p class="pband__out">You receive <strong>two reports</strong> and an <strong>SEO-optimised website ready to deploy</strong>.</p>
   </section>
 
   <div class="pfork">
@@ -283,11 +288,11 @@ export function processDiagram({ compact = false, base = '/process/' } = {}) {
     <ul class="pfork__paths">
       <li class="ppath ppath--stop">
         <span class="ppath__head">If you stop here</span>
-        <span class="ppath__body">The website and the campaign plan are yours, in full. No further cost, no licence, no claw-back.</span>
+        <span class="ppath__body">Both reports and the website are yours to deploy. No further cost, no licence, no claw-back.</span>
       </li>
       <li class="ppath ppath--go">
         <span class="ppath__head">If you continue</span>
-        <span class="ppath__body">We execute the plan we built, under a three-month agreement.</span>
+        <span class="ppath__body">We execute against the opportunities the research identified.</span>
       </li>
     </ul>
   </div>
@@ -296,14 +301,14 @@ export function processDiagram({ compact = false, base = '/process/' } = {}) {
     <header class="pband__head">
       <p class="pband__tag">Phase 2</p>
       <h3 class="pband__title" id="pband-two"><a href="/growth-engine/">Growth Engine</a></h3>
-      <p class="pband__meta">Three-month agreement &middot; optional</p>
+      <p class="pband__meta">Optional &middot; decided after delivery</p>
     </header>
     <ol class="pband__nodes pband__nodes--wide">
       <li class="pnode pnode--wide">
         <a href="${base}#execution">
-          <span class="pnode__num">06</span>
+          <span class="pnode__top"><span class="pnode__num">05</span></span>
           <span class="pnode__label">Execution</span>
-          ${compact ? '' : '<span class="pnode__detail">SEO, content, outbound, reputation and reporting — run against the plan, measured on booked meetings.</span>'}
+          ${compact ? '' : '<span class="pnode__detail">SEO, content, outbound and reputation run against the opportunities, measured on booked meetings.</span>'}
         </a>
       </li>
     </ol>

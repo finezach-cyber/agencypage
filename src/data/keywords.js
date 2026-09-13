@@ -48,24 +48,6 @@ export const servicesCluster = [{ keyword: 'msp marketing services', volume: 110
 /** /msp-pricing-models/. 30/mo */
 export const pricingCluster = [{ keyword: 'msp pricing models', volume: 30, cpc: 63.4 }]
 
-/**
- * Illustration only, used once inside /process/#research.
- *
- * This is what a business searches when it wants to hire an MSP — our clients'
- * demand, not ours. It appears on the site to demonstrate the market research
- * step. We deliberately do not build pages against it: those searchers want to
- * hire a provider, not a marketing firm.
- */
-export const clientDemandExample = [
-  { keyword: 'it support near me', volume: 9900, cpc: 31.72 },
-  { keyword: 'managed it services near me', volume: 8100, cpc: 60.69 },
-  { keyword: 'managed it services provider', volume: 5400, cpc: 98.09 },
-  { keyword: 'it support company', volume: 5400, cpc: 75.37 },
-  { keyword: 'outsourced it support', volume: 2400, cpc: 71.16 },
-  { keyword: 'healthcare it services', volume: 480, cpc: 32.43 },
-  { keyword: 'it support for dental practices', volume: 40, cpc: 97.83 },
-]
-
 export const sum = (rows) => rows.reduce((total, row) => total + row.volume, 0)
 
 /** Total List 1 demand across every cluster the site targets. */

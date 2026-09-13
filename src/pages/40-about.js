@@ -121,7 +121,7 @@ ${cta({
 ${relatedLinks([
   { href: '/process/', label: 'The process', body: 'Every stage of the engagement, with deliverables stated.' },
   { href: '/gtm-foundation/', label: 'Phase 1 — GTM Foundation', body: 'The Month 1 engagement in detail.' },
-  { href: '/growth-engine/', label: 'Phase 2 — Growth Engine', body: 'The three-month execution agreement.' },
+  { href: '/growth-engine/', label: 'Phase 2 — Growth Engine', body: 'Optional execution against the opportunities identified.' },
 ])}
 `
 

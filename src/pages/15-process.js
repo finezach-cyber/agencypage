@@ -1,8 +1,7 @@
 import {
   hero, section, sectionHead, faq, cta, callout, checklist,
-  breadcrumbs, relatedLinks, processDiagram, keywordTable, cards,
+  breadcrumbs, relatedLinks, processDiagram, cards,
 } from '../components.js'
-import { clientDemandExample } from '../data/keywords.js'
 
 const crumbs = [{ label: 'Process', href: '/process/' }]
 
@@ -35,28 +34,28 @@ function stage({ id, num, title, lede, inputs, work, deliverable, tone = '' }) {
 
 const faqBlock = faq([
   {
-    q: 'How long does Month 1 actually take?',
-    a: `<p>Four weeks from kickoff, provided interviews and content review happen on schedule. The most common cause of extension is an internal disagreement about positioning that needed to surface anyway — we would rather resolve it than publish a site the leadership team does not believe in.</p>`,
+    q: 'What exactly do we receive at the end of Month 1?',
+    a: `<p>Three things. The <strong>Opportunities Report</strong>, setting out the three offers with the most demand and the least competition, each sized, keyword-mapped and priced at a validated figure. An <strong>SEO-optimised website</strong> carrying your branding, with an optimised home page and a dedicated page for each opportunity, ready for you to deploy. And the <strong>GTM Foundations Impact Report</strong>, projecting where you rank now, where you would rank once the site is live, and the ceiling available with best practice applied — converted into meetings and revenue through cited industry benchmarks.</p>`,
   },
   {
     q: 'How much of our time does the process require?',
     a: `<p>Approximately four to six hours in the first fortnight: a kickoff session, interviews with you and one or two technical leads, access to client and financial data, and a content review. Two further review checkpoints follow. We require your knowledge, not your labour.</p>`,
   },
   {
-    q: 'Can you work from research we have already commissioned?',
-    a: `<p>Send it and we will assess it. If the ideal customer profile, positioning and demand analysis are sound and current, Month 1 narrows to validation and build, and the fee reflects the reduced scope. We will tell you plainly if the existing work is not sufficient to build on.</p>`,
+    q: 'How long does Month 1 take?',
+    a: `<p>Four weeks from kickoff, provided interviews and content review happen on schedule. The most common cause of extension is an internal disagreement about which opportunity to lead with — a disagreement that needed to surface regardless, and one we would rather resolve than build around.</p>`,
   },
   {
     q: 'Who writes the website copy?',
     a: `<p>We do, drawn from the research and from interviews with your team. You review and approve it. Asking an MSP principal to draft their own service pages is the most reliable way to leave a website unfinished for a year.</p>`,
   },
   {
-    q: 'What if we already have a recent website?',
-    a: `<p>The build stage becomes a restructure rather than a rebuild: new architecture, new copy and new pages mapped to demand, applied to your existing design system. Stages 01 through 03 are unchanged, and the quote reflects the narrower build.</p>`,
+    q: 'Why are the offers priced between $5,000 and $10,000?',
+    a: `<p>Because that range is where a land-and-expand offer works. It is substantial enough to constitute a real engagement rather than a trial, and small enough that a prospective client can approve it without a procurement process. It establishes the relationship that larger managed services agreements are subsequently built on, which is why the final conversion step in the Impact Report models initial revenue through to longer-term engagement.</p>`,
   },
   {
     q: 'Is Phase 2 required?',
-    a: `<p>No. It is a separate decision made after Month 1 has been delivered. The separation is the point: you evaluate the quality of the thinking before committing to an execution agreement, and we earn that agreement rather than bundling it.</p>`,
+    a: `<p>No. It is a separate decision made after Month 1 has been delivered. The separation is the point: you evaluate the quality of the analysis before committing to execution, and we earn that engagement rather than bundling it.</p>`,
   },
 ])
 
@@ -66,7 +65,7 @@ ${breadcrumbs(crumbs)}
 ${hero({
   eyebrow: 'The process',
   title: 'How the engagement works, stage by stage',
-  lede: `Two phases with a decision point between them. Month 1 establishes the commercial foundation and delivers the assets. Phase 2 executes the plan. Each stage below states what it takes in, what we do, and what you receive.`,
+  lede: `Month 1 identifies the offers with the most demand and the least competition, builds an SEO-optimised website against them, and projects what that is worth. You receive two reports and the website. What happens after that is your decision.`,
   primary: { href: '/contact/', label: 'Book a strategy call' },
   secondary: { href: '/gtm-foundation/', label: 'Phase 1 in detail' },
 })}
@@ -85,120 +84,98 @@ ${section({
   inner: `
   ${sectionHead({
     eyebrow: 'Phase 1 — GTM Foundation',
-    title: 'Month 1: establish the position, build the assets',
-    intro: `A fixed-fee engagement. Five stages, delivered in four weeks, ending with a live website and a campaign plan you own outright.`,
+    title: 'Month 1: find the opportunity, build the asset, model the return',
+    intro: `A fixed-fee engagement delivered in four weeks. Four stages producing three deliverables: the Opportunities Report, an SEO-optimised website ready to deploy, and the GTM Foundations Impact Report.`,
   })}
 
   ${stage({
-    id: 'capabilities',
+    id: 'intake',
     num: '01',
-    title: 'Capability audit',
-    lede: `Before assessing the market, we establish what your firm is actually strong at — which is rarely what the website currently emphasises.`,
+    title: 'Capability intake',
+    lede: `We establish what your firm actually sells, to whom, and in which markets — the inputs every later stage is analysed against.`,
     inputs: [
-      'Interviews with you and your technical leads',
+      'Your company, website and full service list',
       'Client roster, tenure and contract structure',
       'Revenue, margin and retention by service line',
-      'Delivery data: escalations, onboarding, response performance',
+      'Your genuine service area and delivery capacity',
     ],
     work: [
-      'Identify services delivered with genuine depth, not merely offered',
+      'Identify services delivered with real depth, not merely offered',
       'Locate margin and retention concentration by segment',
       'Surface vertical concentration that accumulated unintentionally',
-      'Establish the real service area and response capability',
+      'Determine whether local search is relevant to your model, or not',
     ],
-    deliverable: `A written capability and margin assessment: where your firm performs disproportionately well, and which segments are worth defending. Nearly every MSP we assess is already specialised without having recognised it.`,
+    deliverable: `A defined input set for the analysis: the services worth taking to market, the segments worth defending, and a clear answer on whether local search applies to your firm. Not every MSP is a local-search business, and treating one as though it were wastes the budget.`,
   })}
 
   ${stage({
-    id: 'research',
+    id: 'opportunities',
     num: '02',
-    title: 'Market research',
-    lede: `Internal strength only matters where external demand exists. This stage tests the first against the second.`,
+    title: 'Opportunity analysis',
+    lede: `The central question of the engagement: of everything you could sell, which offers carry the most demand against the least competition?`,
     inputs: [
-      'Your defined service area and target size band',
-      'The capability assessment from stage 01',
-      'Competitor set across your markets',
+      'The service list and capability findings from stage 01',
+      'Search demand across your markets',
+      'The competitive set ranking for each candidate term',
     ],
     work: [
-      'Map search demand by service, location and vertical across your area',
-      'Analyse competitor positioning, messaging and site structure',
-      'Identify demand that no competitor is answering competently',
-      'Size the addressable account base for each candidate segment',
+      'Assess demand against competitive difficulty for every service you offer',
+      'Identify the three strongest opportunities — highest demand, weakest competition',
+      'Shape each as a land-and-expand offer in the $5,000–$10,000 range',
+      'Validate the pricing against what the market currently pays',
+      'Size each opportunity and establish the keywords that reach it',
     ],
-    deliverable: `A demand map for your service area: what your buyers search, in what volume, what those clicks cost in paid search, who currently ranks, and where the openings are. This is the evidence the positioning decision is made against.`,
-  })}
-
-  ${section({
-    className: 'section--tight',
-    inner: `${callout({
-      title: 'What the demand map looks like',
-      body: `<p>An illustration of the national picture. Yours is built for your service area and your verticals.</p>
-        ${keywordTable({
-          rows: clientDemandExample,
-          caption: 'What businesses search when they intend to hire an MSP. US monthly volume and paid cost per click.',
-        })}
-        <p>Two observations drive most positioning decisions. Local intent dominates, which determines where visibility has to be won. And low volume does not mean low value — <em>it support for dental practices</em> draws 40 searches a month at $97.83 a click, because the few firms searching it are worth a great deal to a provider who understands that environment.</p>`,
-    })}`,
-  })}
-
-  ${stage({
-    id: 'positioning',
-    num: '03',
-    title: 'Positioning and offer design',
-    lede: `The research resolves into decisions. This is the stage that determines whether everything downstream works.`,
-    inputs: [
-      'The capability assessment and the demand map',
-      'Commercial constraints: capacity, delivery model, pricing floor',
-      'Leadership input on direction and appetite',
-    ],
-    work: [
-      'Define the ideal customer profile and the segments to lead with',
-      'Establish the positioning: what you are, for whom, on what grounds',
-      'Package services into tiers a buyer can evaluate without a call',
-      'Set the pricing model and how it is communicated',
-      'Determine what is no longer actively marketed',
-    ],
-    deliverable: `A positioning statement you can defend, a packaged and priced service structure, and a messaging framework that governs the website, outbound sequences and sales conversations alike.`,
+    deliverable: `<strong>Deliverable 1 — the Opportunities Report.</strong> Your three strongest offers, each with the size of the opportunity described in plain terms, the keywords that reach it, the competition you would rank against, and a validated price point. Written to be read by your leadership team, not decoded by them.`,
   })}
 
   ${stage({
     id: 'website',
-    num: '04',
+    num: '03',
     title: 'Website build',
-    lede: `The positioning becomes a working asset. We build the site rather than specifying it.`,
+    lede: `The opportunities become a working asset. We build the site rather than specifying it.`,
     inputs: [
-      'The positioning and messaging framework',
-      'The demand map and resulting page architecture',
-      'Existing brand assets, where they are usable',
+      'The three validated opportunities and their keyword targets',
+      'Your existing branding, which the build carries through',
+      'Current site structure, content and any equity worth preserving',
     ],
     work: [
-      'Map one page to each commercial intent, with no internal competition',
-      'Write all copy from the research and interviews, for your review',
-      'Design and build: fast, responsive, accessible, structured data throughout',
+      'Build an SEO-optimised home page positioned on the strongest opportunity',
+      'Build a dedicated, individually optimised page for each of the three opportunities',
+      'Write all copy from the research, for your review',
+      'Apply technical SEO throughout: structure, speed, metadata, structured data',
       'Configure analytics, conversion tracking and enquiry routing',
-      'Migrate with URL mapping and redirects so existing equity is preserved',
     ],
-    deliverable: `A live, SEO-optimised website built on your positioning — with all copy, the domain and the analytics owned outright by you. No proprietary platform and no licence.`,
+    deliverable: `<strong>Deliverable 2 — the website.</strong> A complete, SEO-optimised site carrying your branding: an optimised home page plus one page per opportunity, ready for you to deploy. All copy, the build and the analytics are owned outright by you.`,
   })}
 
   ${stage({
-    id: 'campaign-plan',
-    num: '05',
-    title: 'Campaign plan',
-    lede: `A specification for demand generation in your market, detailed enough to execute with or without us.`,
+    id: 'impact',
+    num: '04',
+    title: 'Impact modelling',
+    lede: `What the work is projected to be worth, stated in revenue rather than in rankings.`,
     inputs: [
-      'The positioning, packaging and demand map',
-      'Addressable account sizing by segment',
-      'Your CRM, sales process and current follow-up practice',
+      'Your current search positions and visibility',
+      'The opportunity keywords and their competitive difficulty',
+      'Validated pricing from the Opportunities Report',
     ],
     work: [
-      'Specify inbound targets: search terms, pages, local visibility and reputation',
-      'Specify outbound: account criteria, list sources, segmentation and triggers',
-      'Draft messaging by segment, since motivations differ by vertical',
-      'Sequence the channels by speed of return and rate of compounding',
-      'Define the metrics and reporting cadence performance is judged against',
+      'Establish where your current website ranks today',
+      'Project where it ranks once the new site is deployed',
+      'Model the further ceiling available through best practice — an authoritative reference presence, managed LinkedIn content, outbound and reputation',
+      'Apply cited industry averages at each conversion step: search to visit, visit to booked meeting, meeting to revenue, and initial revenue to longer-term engagement',
     ],
-    deliverable: `A written 90-day campaign plan covering inbound and outbound, with targets, messaging, sequencing and success measures. Yours regardless of what you decide next.`,
+    deliverable: `<strong>Deliverable 3 — the GTM Foundations Impact Report.</strong> Current rankings, projected rankings after deployment, and the ceiling available once best practice is applied — each converted through cited industry benchmarks into meetings and revenue, so the investment can be assessed on expected return rather than on traffic.`,
+  })}
+
+  ${callout({
+    tone: 'success',
+    title: 'What Month 1 hands over',
+    body: `<ul class="tick-list">
+      <li><strong>The Opportunities Report</strong> — your three strongest offers, sized and priced</li>
+      <li><strong>The website</strong> — SEO-optimised, on your branding, ready to deploy</li>
+      <li><strong>The GTM Foundations Impact Report</strong> — projected rankings and the revenue they imply</li>
+    </ul>
+    <p>All three are yours outright at the end of the month, whatever you decide next.</p>`,
   })}`,
 })}
 
@@ -209,27 +186,27 @@ ${section({
   ${sectionHead({
     eyebrow: 'The decision point',
     title: 'Month 1 ends. You decide what happens next.',
-    intro: `You make this decision holding the finished work, not a proposal describing it.`,
+    intro: `You make this decision holding the finished work — both reports and a deployable website — rather than a proposal describing it.`,
   })}
   ${cards(
     [
       {
         kicker: 'Option A',
         title: 'Stop here',
-        body: `The website, copy, research, positioning and campaign plan are yours in full. No licence, no ongoing fee, no claw-back, nothing that ceases to function. Execute the plan internally or engage another firm to run it.`,
+        body: `Both reports and the website are yours in full — deploy the site, work the opportunities, and apply the Impact Report's recommendations internally or through another firm. No licence, no ongoing fee, no claw-back, nothing that ceases to function.`,
       },
       {
         kicker: 'Option B',
         title: 'Continue to Phase 2',
-        body: `We execute the plan under a three-month agreement: search, content, outbound, reputation and reporting run as one system and measured on booked meetings. <a href="/growth-engine/">Review the scope</a>.`,
+        body: `We execute against the opportunities the research identified: search, content, outbound, reputation and reporting run as one system and measured on booked meetings. <a href="/growth-engine/">Review the scope</a>.`,
       },
     ],
     { columns: 2 },
   )}
   ${callout({
     title: 'Why the phases are separated',
-    body: `<p>Most agency relationships require a multi-month commitment before the client has seen anything beyond a proposal. That structure transfers all of the risk at precisely the moment the buyer has the least information.</p>
-    <p>Separating the phases inverts it. You evaluate the quality of the thinking against finished work, and we earn the execution agreement rather than bundling it into the initial signature.</p>`,
+    body: `<p>Most agency relationships require a commitment before the client has seen anything beyond a proposal. That structure transfers the risk at precisely the moment the buyer holds the least information.</p>
+    <p>Separating the phases inverts it. You evaluate the quality of the analysis against finished work, and we earn the execution engagement rather than bundling it into the first signature.</p>`,
   })}`,
 })}
 
@@ -237,27 +214,27 @@ ${section({
   inner: `
   ${sectionHead({
     eyebrow: 'Phase 2 — Growth Engine',
-    title: 'Execution against the plan',
-    intro: `A three-month agreement. The plan built in Month 1 is operated across every channel where your buyers can be reached.`,
+    title: 'Execution against the opportunities',
+    intro: `Optional, and decided only once Month 1 has been delivered. The opportunities identified in the research are worked across every channel where those buyers can be reached.`,
   })}
   ${stage({
     id: 'execution',
-    num: '06',
+    num: '05',
     title: 'Execution',
-    lede: `Not a content subscription. The specified plan, run as one system, reported against pipeline.`,
+    lede: `Not a content subscription. The identified opportunities, worked as one system and reported against pipeline.`,
     inputs: [
-      'The campaign plan and messaging framework from Month 1',
+      'The Opportunities Report and the Impact Report recommendations',
       'The website as the conversion surface',
       'CRM access and an agreed definition of a qualified meeting',
     ],
     work: [
-      'Inbound: SEO execution, local visibility, landing pages, conversion work',
+      'Inbound: SEO execution against the opportunity keywords, landing pages, conversion work',
       'Outbound: list construction, sequenced email and LinkedIn, appointment setting',
       'Reputation: review generation, Google Business Profile, monitoring',
       'Content: service, vertical and sales-support material that shortens deals',
       'Infrastructure: CRM configuration, routing, attribution and reporting',
     ],
-    deliverable: `Monthly reporting against booked meetings, opportunities created and revenue by source, with leading indicators — reply rates, rankings, review velocity, conversion by page — reviewed alongside them.`,
+    deliverable: `Monthly reporting against booked meetings, opportunities created and revenue by source, measured against the projections set out in the Impact Report — with leading indicators such as reply rates, rankings, review velocity and conversion by page reviewed alongside them.`,
   })}
   ${callout({
     tone: 'warn',
@@ -276,8 +253,8 @@ ${cta({
 })}
 
 ${relatedLinks([
-  { href: '/gtm-foundation/', label: 'Phase 1 — GTM Foundation', body: 'Scope, deliverables and terms for the Month 1 engagement.' },
-  { href: '/growth-engine/', label: 'Phase 2 — Growth Engine', body: 'The three-month execution agreement in full.' },
+  { href: '/gtm-foundation/', label: 'Phase 1 — GTM Foundation', body: 'The two reports and the website, in full.' },
+  { href: '/growth-engine/', label: 'Phase 2 — Growth Engine', body: 'Optional execution against the opportunities identified.' },
   { href: '/msp-marketing-strategy/', label: 'MSP marketing strategy', body: 'The framework behind stages 01 to 03.' },
 ])}
 `
@@ -286,7 +263,7 @@ export default {
   path: '/process/',
   title: 'Our Process | MSP Marketing, Stage by Stage',
   description:
-    'The engagement in full: capability audit, market research, positioning, website build and campaign plan in Month 1, then a three-month execution agreement.',
+    'The engagement in full: capability intake, opportunity analysis, an SEO-optimised website build and impact modelling in Month 1, then optional execution.',
   breadcrumbs: crumbs,
   priority: 0.9,
   schema: [faqBlock.schema],

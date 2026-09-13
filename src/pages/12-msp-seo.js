@@ -2,7 +2,7 @@ import {
   hero, section, sectionHead, cards, steps, keywordTable, faq, cta,
   callout, checklist, breadcrumbs, relatedLinks, serviceSchema,
 } from '../components.js'
-import { seoCluster, clientDemandExample } from '../data/keywords.js'
+import { seoCluster } from '../data/keywords.js'
 
 const crumbs = [
   { label: 'Services', href: '/msp-marketing-services/' },
@@ -100,18 +100,28 @@ ${section({
   tone: 'muted',
   inner: `
   ${sectionHead({
-    eyebrow: 'Demand',
-    title: 'What your buyers search, and what those clicks cost',
-    intro: `An illustration of the national picture. The version that informs your strategy is built for your service area during <a href="/process/#research">market research</a>.`,
+    eyebrow: 'Targets',
+    title: 'How the search targets are chosen',
+    intro: `Not by volume. By the ratio of demand to competitive difficulty across the services you can credibly deliver.`,
   })}
-  ${keywordTable({
-    rows: clientDemandExample,
-    caption: 'What organisations search when they intend to hire an MSP. US monthly volume and paid cost per click.',
-  })}
-  ${callout({
-    title: 'Read the cost column, not only the volume',
-    body: `<p><em>it support for dental practices</em> returns 40 searches a month at $97.83 per click. Low volume does not indicate low value; it indicates that the few organisations searching are worth a great deal. A page holding that position costs nothing per click once earned.</p>`,
-  })}`,
+  <div class="split">
+    <div class="prose">
+      <p>The instinct is to pursue the highest-volume term in the category. It is usually the wrong target: the highest-volume terms are held by national firms and aggregators with authority no local provider will displace within a year.</p>
+      <p>The useful target is the one where genuine demand meets weak incumbents — a service you deliver well, described the way buyers describe it, in a market where the pages currently ranking are thin. That assessment is <a href="/process/#opportunities">stage 02 of the engagement</a>, and it produces the three opportunities the site is then built against.</p>
+      <p>Two considerations govern the selection throughout. Whether local search applies to your model at all, which is established during <a href="/process/#intake">intake</a> and is not true of every provider. And what a click in that category costs in paid search, which indicates what the position is worth holding organically.</p>
+    </div>
+    <div>
+      ${callout({
+        title: 'Volume is the wrong first filter',
+        body: `<p>A low-volume term with high commercial intent and a weak field is frequently worth more than a high-volume term you will never rank for. Few searchers, each with a specific and expensive problem, and a small set of providers who understand their environment.</p>`,
+      })}
+      ${callout({
+        tone: 'success',
+        title: 'What the analysis produces',
+        body: `<p>Three opportunities, each sized, keyword-mapped and priced — documented in the Opportunities Report, then built as individually optimised pages on the new site.</p>`,
+      })}
+    </div>
+  </div>`,
 })}
 
 ${section({

@@ -7,15 +7,15 @@ import { coreCluster } from '../data/keywords.js'
 const faqBlock = faq([
   {
     q: 'What makes this different from other MSP marketing agencies?',
-    a: `<p>Most agencies begin with execution: a website refresh, a content calendar, an ad account. We begin with the commercial question that determines whether any of it works — which of your services to lead with, for which buyers, and on what grounds they should select you. Month 1 answers that question and delivers the website and campaign plan built on the answer. Only then do we run campaigns.</p>`,
+    a: `<p>Most agencies begin with execution: a website refresh, a content calendar, an ad account. We begin with the commercial question that determines whether any of it works — which of your services carry genuine demand against weak competition, and what those offers should cost. Month 1 answers that question, builds the website against the answer, and projects what deploying it is worth. Only then does execution begin.</p>`,
   },
   {
     q: 'What does Month 1 cost, and what am I committing to?',
-    a: `<p>Month 1 is a fixed-fee engagement, quoted after the first call and before any work begins. It commits you to nothing beyond that month. At the end you hold the positioning, the website and the campaign plan, and you decide whether to continue. See <a href="/process/">the process</a> for the full sequence.</p>`,
+    a: `<p>Month 1 is a fixed-fee engagement, quoted after the first call and before any work begins. It commits you to nothing beyond that month. At the end you hold both reports and the website, and you decide whether to continue. See <a href="/process/">the process</a> for the full sequence.</p>`,
   },
   {
     q: 'What happens if I decline Phase 2?',
-    a: `<p>You keep everything produced in Month 1 — the website, the domain, the copy, the research and the campaign plan — in full, with no licence, no ongoing fee and no claw-back. You are free to execute the plan in-house or with another firm.</p>`,
+    a: `<p>You keep everything produced in Month 1 — both reports, the website, the copy and the underlying research — in full, with no licence, no ongoing fee and no claw-back. Deploy the site and work the opportunities in-house, or hand the whole of it to another firm.</p>`,
   },
   {
     q: 'How should I evaluate an MSP marketing company?',
@@ -43,24 +43,22 @@ const body = `
 ${hero({
   eyebrow: 'MSP marketing agency',
   title: 'The top MSP marketing solution for managed service providers',
-  lede: `We determine what your MSP should be selling, and to whom, before a dollar goes to demand generation. Month 1 delivers your positioning, an SEO-optimised website and a complete campaign plan. What happens next is your decision.`,
+  lede: `We identify which of your services carry the most demand against the least competition, then build an SEO-optimised website against those opportunities. Month 1 delivers two reports and a website ready to deploy. What happens next is your decision.`,
   primary: { href: '/contact/', label: 'Book a strategy call' },
   secondary: { href: '/process/', label: 'See the process' },
   stats: [
     { label: 'Month 1', value: 'Fixed fee' },
-    { label: 'Deliverable', value: 'Site + plan' },
+    { label: 'Deliverables', value: '2 reports + site' },
     { label: 'Coverage', value: 'One MSP per metro' },
   ],
   aside: `<div class="panel">
-    <p class="panel__label">Month 1 deliverables</p>
+    <p class="panel__label">What Month 1 delivers</p>
     <ul>
-      <li><span>Capability and margin audit</span> <b>&#10003;</b></li>
-      <li><span>Market and competitor research</span> <b>&#10003;</b></li>
-      <li><span>Positioning and service packaging</span> <b>&#10003;</b></li>
-      <li><span>SEO-optimised website, built</span> <b>&#10003;</b></li>
-      <li><span>Inbound and outbound campaign plan</span> <b>&#10003;</b></li>
+      <li><span>Opportunities Report</span> <b>01</b></li>
+      <li><span>SEO-optimised website, ready to deploy</span> <b>02</b></li>
+      <li><span>GTM Foundations Impact Report</span> <b>03</b></li>
     </ul>
-    <p class="panel__foot">Yours to keep whether or not you continue to Phase 2.</p>
+    <p class="panel__foot">All three owned outright, whether or not you continue to Phase 2.</p>
   </div>`,
 })}
 
@@ -77,7 +75,7 @@ ${section({
       <p>Open five managed service provider websites in any market and you will find the same four services listed in the same order: managed IT, cybersecurity, cloud, IT support. The language is interchangeable. So is the proof. A buyer who cannot evaluate the technical substance of any of it defaults to the two variables they can compare — price and proximity.</p>
       <p>This is a positioning failure, not a copywriting failure. It is what happens when a technically capable firm has never been required to decide which part of the market it is built to serve. Breadth of capability becomes breadth of message, and breadth of message reads as no message at all.</p>
       <p>The consequence is that marketing spend produces activity without producing pipeline. Traffic rises. Enquiries do not. The conclusion drawn is usually that marketing does not work for managed services, when what did not work was promoting an undifferentiated offer to an undefined buyer.</p>
-      <p><strong>We do not take generic copy and generic offers to market.</strong> That is the entire reason Month 1 exists.</p>
+      <p><strong>We do not take generic copy and generic offers to market.</strong> Establishing which offers carry real demand against weak competition is what Month 1 exists to do, and it decides what the website is for.</p>
     </div>
     <div>
       ${callout({
@@ -115,34 +113,33 @@ ${section({
   inner: `
   ${sectionHead({
     eyebrow: 'Month 1',
-    title: 'What the first month produces',
-    intro: `A fixed-fee engagement that ends with a commercial strategy and the assets required to execute it — not a strategy document.`,
+    title: 'Two reports and a website you can deploy',
+    intro: `A fixed-fee engagement that ends with validated offers, the asset built to sell them, and a projection of what that is worth — not a strategy document.`,
   })}
   ${cards(
     [
       {
-        kicker: 'Stage 01–02',
-        title: 'Capability audit and market research',
-        body: `We establish what your firm is genuinely strong at, where margin and retention actually come from, and which verticals you have already concentrated in. That is then tested against the market: search demand across your service area, competitor positioning, and the gaps nobody is answering well.`,
+        kicker: 'Deliverable 1',
+        title: 'The Opportunities Report',
+        body: `Every service you offer is assessed for demand against competitive difficulty. The three strongest become your opportunities, each shaped as a land-and-expand offer between $5,000 and $10,000, with the pricing validated against what the market currently pays. The report states the size of each opportunity, the keywords that reach it, who you would be ranking against, and whether local search is relevant to your model at all.`,
       },
       {
-        kicker: 'Stage 03',
-        title: 'Positioning and service packaging',
-        body: `The research resolves into decisions. Which services lead, which buyers they are aimed at, how the offer is packaged and priced, and what is no longer actively marketed. Every subsequent asset is built from this.`,
+        kicker: 'Deliverable 2',
+        title: 'An SEO-optimised website, ready to deploy',
+        body: `Built against those opportunities and carrying your existing branding: an SEO-optimised home page positioned on the strongest offer, plus a dedicated, individually optimised page for each of the three opportunities. All copy written from the research, technical SEO applied throughout, tracking configured. Delivered complete for you to put live.`,
       },
       {
-        kicker: 'Stage 04',
-        title: 'An SEO-optimised website',
-        body: `Built on the positioning and structured against the demand map: a page for each commercial intent your buyers search, technically sound, fast, and built to convert. Delivered live within the month, owned outright by you.`,
-      },
-      {
-        kicker: 'Stage 05',
-        title: 'A tailored campaign plan',
-        body: `Inbound and outbound specified for your market — the search targets, the account list and segmentation, the messaging by segment, the sequence of channels, and the metrics against which performance is judged.`,
+        kicker: 'Deliverable 3',
+        title: 'The GTM Foundations Impact Report',
+        body: `Where your website ranks today, where it is projected to rank once the new site is deployed, and the further ceiling available with best practice applied — an authoritative reference presence, managed LinkedIn content, outbound and reputation. Cited industry conversion benchmarks are then applied at every step: search to visit, visit to booked meeting, meeting to revenue, and initial revenue to longer-term engagement.`,
       },
     ],
-    { columns: 2 },
-  )}`,
+    { columns: 3 },
+  )}
+  ${callout({
+    title: 'Why the projection is stated in revenue',
+    body: `<p>Ranking positions are not a business outcome. The Impact Report carries the projection through to the figure you would use to assess any other investment, using benchmarks that are cited rather than asserted — so you can check them.</p>`,
+  })}`,
 })}
 
 ${section({
@@ -154,9 +151,9 @@ ${section({
         title: 'At the end of Month 1, you choose',
         intro: `The separation between the two phases is deliberate. It removes the requirement to commit to a long engagement before seeing the quality of the thinking.`,
       })}
-      <p><strong>Continue.</strong> Phase 2 is a three-month agreement in which we execute the plan: search, content, outbound, reputation and reporting, run as one system and measured on booked meetings. <a href="/growth-engine/">Review the Growth Engine scope</a>.</p>
-      <p><strong>Stop.</strong> The website, the copy, the research and the campaign plan are yours in full — no licence, no ongoing fee, nothing that stops working. Execute it internally or hand it to another firm.</p>
-      <p>Either outcome is acceptable to us. An MSP that leaves after Month 1 with a clear position and a working website is better served than one retained on a contract that was never earned.</p>
+      <p><strong>Continue.</strong> We execute against the opportunities the research identified: search, content, outbound, reputation and reporting, run as one system and measured on booked meetings. <a href="/growth-engine/">Review the Growth Engine scope</a>.</p>
+      <p><strong>Stop.</strong> Both reports and the website are yours in full — no licence, no ongoing fee, nothing that ceases to function. Deploy the site and work the opportunities internally, or hand the whole of it to another firm.</p>
+      <p>Either outcome is acceptable to us. An MSP that leaves after Month 1 with three validated offers and a website built against them is better served than one retained on a contract that was never earned.</p>
     </div>
     <div>
       ${callout({
@@ -257,7 +254,7 @@ export default {
   path: '/',
   title: 'MSP Marketing Agency | The Top MSP Marketing Solution',
   description:
-    'An MSP marketing agency that defines your market before building demand. Month 1 delivers positioning, an SEO-optimised website and a full campaign plan.',
+    'An MSP marketing agency that finds your highest-demand offers first. Month 1 delivers two reports and an SEO-optimised website, ready for you to deploy.',
   priority: 1.0,
   changefreq: 'weekly',
   schema: [faqBlock.schema],

@@ -5,8 +5,8 @@ import {
 
 const faqBlock = faq([
   {
-    q: 'Why a three-month minimum?',
-    a: `<p>No channel in this scope produces a reliable read in less time. Outbound requires domain warm-up and several sequence iterations before reply rates carry meaning. New pages take weeks to index and months to place. Review velocity is a trend rather than an event. Three months is the shortest period over which the data becomes dependable.</p>`,
+    q: 'How long before the data becomes meaningful?',
+    a: `<p>No channel in this scope produces a reliable read immediately. Outbound requires domain warm-up and several sequence iterations before reply rates carry meaning. New pages take weeks to index and months to place. Review velocity is a trend rather than an event. We set that expectation at the outset and report leading indicators in the interim, so progress is visible before the lagging measures settle.</p>`,
   },
   {
     q: 'Is the GTM Foundation a prerequisite?',
@@ -25,8 +25,8 @@ const faqBlock = faq([
     a: `<p>We do. There is no subcontracted content operation and no account-management layer forwarding correspondence. It is also why the number of concurrent engagements is capped and why we hold to one client per metropolitan market.</p>`,
   },
   {
-    q: 'What happens after three months?',
-    a: `<p>The engagement continues month to month, or it concludes. Most of the compounding return in search, reputation and content accrues after month three, so concluding at the minimum generally means having funded the establishment without collecting the return. That remains your decision; there is no automatic renewal.</p>`,
+    q: 'How does the engagement end?',
+    a: `<p>It continues month to month, or it concludes — your decision, with no automatic renewal. Worth noting that most of the compounding return in search, reputation and content accrues later rather than earlier, so concluding early generally means having funded the establishment without collecting the return.</p>`,
   },
 ])
 
@@ -34,13 +34,13 @@ const body = `
 ${breadcrumbs([{ label: 'Growth Engine', href: '/growth-engine/' }])}
 
 ${hero({
-  eyebrow: 'Phase 2 · Three-month minimum',
+  eyebrow: 'Phase 2 · Optional · decided after Month 1',
   title: 'Growth Engine: execution against the plan',
-  lede: `Month 1 established the position and produced the plan. Phase 2 operates it — inbound, outbound, reputation, content and the infrastructure that connects all of it to pipeline, run as one system against one strategy.`,
+  lede: `Month 1 identified the opportunities and produced the website. Phase 2 works them — inbound, outbound, reputation, content and the infrastructure that connects all of it to pipeline, run as one system.`,
   primary: { href: '/contact/', label: 'Book a strategy call' },
   secondary: { href: '/process/', label: 'See the process' },
   stats: [
-    { label: 'Term', value: '3 months' },
+    { label: 'Begins', value: 'After Month 1' },
     { label: 'Workstreams', value: 'Five' },
     { label: 'Reported on', value: 'Pipeline' },
   ],
@@ -63,7 +63,7 @@ ${section({
     <div class="prose">
       <h2>Not a content subscription</h2>
       <p>The standard managed services retainer is a publishing schedule with a reporting deck attached: several articles, some social posts, a newsletter, and a monthly call at which impressions are read aloud. It is straightforward to sell and straightforward to deliver, and it rarely alters the shape of the business.</p>
-      <p>This is a different instrument. We operate a specific go-to-market strategy — the one established during the <a href="/gtm-foundation/">GTM Foundation</a> — across every channel where your buyers can be reached, and hold the whole of it to pipeline rather than activity.</p>
+      <p>This is a different instrument. We work the specific opportunities identified during the <a href="/gtm-foundation/">GTM Foundation</a> across every channel where those buyers can be reached, and hold the whole of it to pipeline rather than activity — measured against the projections set out in the Impact Report.</p>
       <p>It functions as a system because the channels reinforce one another. Reviews improve local ranking, which feeds inbound. Published material gives outbound something credible to reference. Outbound replies indicate which messages land, which improves the pages. The website converts all of it. Operated individually, each produces a channel report; operated together, the trajectory changes.</p>
     </div>
     <div>
@@ -82,7 +82,7 @@ ${section({
   ${sectionHead({
     eyebrow: 'Scope',
     title: 'The five workstreams',
-    intro: `Operated concurrently, against the campaign plan produced in Month 1.`,
+    intro: `Operated concurrently, against the opportunities identified in Month 1.`,
   })}
   ${cards([
     {
@@ -253,9 +253,9 @@ ${relatedLinks([
 
 export default {
   path: '/growth-engine/',
-  title: 'Growth Engine | MSP Marketing Execution, 3 Months',
+  title: 'Growth Engine | MSP Marketing Execution and Delivery',
   description:
-    'A three-month execution agreement for MSPs: SEO, local search, reviews, email and LinkedIn outbound, content and reporting — measured on booked meetings.',
+    'Optional execution for MSPs after Month 1: SEO, local search, reviews, email and LinkedIn outbound, content and reporting — measured on booked meetings.',
   breadcrumbs: [{ label: 'Growth Engine', href: '/growth-engine/' }],
   priority: 0.8,
   schema: [faqBlock.schema],

@@ -530,3 +530,17 @@ hr { border: 0; border-top: 1px solid var(--ink-200); margin: 2.5rem 0; }
   .stage__num { font-size: 1.2rem; padding-top: 0; }
   .stage__grid { margin-left: 0; }
 }
+
+/* Deliverable markers on the stages that produce one. */
+.pnode__top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.pnode__out {
+  font-size: .66rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--success-600); background: var(--success-50); border: 1px solid #a7f3d0;
+  padding: 2px 8px; border-radius: 999px; white-space: nowrap;
+}
+.pband__out {
+  margin: 18px 0 0; padding-top: 16px; border-top: 1px dashed var(--ink-200);
+  font-size: .95rem; color: var(--ink-600);
+}
+.section--dark .pnode__out { background: rgba(52, 211, 153, .14); color: #6ee7b7; border-color: rgba(52, 211, 153, .35); }
+.section--dark .pband__out { border-top-color: rgba(255, 255, 255, .18); color: rgba(233, 238, 246, .75); }

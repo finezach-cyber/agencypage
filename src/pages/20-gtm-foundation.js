@@ -8,27 +8,31 @@ const crumbs = [{ label: 'GTM Foundation', href: '/gtm-foundation/' }]
 const faqBlock = faq([
   {
     q: 'What does the GTM Foundation cost?',
-    a: `<p>It is a fixed fee, determined by the size of your service area, the number of services and verticals in scope, and the scale of the website. We quote after the first call and before any work begins. There is no hourly billing and no variation without a written change of scope.</p>`,
+    a: `<p>A fixed fee, determined by the number of services in scope and the scale of the website. We quote after the first call and before any work begins. There is no hourly billing and no variation without a written change of scope.</p>`,
   },
   {
-    q: 'What happens if we stop after Month 1?',
-    a: `<p>You retain everything: the research, the positioning, the packaging, the demand map, the messaging framework, the campaign plan and the website — owned outright, with no licence and no platform dependency. You may execute the plan internally, engage another firm, or do neither. No clause reduces the value of the work if you leave.</p>`,
+    q: 'Do we own the reports and the website?',
+    a: `<p>Entirely. Both reports and the complete website — copy, build, structure and analytics — are yours at the end of the month, with no licence, no proprietary platform and no claw-back. You are free to deploy the site yourself, hand it to your own developer, or act on the reports with another firm.</p>`,
+  },
+  {
+    q: 'How are the three opportunities selected?',
+    a: `<p>By ratio, not by volume. Every service you offer is assessed for search demand against the competitive difficulty of ranking for it. The three that combine the strongest demand with the weakest incumbents become the opportunities. Each is then shaped as a land-and-expand offer and the pricing is validated against what the market currently pays, so the figure in the report is defensible rather than aspirational.</p>`,
+  },
+  {
+    q: 'Why are the offers priced between $5,000 and $10,000?',
+    a: `<p>That range is where a land-and-expand offer functions. It is substantial enough to constitute a genuine engagement rather than a trial, and small enough for a prospective client to approve without a procurement process. It establishes the relationship on which larger managed services agreements are subsequently built — which is why the Impact Report models initial revenue through to longer-term engagement rather than stopping at the first sale.</p>`,
   },
   {
     q: 'How much of our time does it require?',
-    a: `<p>Approximately four to six hours across the first fortnight: a kickoff session, interviews with you and one or two technical leads, access to client and financial data, and a content review. Two review checkpoints follow. We require your knowledge rather than your labour.</p>`,
+    a: `<p>Approximately four to six hours across the first fortnight: a kickoff session, interviews with you and one or two technical leads, access to client and financial data, and a review of the draft copy. Two further review checkpoints follow. We require your knowledge rather than your labour.</p>`,
   },
   {
-    q: 'Can this genuinely be completed in a month?',
-    a: `<p>Yes. It is a defined scope executed by people who have run it before, without committee review cycles. Where timelines extend it is generally on the client side: delayed interviews, slow content approval, or an unresolved internal disagreement about positioning. We would rather that disagreement surface than publish a site the leadership does not stand behind.</p>`,
+    q: 'Is local search always part of the analysis?',
+    a: `<p>No, and assuming it is would be an error. Some providers sell into a defined geography where local visibility decides everything; others sell a specialised service nationally, where local optimisation is effort spent in the wrong place. Whether local search is relevant to your model is established during intake and stated explicitly in the Opportunities Report.</p>`,
   },
   {
-    q: 'Are we obliged to proceed to Phase 2?',
-    a: `<p>No, and the separation is deliberate. You receive a complete, usable deliverable without committing to an execution retainer, and we demonstrate the quality of the thinking before requesting one. Clients frequently take a month or two to decide.</p>`,
-  },
-  {
-    q: 'What if we already have a recent website?',
-    a: `<p>The build becomes a restructure rather than a rebuild: new architecture, new copy and new pages mapped to demand, applied to your existing design system. The research and positioning work is unchanged; the quote reflects the narrower build scope.</p>`,
+    q: 'Are we obliged to continue afterwards?',
+    a: `<p>No. Continuing into execution is a separate decision, made once the work has been delivered and reviewed. The separation is deliberate: you assess the quality of the analysis against finished deliverables rather than against a proposal describing them.</p>`,
   },
 ])
 
@@ -37,54 +41,107 @@ ${breadcrumbs(crumbs)}
 
 ${hero({
   eyebrow: 'Phase 1 · Month 1 · fixed fee',
-  title: 'GTM Foundation: establish the position, build the assets',
-  lede: `Before any budget is directed at demand generation, we determine what your firm should be selling, to whom, and on what grounds they should select you. Month 1 then delivers the digital foundation for that answer — including the website itself.`,
+  title: 'GTM Foundation: two reports and a website, in 30 days',
+  lede: `We identify which of your services carry the most demand against the least competition, build an SEO-optimised website against those opportunities, and project what deploying it is worth in meetings and revenue.`,
   primary: { href: '/contact/', label: 'Book a strategy call' },
   secondary: { href: '/process/', label: 'See every stage' },
   stats: [
     { label: 'Duration', value: '30 days' },
+    { label: 'Deliverables', value: 'Three' },
     { label: 'Commitment', value: 'Month 1 only' },
-    { label: 'Concludes with', value: 'A live site' },
   ],
   aside: `<div class="panel">
-    <p class="panel__label">Delivered in Month 1</p>
+    <p class="panel__label">What you receive</p>
     <ul>
-      <li><span>Capability and margin assessment</span> <b>&#10003;</b></li>
-      <li><span>Market and competitor research</span> <b>&#10003;</b></li>
-      <li><span>ICP and positioning</span> <b>&#10003;</b></li>
-      <li><span>Service packaging and pricing model</span> <b>&#10003;</b></li>
-      <li><span>Demand map for your service area</span> <b>&#10003;</b></li>
-      <li><span>SEO-optimised website, live</span> <b>&#10003;</b></li>
-      <li><span>90-day campaign plan</span> <b>&#10003;</b></li>
+      <li><span>Opportunities Report</span> <b>01</b></li>
+      <li><span>SEO-optimised website, ready to deploy</span> <b>02</b></li>
+      <li><span>GTM Foundations Impact Report</span> <b>03</b></li>
     </ul>
-    <p class="panel__foot">Retained in full whether or not you continue.</p>
+    <p class="panel__foot">All three owned outright, whatever you decide next.</p>
   </div>`,
 })}
 
 ${section({
   inner: `
+  ${sectionHead({
+    eyebrow: 'The deliverables',
+    title: 'Three things, delivered inside one month',
+    intro: `Not a strategy document and a set of recommendations. Two pieces of analysis and a finished asset you can put live.`,
+  })}
+  ${cards(
+    [
+      {
+        kicker: 'Deliverable 1',
+        title: 'The Opportunities Report',
+        body: `Of everything your firm could sell, which offers carry the most demand against the least competition. We assess every service you deliver, then document the three strongest as land-and-expand offers.`,
+        list: [
+          'The three highest-opportunity offers, ranked',
+          'The size of each opportunity, described in plain terms',
+          'The keywords that reach each one, and who currently ranks',
+          'A validated price point per offer, in the $5,000–$10,000 range',
+          'An explicit finding on whether local search applies to your model',
+        ],
+      },
+      {
+        kicker: 'Deliverable 2',
+        title: 'The website',
+        body: `Built against those opportunities and carrying your existing branding — not a template and not a wireframe. Delivered complete and ready for you to deploy.`,
+        list: [
+          'An SEO-optimised home page positioned on the strongest opportunity',
+          'A dedicated, individually optimised page for each of the three opportunities',
+          'All copy written from the research and reviewed by you',
+          'Technical SEO throughout: structure, speed, metadata, structured data',
+          'Analytics, conversion tracking and enquiry routing configured',
+        ],
+      },
+      {
+        kicker: 'Deliverable 3',
+        title: 'The GTM Foundations Impact Report',
+        body: `What the work is projected to be worth, expressed in meetings and revenue rather than in rankings — so the investment can be assessed on expected return.`,
+        list: [
+          'Where your current website ranks today',
+          'Where it is projected to rank once the new site is deployed',
+          'The further ceiling available with best practice applied',
+          'Cited industry conversion benchmarks applied at every step',
+          'Search to visit, visit to meeting, meeting to revenue, revenue to long-term engagement',
+        ],
+      },
+    ],
+    { columns: 3 },
+  )}`,
+})}
+
+${section({
+  tone: 'muted',
+  inner: `
   <div class="split">
     <div class="prose">
-      <h2>Why this precedes demand generation</h2>
-      <p>The conventional sequence is inverted. A provider determines it requires more enquiries, engages an agency, and the agency directs traffic toward a website that states what every competitor states. Traffic increases. Conversations do not. Eighteen months later the conclusion is that marketing does not work in managed services.</p>
-      <p>Marketing performed exactly as designed. It amplified an undifferentiated message, and an amplified undifferentiated message is a more expensive route to the same indifference.</p>
-      <p>So we begin with the commercial question instead: <strong>what should this firm be selling, to whom, and why would they select it?</strong> That is not a marketing question. It is a strategic one that marketing cannot answer on your behalf — and once it is answered, every subsequent decision becomes cheaper and more accurate.</p>
-      <p>The second reason concerns accountability. At the end of Month 1 you hold a thesis specific enough to be wrong, and therefore specific enough to test. "We need more leads" cannot be tested. "Dental practices in this metropolitan area will change provider for compliance-grade support at this price point" can be, and within a quarter.</p>
+      <h2>Why the analysis precedes the build</h2>
+      <p>The conventional sequence is inverted. A provider decides it requires more enquiries, commissions a website, and the site is built around the services the firm happens to list — which are the same services every competitor lists. Traffic may increase. Enquiries do not, because the pages are competing for terms the firm cannot win on, describing offers indistinguishable from the alternatives.</p>
+      <p>Determining which offers carry real demand against weak competition is therefore not preparatory work. It decides what the website is for. A site built against three validated opportunities is a different asset from a site built against a service list, even where the two look similar.</p>
+      <p><strong>We do not take generic copy and generic offers to market.</strong> That is what the first two stages exist to prevent.</p>
+
+      <h2>Why the projection is stated in revenue</h2>
+      <p>Ranking positions are not a business outcome. A report promising first-page visibility says nothing about whether the engagement was worth commissioning.</p>
+      <p>So the Impact Report carries the projection through to the figure that matters. Cited industry averages are applied at each conversion step — search impressions to website visits, visits to booked meetings, meetings to closed revenue, and initial revenue to longer-term engagement — so the projected outcome is stated in the same terms you would use to assess any other investment. The benchmarks are cited rather than asserted, so you can check them.</p>
     </div>
     <div>
       ${callout({
-        title: 'Not a strategy document',
-        body: `<p>The deliverable is the strategy <em>and</em> the website built on it.</p>
-        <p>A plan that is never implemented has produced nothing. Most consulting engagements conclude precisely where the execution risk begins.</p>`,
+        title: 'The three questions Month 1 answers',
+        body: `<ol>
+          <li>Which of our services should we actually be selling?</li>
+          <li>What should we charge for them?</li>
+          <li>What is it worth to us if we do?</li>
+        </ol>
+        <p>Most providers can answer none of these with evidence.</p>`,
       })}
       ${callout({
         tone: 'success',
         title: 'What you own at the conclusion',
         body: `<ul class="tick-list">
-          <li>The research and the documented plan</li>
-          <li>The website, domain and analytics</li>
-          <li>All copy and content</li>
-          <li>The demand map and page architecture</li>
+          <li>Both reports, in full</li>
+          <li>The website, copy and analytics</li>
+          <li>The research and keyword analysis behind them</li>
         </ul>
         <p>No proprietary platform, no licence, no dependency.</p>`,
       })}
@@ -93,51 +150,10 @@ ${section({
 })}
 
 ${section({
-  tone: 'muted',
-  inner: `
-  ${sectionHead({
-    eyebrow: 'Research',
-    title: 'What the month establishes',
-    intro: `Half internal, half external. The internal half identifies where you already win; the external half establishes whether anyone is searching for it.`,
-  })}
-  ${cards(
-    [
-      {
-        kicker: 'Internal',
-        title: 'What your firm is actually strong at',
-        body: `Most providers cannot articulate this, because work performed daily ceases to appear remarkable. We establish it by examining the evidence rather than requesting a summary.`,
-        list: [
-          'Services delivered with depth, not merely offered',
-          'Highest-margin and highest-retention capabilities',
-          'Existing client base and vertical concentration',
-          'Margin and retention patterns by segment',
-          'The genuine service area and response capability',
-          'Where delivery is demonstrably superior',
-        ],
-      },
-      {
-        kicker: 'External',
-        title: 'What the market is doing',
-        body: `Positioning established without external reference is conjecture. We test it against demand, competitors and the language buyers in your market actually use.`,
-        list: [
-          'Competitor positioning and messaging across your markets',
-          'What buyers search, and in what volume',
-          'Where competitors currently hold position',
-          'Which services carry verified search demand',
-          'Which verticals are attractive and reachable',
-          'What the current site and brand fail to communicate',
-        ],
-      },
-    ],
-    { columns: 2 },
-  )}`,
-})}
-
-${section({
   inner: `
   ${sectionHead({
     eyebrow: 'Sequence',
-    title: 'The five stages of Month 1',
+    title: 'The four stages of Month 1',
     intro: `Select any stage for its inputs, method and deliverable.`,
   })}
   ${processDiagram()}`,
@@ -148,19 +164,22 @@ ${section({
   inner: `
   <div class="split">
     <div>
-      ${sectionHead({ eyebrow: 'Deliverables', title: 'Everything you receive' })}
+      ${sectionHead({ eyebrow: 'Scope', title: 'Everything included' })}
       ${checklist([
-        'Capability and margin assessment',
-        'Market and competitor research findings',
-        'ICP definition with addressable market sizing',
-        'Positioning statement and supporting rationale',
-        'Service packaging and pricing framework',
-        'Demand map for your service area',
-        'Messaging framework for site, sales and outbound',
-        'Site architecture and internal linking plan',
-        'A complete, live website with all copy',
-        'Analytics, conversion tracking and call tracking',
-        'A documented 90-day campaign plan',
+        'Capability and margin assessment across your service lines',
+        'Demand and competition analysis for every service you offer',
+        'Identification and ranking of the three strongest opportunities',
+        'Land-and-expand offer design for each opportunity',
+        'Price validation against current market rates',
+        'An explicit finding on the relevance of local search',
+        'Keyword mapping per opportunity',
+        'An SEO-optimised home page built on your branding',
+        'A dedicated optimised page for each of the three opportunities',
+        'All website copy, written and reviewed',
+        'Analytics, conversion tracking and enquiry routing',
+        'Current ranking baseline and post-deployment projection',
+        'Best-practice ceiling modelling',
+        'Revenue projection using cited industry conversion benchmarks',
       ])}
     </div>
     <div>
@@ -171,7 +190,7 @@ ${section({
           'Growth presently dependent on referral',
           'Technical strengths that have never been marketed',
           'Capacity to service new clients on arrival',
-          'Willingness to lead with a defined segment',
+          'Willingness to lead with a defined offer',
         ],
         { columns: 1 },
       )}
@@ -188,23 +207,23 @@ ${section({ tone: 'muted', inner: faqBlock.html })}
 
 ${cta({
   title: 'Begin with one call',
-  body: 'Thirty minutes covering your services, your client base and your market. You will receive a candid assessment of where your position most likely lies, before committing to anything.',
-  secondaryLabel: 'Phase 2 — Growth Engine',
-  secondaryHref: '/growth-engine/',
+  body: 'Thirty minutes covering your services, your client base and your market. You will receive a candid assessment of where your strongest opportunity most likely lies, before committing to anything.',
+  secondaryLabel: 'See every stage',
+  secondaryHref: '/process/',
 })}
 
 ${relatedLinks([
-  { href: '/process/', label: 'The process', body: 'All five stages with inputs and deliverables stated.' },
-  { href: '/msp-marketing-strategy/', label: 'MSP marketing strategy', body: 'The framework behind the research and the decisions it produces.' },
-  { href: '/growth-engine/', label: 'Phase 2 — Growth Engine', body: 'The optional execution agreement that follows.' },
+  { href: '/process/', label: 'The process', body: 'All four stages with inputs and deliverables stated.' },
+  { href: '/msp-marketing-strategy/', label: 'MSP marketing strategy', body: 'The framework behind the opportunity analysis.' },
+  { href: '/growth-engine/', label: 'Phase 2 — Growth Engine', body: 'Optional execution against the opportunities identified.' },
 ])}
 `
 
 export default {
   path: '/gtm-foundation/',
-  title: 'GTM Foundation | Positioning and Website in 30 Days',
+  title: 'GTM Foundation | Two Reports and a Website in 30 Days',
   description:
-    'A fixed-fee Month 1 engagement for MSPs: capability audit, market research, positioning, service packaging and an SEO-optimised website you own outright.',
+    'A fixed-fee Month 1 engagement for MSPs: an Opportunities Report, an SEO-optimised website ready to deploy, and a GTM Foundations Impact Report.',
   breadcrumbs: crumbs,
   priority: 0.8,
   schema: [faqBlock.schema],
