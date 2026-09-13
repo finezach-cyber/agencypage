@@ -148,6 +148,38 @@ ${section({
 })}
 
 ${section({
+  tone: 'muted',
+  inner: `
+  ${sectionHead({
+    eyebrow: 'Sources',
+    title: 'Where MSP leads actually come from',
+    intro: `Across engagements, three sources produce the meetings — in roughly descending order of predictability.`,
+  })}
+  ${cards([
+    {
+      kicker: 'Most predictable',
+      title: 'Outbound to a defined account list',
+      body: `Reaches the accounts you want before they begin evaluating, which for a service sold on multi-year agreements is most of them at any moment. Predictable because volume is a function of list size and sending capacity rather than of market timing.`,
+    },
+    {
+      kicker: 'Compounds',
+      title: 'Search and reputation',
+      body: `Captures the firms already looking. Slower to establish and stronger over time, since positions and review volume accumulate rather than reset each month.`,
+    },
+    {
+      kicker: 'Highest quality',
+      title: 'Referral',
+      body: `The best-converting source and the least controllable. Sharper positioning improves it indirectly: a firm known for something specific gets referred for that thing.`,
+    },
+  ])}
+  ${callout({
+    tone: 'warn',
+    title: 'What is not on this list',
+    body: `<p>Purchased records. A bought contact sits outside all three sources — it carries no relationship to your firm and no reason to take the call, which is why we build lists rather than buy them.</p>`,
+  })}`,
+})}
+
+${section({
   inner: `
   ${sectionHead({
     eyebrow: 'Method',
@@ -184,11 +216,38 @@ ${section({
 })}
 
 ${section({
+  inner: `
+  ${sectionHead({
+    eyebrow: 'Terminology',
+    title: 'IT services lead generation and managed services lead generation',
+    intro: `The same buyer, described two ways. Which phrase your market uses changes the targeting, not the method.`,
+  })}
+  <div class="split">
+    <div class="prose">
+      <p>Firms in this category describe themselves differently — managed service provider, IT services company, IT support firm, co-managed IT provider — and their buyers describe the need differently again. Organisations rarely search for managed services. They search for IT support, IT services or outsourced IT, because that is the language of the problem rather than the language of the industry.</p>
+      <p>That distinction matters for targeting. An IT services company running campaigns built on managed services vocabulary is reaching for terms its buyers do not type, while the terms they do type go unclaimed. Establishing which vocabulary your market actually uses is part of <a href="/process/#research">the demand analysis</a>, and it frequently redirects the campaign before a single message is sent.</p>
+      <p>The method is identical either way: define the accounts, identify the offers with real demand and weak competition, and reach those accounts through inbound and outbound carrying one message.</p>
+    </div>
+    <div>
+      ${callout({
+        title: 'Where the vocabulary gap shows up',
+        body: `<ul class="tick-list">
+          <li>Website copy written in industry terms rather than buyer terms</li>
+          <li>Outbound subject lines describing a category, not a problem</li>
+          <li>Search targets chosen from how the firm self-describes</li>
+          <li>Service pages that rank for peers rather than prospects</li>
+        </ul>`,
+      })}
+    </div>
+  </div>`,
+})}
+
+${section({
   tone: 'dark',
   inner: `
   ${sectionHead({
     eyebrow: 'Search demand',
-    title: 'What MSP owners search when seeking this service',
+    title: 'What MSP and IT services firms search when seeking this service',
     intro: `If you arrived through one of these terms, the analysis is worth noting — it is the same method we apply to your market, directed at ours.`,
   })}
   <div class="split">

@@ -134,6 +134,11 @@ ${section({
       <p>The instinct is to publish nothing and route every enquiry to a discovery call. It is understandable: pricing depends on the environment, and no provider wants to be compared on a figure presented without context.</p>
       <p>Consider what occurs in practice. A buyer with a live problem evaluates four providers on a Tuesday afternoon. Three state that pricing is available on request. The fourth explains the model, the variables that move it, and approximately where an organisation of that size lands. The fourth receives the call — not because it is cheapest, but because it was the only firm that made the process appear straightforward.</p>
       <p>A rate card is not required. Removing the apprehension that asking initiates something is.</p>
+      <h3>Pricing for IT services companies versus managed services</h3>
+      <p>The models above describe recurring agreements. An IT services company selling projects, migrations or assessments prices differently: by scope, by phase or by outcome rather than per seat or per device. The commercial logic still holds — a buyer who can anticipate the structure proceeds, and one who cannot asks for the cheapest version — but the published explanation differs.</p>
+      <p>For project work the useful disclosure is the shape of an engagement rather than a rate: what a typical scope includes, what moves the figure, roughly what a firm of that size spends, and what happens when the scope changes mid-engagement. That last point closes more deals than a discount, because unmanaged scope change is the outcome buyers of project work most expect and most fear.</p>
+      <p>Firms selling both — an ongoing agreement alongside project work — need each explained separately. Combining them produces a page that reads as evasive about both.</p>
+
       <h3>What an effective pricing page contains</h3>
       ${checklist(
         [

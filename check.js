@@ -64,9 +64,19 @@ async function resolvesInDist(href) {
   return (await exists(base)) || exists(join(base, 'index.html'))
 }
 
+/** Decode the handful of entities the builder escapes, so length checks
+ *  measure what a search engine renders rather than the escaped source. */
+const decode = (s) =>
+  s
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+
 const attr = (html, re) => {
   const m = html.match(re)
-  return m ? m[1] : null
+  return m ? decode(m[1]) : null
 }
 
 async function main() {

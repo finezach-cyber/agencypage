@@ -1,6 +1,6 @@
 import {
   hero, section, sectionHead, cards, cta, breadcrumbs, keywordTable,
-  callout, processDiagram, checklist, serviceSchema, relatedLinks,
+  callout, processDiagram, checklist, serviceSchema, relatedLinks, audienceStrip,
 } from '../components.js'
 import { servicesCluster } from '../data/keywords.js'
 
@@ -85,6 +85,15 @@ ${section({
 
 ${section({
   inner: `
+  ${audienceStrip({
+    title: 'Who these services are for',
+    intro: `The method is the same across the category. What changes is the vocabulary your buyers use and whether local search is relevant to how you sell — both established in Month 1.`,
+  })}`,
+})}
+
+${section({
+  tone: 'muted',
+  inner: `
   ${sectionHead({
     eyebrow: 'Sequence',
     title: 'How the services are ordered',
@@ -137,7 +146,7 @@ ${relatedLinks([
 
 export default {
   path: '/msp-marketing-services/',
-  title: 'MSP Marketing Services for Managed Service Providers',
+  title: 'MSP Marketing Services | MSPs & IT Services Firms',
   description:
     'MSP marketing services for MSPs and IT services companies: opportunity research and an SEO-optimised website in Month 1, then lead generation and SEO.',
   breadcrumbs: crumbs,

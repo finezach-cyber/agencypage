@@ -67,7 +67,7 @@ ${section({
   inner: `
   <div class="split">
     <div class="prose">
-      <h2>Why SEO for managed service providers is a distinct discipline</h2>
+      <h2>Why SEO for managed service providers and IT services companies is a distinct discipline</h2>
       <p>Most search guidance is written for ecommerce or software. Neither model reflects how an organisation purchases IT support. An MSP or IT services company sells a high-consideration, relationship-led service, generally to a buyer who cannot assess the technical substance of what they are acquiring. That changes both what ranks and what converts.</p>
 
       <h3>Demand is local rather than national</h3>
@@ -128,7 +128,7 @@ ${section({
   inner: `
   ${sectionHead({
     eyebrow: 'Scope',
-    title: 'What MSP SEO covers',
+    title: 'What MSP and IT services SEO covers',
     intro: `Search execution runs within <a href="/growth-engine/">Phase 2</a>, against the architecture established in Month 1.`,
   })}
   ${cards([

@@ -389,6 +389,36 @@ export function funnelSteps(steps) {
   </ol>`
 }
 
+/**
+ * The firm types we serve, as a compact strip.
+ *
+ * SEO note: this exists to build entity coverage for "IT services company" and
+ * its neighbours WITHOUT competing for any targeted keyword. It carries no
+ * links and no page of its own — the audience is broad, the keyword targeting
+ * stays narrow. Never turn these into separate landing pages: that would split
+ * one intent across several URLs, which is the actual cause of dilution.
+ */
+export function audienceStrip({ title = 'Who we work with', intro, tone = '' } = {}) {
+  const types = [
+    { label: 'Managed service providers', note: 'Full-stack managed IT' },
+    { label: 'IT services companies', note: 'Project and professional services' },
+    { label: 'IT support firms', note: 'Helpdesk-led providers' },
+    { label: 'Co-managed IT providers', note: 'Supporting internal IT teams' },
+    { label: 'MSSPs and security firms', note: 'Security-led offerings' },
+  ]
+  return `<div class="audience ${tone ? 'audience--' + tone : ''}">
+    <h2 class="audience__title">${esc(title)}</h2>
+    ${intro ? `<p class="audience__intro">${intro}</p>` : ''}
+    <ul class="audience__list">
+      ${types
+        .map(
+          (t) => `<li><span class="audience__label">${esc(t.label)}</span><span class="audience__note">${esc(t.note)}</span></li>`,
+        )
+        .join('')}
+    </ul>
+  </div>`
+}
+
 /** Service schema helper for the ranking pages. */
 export function serviceSchema({ name, description, path, serviceType }) {
   return {

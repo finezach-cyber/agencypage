@@ -1,6 +1,6 @@
 import {
   hero, section, sectionHead, cards, faq, cta, callout,
-  checklist, processDiagram, keywordTable,
+  checklist, processDiagram, keywordTable, audienceStrip,
 } from '../components.js'
 import { coreCluster } from '../data/keywords.js'
 
@@ -173,6 +173,35 @@ ${section({
 })}
 
 ${section({
+  inner: `
+  <div class="split">
+    <div class="prose">
+      <h2>Choosing an MSP marketing company</h2>
+      <p>Three questions separate most of the field, and they are worth asking of us as much as of anyone else.</p>
+      <p><strong>Does the firm establish what you should be selling before selling you execution?</strong> An agency that opens with deliverables — a site refresh, a content schedule, an ad account — is proposing to amplify whatever message already exists. If that message is the same as your competitors', amplification produces cost rather than pipeline.</p>
+      <p><strong>Can it show what it would do differently for your market specifically?</strong> A description of process is not an answer. A named opportunity, with the demand behind it and the competition it would face, is.</p>
+      <p><strong>Does it report on booked meetings and revenue by source?</strong> Impressions, rankings and published article counts are inputs. They are worth tracking and they are not the outcome you are buying.</p>
+
+      <h3>What MSP digital marketing should cover</h3>
+      <p>Used properly, MSP digital marketing is not a channel list. It is the website, organic and local search, review generation and Google Business Profile, email and LinkedIn outbound, content, conversion work, and the analytics and CRM configuration that ties all of it to pipeline — operated as one system against one set of validated offers rather than as parallel workstreams each reporting separately.</p>
+      <p>Paid advertising sits outside that default. With clicks in this category running from $28 to $98, paid search is an expensive place to discover what your market responds to. Establish the message through organic and outbound first; paid then becomes a way to amplify what already converts.</p>
+    </div>
+    <div>
+      ${callout({
+        title: 'Questions worth asking any agency',
+        body: `<ul class="tick-list">
+          <li>What will you tell me I should stop selling?</li>
+          <li>What does the first month produce that I keep?</li>
+          <li>Which of my competitors already rank, and why?</li>
+          <li>What will you report, and what will you leave out?</li>
+          <li>Who performs the work day to day?</li>
+        </ul>`,
+      })}
+    </div>
+  </div>`,
+})}
+
+${section({
   tone: 'muted',
   inner: `
   ${sectionHead({
@@ -208,11 +237,10 @@ ${section({
   inner: `
   <div class="split">
     <div>
-      ${sectionHead({
-        eyebrow: 'Specialisation',
+      ${audienceStrip({
         title: 'We work exclusively with MSPs and IT services companies',
+        intro: `Working in one category compounds: each engagement adds to a body of evidence the next one begins with — which services carry genuine demand, which verticals convert, which offers hold up under scrutiny, which site structures produce enquiries, and which outbound messages earn replies.`,
       })}
-      <p>Managed service providers, IT services companies, IT support firms, MSSPs and co-managed IT providers. Working in one category compounds: each engagement adds to a body of evidence the next one begins with — which services carry genuine demand, which verticals convert, which offers hold up under scrutiny, which site structures produce enquiries, and which outbound messages earn replies.</p>
       <p>It also means the work does not require translation. We understand what co-managed IT involves, why a vCISO offer prices differently from break-fix, and why claiming to be proactive rather than reactive has not differentiated a provider for over a decade.</p>
       ${keywordTable({
         rows: coreCluster,

@@ -125,7 +125,7 @@ ${relatedLinks([
 
 export default {
   path: '/about/',
-  title: 'About | A Marketing Firm for MSPs Exclusively',
+  title: 'About | Marketing for MSPs & IT Services Companies',
   description:
     'A marketing firm working exclusively with MSPs and IT services companies at $2–5M. How we work, what we decline to do, and who we are a fit for.',
   breadcrumbs: [{ label: 'About', href: '/about/' }],

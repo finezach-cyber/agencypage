@@ -132,7 +132,7 @@ ${section({ tone: 'muted', inner: faqBlock.html })}
 
 export default {
   path: '/contact/',
-  title: 'Contact | Book a Strategy Call for Your MSP',
+  title: 'Contact | Strategy Call for MSPs & IT Services Firms',
   description:
     'Book a 30-minute strategy call. We review your services, market and competitors, and tell you where the demand sits and whether your market is available.',
   breadcrumbs: [{ label: 'Contact', href: '/contact/' }],

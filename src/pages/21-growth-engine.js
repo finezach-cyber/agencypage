@@ -253,7 +253,7 @@ ${relatedLinks([
 
 export default {
   path: '/growth-engine/',
-  title: 'Growth Engine | MSP Marketing Execution and Delivery',
+  title: 'Growth Engine | MSP & IT Services Marketing Execution',
   description:
     'Optional execution for MSPs after Month 1: SEO, local search, reviews, email and LinkedIn outbound, content and reporting — measured on booked meetings.',
   breadcrumbs: [{ label: 'Growth Engine', href: '/growth-engine/' }],

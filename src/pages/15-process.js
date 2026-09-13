@@ -272,7 +272,7 @@ ${relatedLinks([
 
 export default {
   path: '/process/',
-  title: 'Our Process | MSP Marketing, Stage by Stage',
+  title: 'Our Process | MSP & IT Services Marketing, Stage by Stage',
   description:
     'The engagement in full: capability intake, opportunity analysis, an SEO-optimised website build and impact modelling in Month 1, then optional execution.',
   breadcrumbs: crumbs,

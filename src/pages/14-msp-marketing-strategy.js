@@ -76,6 +76,10 @@ ${section({
       <p>Nearly every provider we assess is already specialised and has not registered it. Nine of forty clients are dental practices. The strongest margin sits in the compliance-heavy accounts competitors decline. The fastest onboarding occurs on a platform the team happens to know unusually well. None of it appears on the website, because it accumulated rather than being chosen, and accumulation does not feel like strategy.</p>
       <p>That concentration is the most valuable input available — evidence of where the firm already wins, which is a considerably better foundation than selecting a vertical because it was described as lucrative at a conference.</p>
 
+      <h3>Where an IT services company differs from an MSP</h3>
+      <p>The framework is identical; two inputs are not. The first is recurring revenue. A managed service provider sells an ongoing agreement, so the strategy optimises for accounts worth retaining over years. An IT services company selling projects and professional services has to plan for repeat purchase rather than renewal, which changes what the lead offer should be and how aggressively it can be priced.</p>
+      <p>The second is geography. Managed services is frequently a local business, decided by proximity and response commitments. A specialised IT services capability — a platform migration practice, a security assessment offering — often sells nationally, and optimising it for local search is effort directed at the wrong signal. Which applies to your firm is established before any target is chosen.</p>
+
       <h3>Demand must be verified, not assumed</h3>
       <p>The external half matters equally. There is no value in building a strategy around a service nobody searches for, or a vertical containing four reachable prospects in the service area. Before any recommendation is made we map actual demand: what buyers in your market search, in what volume, who already ranks, and where the openings sit. That work is <a href="/process/#research">stage 02 of the process</a>.</p>
     </div>
@@ -106,7 +110,7 @@ ${section({
   ${sectionHead({
     eyebrow: 'Framework',
     title: 'The six decisions in an MSP marketing plan',
-    intro: `Decisions one through four are made during Month 1. Five and six determine what Phase 2 executes.`,
+    intro: `The same six apply whether the firm describes itself as a managed service provider or an IT services company. Decisions one through four are made during Month 1; five and six determine what Phase 2 executes.`,
   })}
   ${steps([
     {

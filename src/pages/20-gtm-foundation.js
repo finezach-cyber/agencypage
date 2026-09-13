@@ -204,7 +204,7 @@ ${section({
       ])}
     </div>
     <div>
-      <h3>Who this is for</h3>
+      <h3>Built for MSPs and IT services companies</h3>
       ${checklist(
         [
           'MSPs and IT services firms at roughly $2–5M in annual revenue',
@@ -242,7 +242,7 @@ ${relatedLinks([
 
 export default {
   path: '/gtm-foundation/',
-  title: 'GTM Foundation | Two Reports and a Website in 30 Days',
+  title: 'GTM Foundation | MSP & IT Services Marketing in 30 Days',
   description:
     'A fixed-fee Month 1 engagement for MSPs: an Opportunities Report, an SEO-optimised website ready to deploy, and a GTM Foundations Impact Report.',
   breadcrumbs: crumbs,
