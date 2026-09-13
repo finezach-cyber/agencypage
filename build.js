@@ -10,7 +10,8 @@
  * Every page module in src/pages/ exports a default object:
  *   { path, title, description, breadcrumbs?, schema?, body, ... }
  */
-import { readdir, mkdir, writeFile, rm, cp } from 'node:fs/promises'
+import { readdir, mkdir, writeFile, rm, cp, readFile } from 'node:fs/promises'
+import { createHash } from 'node:crypto'
 import { dirname, join } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { renderPage } from './src/layout.js'
@@ -34,7 +35,9 @@ function applyBasePath(html) {
 
 function sitemap(pages) {
   const entries = pages
-    .filter((p) => !p.noindex && p.path !== '/404.html')
+    // A site-level noindex yields a valid but empty sitemap, rather than one
+    // that contradicts the robots meta tag on every page it lists.
+    .filter((p) => !site.noindex && !p.noindex && p.path !== '/404.html')
     .sort((a, b) => (b.priority || 0.5) - (a.priority || 0.5))
     .map(
       (p) => `  <url>
@@ -87,6 +90,11 @@ async function build() {
   const started = Date.now()
   await rm(OUT, { recursive: true, force: true })
   await mkdir(OUT, { recursive: true })
+
+  // Content hash of the stylesheet, so /assets/* can be cached immutably while
+  // a CSS change still reaches returning visitors. Set before pages render.
+  const css = await readFile(join(root, 'src', 'assets', 'styles.css'), 'utf8')
+  site.assetVersion = createHash('sha256').update(css).digest('hex').slice(0, 8)
 
   const pages = await loadPages()
   const seen = new Set()

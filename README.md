@@ -27,6 +27,7 @@ changing them, but do not launch until they are real.
 | LinkedIn / X profile URLs | `src/site.js` → `sameAs` |
 | **Contact form endpoint** | `src/site.js` → `formEndpoint` (see below) |
 | Booking link | `src/site.js` → `bookingUrl` |
+| Live domain | resolved automatically on Vercel — see *Deploying to Vercel* |
 | Privacy policy | `src/pages/50-privacy.js` — template only, have counsel review |
 | Social card image + brand name on it | `tools/og-template.html`, then regenerate (see `tools/README.md`) |
 
@@ -45,23 +46,67 @@ honeypot field (`_gotcha`) for spam.
 
 ---
 
-## Deploying to GitHub Pages
+## Deploying to Vercel
 
-`.github/workflows/deploy.yml` builds, runs the checks, and deploys `dist/` on
-every push to `main`. Pull requests build and check but do not deploy.
+The repo is configured for Vercel's Git integration. `vercel.json` sets the
+build command, output directory, trailing-slash behaviour and headers, so the
+import needs no manual configuration.
 
-Two setup steps in the repository settings:
+1. Go to [vercel.com/new](https://vercel.com/new) and import
+   `finezach-cyber/agencypage`.
+2. Leave Framework Preset as **Other** — `vercel.json` supplies everything.
+3. Deploy. Every subsequent push builds automatically, with a preview URL per
+   branch and pull request.
 
-1. **Settings → Pages → Source: GitHub Actions.**
-2. **If you are *not* using a custom domain**, the site is served from
-   `https://<user>.github.io/<repo>/`, so root-relative URLs need a prefix.
-   Add a repository variable **`BASE_PATH`** = `/<repo>` (Settings → Secrets and
-   variables → Actions → Variables). The workflow passes it to the build.
+There are no dependencies, so the install step is a no-op and builds take
+roughly a second.
 
-   With a custom domain, leave `BASE_PATH` unset and instead set
-   `customDomain` in `src/site.js` — the build then writes a `CNAME` file.
+### The domain is resolved, not hardcoded
 
----
+Every canonical, `og:url`, sitemap `<loc>` and JSON-LD `@id` is derived from
+`site.domain`, which resolves in this order:
+
+| Source | When it applies |
+|---|---|
+| `SITE_URL` | Explicit override. Always wins. |
+| `VERCEL_PROJECT_PRODUCTION_URL` | Injected by Vercel — the production domain |
+| `VERCEL_URL` | Injected by Vercel — this deployment (previews) |
+| placeholder in `src/site.js` | Local builds |
+
+You do not need to set anything for Vercel: it injects the middle two. A build
+that declared canonicals pointing at a domain it is not served from would be
+worse than having none, which is why this is resolved rather than committed.
+
+### Staging deploys are held out of the index automatically
+
+While the site is served from a `*.vercel.app` host, every page carries
+`noindex, follow` and `sitemap.xml` is emitted empty. That stops a staging
+deployment being indexed and later competing with the real site.
+
+**It switches off by itself** as soon as you attach a custom domain — no file
+to remember to edit. Force it either way with `SITE_NOINDEX=1` or
+`SITE_INDEX=1` in the Vercel project's environment variables.
+
+`robots.txt` deliberately still allows crawling. Blocking the crawl would stop
+search engines reading the `noindex`, which is the usual reason a page stays
+indexed despite having the tag.
+
+### Attaching the real domain
+
+1. Add the domain in **Vercel → Project → Settings → Domains** and point DNS at
+   Vercel.
+2. Redeploy. Canonicals switch to the new domain and the noindex lifts on its
+   own.
+3. Update `email`, `phone`, `city`/`region` and `sameAs` in `src/site.js` —
+   those are still placeholders and are *not* derived from the domain.
+4. Submit `sitemap.xml` in Google Search Console.
+
+### CI
+
+`.github/workflows/ci.yml` builds and runs `check.js` on every push and pull
+request. It does not deploy — Vercel does that. Keep the check passing: it is
+the gate that catches broken links, duplicate titles and malformed structured
+data before they ship.
 
 ## Why it is built this way
 

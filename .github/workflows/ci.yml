@@ -1,0 +1,26 @@
+name: Build and check
+
+# Vercel handles deployment via its Git integration. This workflow is the
+# quality gate: the site must build and pass the SEO/link checks on every push
+# and pull request.
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build
+        run: node build.js
+      - name: Check links, titles, descriptions and structured data
+        run: node check.js

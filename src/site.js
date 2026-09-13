@@ -4,11 +4,58 @@
  * RENAMING THE AGENCY: change `name`, `legalName`, `domain`, `email`, `phone`
  * and `city`/`region` below. Nothing else in the codebase hardcodes them.
  */
+/**
+ * Where the site is being served from.
+ *
+ * Resolved rather than hardcoded, because every canonical, og:url, sitemap
+ * <loc> and JSON-LD @id is derived from it. A build that declares canonicals
+ * pointing at a domain it is not served from is worse than no canonical at all.
+ *
+ * Priority:
+ *   1. SITE_URL                        explicit override, always wins
+ *   2. VERCEL_PROJECT_PRODUCTION_URL   the project's stable production domain
+ *   3. VERCEL_URL                      this deployment's URL (preview builds)
+ *   4. PLACEHOLDER_DOMAIN              local builds
+ *
+ * Vercel injects 2 and 3 automatically — neither needs configuring — and both
+ * arrive without a scheme.
+ */
+const PLACEHOLDER_DOMAIN = 'https://www.mspgrowthpartners.com'
+
+function resolveDomain() {
+  const withScheme = (v) => (/^https?:\/\//.test(v) ? v : `https://${v}`)
+  const candidate =
+    process.env.SITE_URL ||
+    process.env.VERCEL_PROJECT_PRODUCTION_URL ||
+    process.env.VERCEL_URL
+  if (!candidate) return PLACEHOLDER_DOMAIN
+  return withScheme(candidate.trim()).replace(/\/$/, '')
+}
+
+/**
+ * Whether to hold the whole site out of the search index.
+ *
+ * True by default on a *.vercel.app host, so a staging deployment cannot get
+ * indexed and compete with the real site later. It switches off by itself the
+ * moment a custom domain is attached — nobody has to remember to remove it.
+ *
+ * Override either way with SITE_NOINDEX=1 or SITE_INDEX=1.
+ *
+ * Note: robots.txt deliberately still allows crawling. Blocking the crawl would
+ * stop search engines reading the noindex, which is the usual way a page stays
+ * indexed despite the tag.
+ */
+function resolveNoindex(domain) {
+  if (process.env.SITE_INDEX === '1') return false
+  if (process.env.SITE_NOINDEX === '1') return true
+  return /\.vercel\.app$/.test(new URL(domain).hostname)
+}
+
 export const site = {
   name: 'MSP Growth Partners',
   legalName: 'MSP Growth Partners LLC',
   tagline: 'We help MSPs and IT services companies build the path from $2M to $10M.',
-  domain: 'https://www.mspgrowthpartners.com',
+  domain: resolveDomain(),
   email: 'hello@mspgrowthpartners.com',
   phone: '+1-555-010-4400',
   phoneDisplay: '(555) 010-4400',
@@ -50,7 +97,16 @@ export const site = {
 
   // Used as the default <lastmod> in sitemap.xml.
   buildDate: new Date().toISOString().slice(0, 10),
+
+  /**
+   * Set by build.js to a short content hash of styles.css, so the stylesheet
+   * can be cached immutably and still update when it changes.
+   */
+  assetVersion: '',
 }
+
+// Depends on the resolved domain, so it is assigned after the object literal.
+site.noindex = resolveNoindex(site.domain)
 
 /**
  * Primary navigation. `children` renders as a dropdown on desktop and an
